@@ -1,0 +1,688 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE =edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="./reflex_favicon.ico" type="image/x-icon"/>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css"/>
+<link rel="stylesheet" href="./css/styles.css" >
+<script src="https://use.fontawesome.com/d8bf0cbc69.js"></script>
+    <title>Reflex Race Leaderboards</title>                
+</head>
+<body>
+    
+<div class="container is-fluid">    
+    <nav class="level page-title-bar">
+        <div class="level-left">
+            <div class="level-item">
+                <a href="./" class="link-no-style">
+                    <figure class="image is-40x40">
+                        <img src="./img/reflex-logo.png" class="img-responsive logo-img" />
+                    </figure>
+                </a>
+            </div>
+            <div class="level-item is-hidden-mobile page-title-divider">&nbsp;</div>
+            <div class="level-item">
+                <div>
+                    <a href="./" class="link-no-style">
+                        <span class="page-title is-uppercase">Reflex Race Leaderboards</span>
+                    </a>
+                    <nav class="level">
+                        <div class="level-left">
+                            <div class="level-item">
+                                <a href="./" class="page-nav-item">Home</a>
+                            </div>
+                            <div class="level-item">
+                                <a href="./players" class="page-nav-item">Players</a>
+                            </div>
+                            <div class="level-item">
+                                <a href="./maps" class="page-nav-item">Maps</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="level-right">
+            <div class="level-item">
+                <span class="nav-text">Last update: lug 10, '21, 03:59</span>
+            </div>
+            <div class="level-item">
+                <span class="nav-text">[18636 Total Records]</span>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container is-fluid page-nav-horizontal-divider is-marginless">&nbsp;</div>
+
+
+
+<section class="hero slim is-black">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title has-text-centered">Latest Maps</h1>
+        </div>
+    </div>
+</section>
+
+<div class="container is-fluid">
+    <div class="columns is-multiline is-mobile is-centered" id="maps_list">    
+    </div>
+</div>
+
+    
+<footer class="footer">
+    <div class="container">
+        <div class="content">            
+            Developed and designed by <a href="http://steamcommunity.com/profiles/76561198058399060">brandon</a></p>
+        </div>
+    </div>
+</footer>
+<script>
+var maps = [
+{id: '2529016611', record_count: 2, title: 'Trial of resolve',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1696150695327059678/8F9D529838C2117DF5E08DD57BF8D53B4E9BC6C9/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '16.372', rank: 1
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '16.404', rank: 2
+},], },
+{id: '2521650741', record_count: 7, title: 'Desanctify',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1715290368685593234/480FA350F9F38A9289AD08F80F515EDED7ABA511/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198009937727', pname: 'salakalastaja', time: '22.906', rank: 1
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '23.866', rank: 2
+},{
+pid: '76561198022059713', pname: 'sjn|merry', time: '24.052', rank: 3
+},{
+pid: '76561198120524395', pname: 'wm_cosmo', time: '24.430', rank: 4
+},{
+pid: '76561198277481408', pname: 'DIM', time: '25.044', rank: 5
+},{
+pid: '76561198052093491', pname: 'Svyt', time: '25.316', rank: 6
+},], },
+{id: '2504576612', record_count: 8, title: 'LP73',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1760324705701089389/061222E64788DDE78B67F61B9D90C4D95E5DD12A/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561197986675995', pname: 'WD!!! night', time: '08.459', rank: 1
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '14.801', rank: 2
+},{
+pid: '76561198022059713', pname: 'sjn|merry', time: '18.771', rank: 3
+},{
+pid: '76561198277481408', pname: 'DIM', time: '26.004', rank: 4
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '28.179', rank: 5
+},{
+pid: '76561198017114958', pname: '4thwrldmrshl', time: '30.835', rank: 6
+},], },
+{id: '2502346375', record_count: 11, title: 'JG73',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1760324403345039804/B80BC1D539083BA4BA8F2B7DB451C9EE71FC23A1/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '24.954', rank: 1
+},{
+pid: '76561197986675995', pname: 'WD!!! night', time: '24.959', rank: 2
+},{
+pid: '76561198120524395', pname: 'wm_cosmo', time: '25.864', rank: 3
+},{
+pid: '76561198022059713', pname: 'sjn|merry', time: '25.936', rank: 4
+},{
+pid: '76561198027469185', pname: 'Vene', time: '26.066', rank: 5
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '26.109', rank: 6
+},], },
+{id: '2498203693', record_count: 8, title: 'uma73',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1760324110528983751/D831C34C570F9E57E07AE725375F2C9CD7775305/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198031006273', pname: 'tofu', time: '37.819', rank: 1
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '38.109', rank: 2
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '39.142', rank: 3
+},{
+pid: '76561198120524395', pname: 'wm_cosmo', time: '39.560', rank: 4
+},{
+pid: '76561198022059713', pname: 'sjn|merry', time: '39.911', rank: 5
+},{
+pid: '76561198027469185', pname: 'Vene', time: '41.416', rank: 6
+},], },
+{id: '2482052457', record_count: 10, title: 'GD73',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1810988044006265809/4FAA0C58345367B62F92D46587A2C22F476F36FF/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '31.022', rank: 1
+},{
+pid: '76561198022059713', pname: 'sjn|merry', time: '31.222', rank: 2
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '31.238', rank: 3
+},{
+pid: '76561198120524395', pname: 'wm_cosmo', time: '31.281', rank: 4
+},{
+pid: '76561198277481408', pname: 'DIM', time: '32.344', rank: 5
+},{
+pid: '76561198052093491', pname: 'Svyt', time: '34.597', rank: 6
+},], },
+{id: '2461636379', record_count: 1, title: 'ox-glide',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1758068818893598773/86D2FBE94497ABAE61BB06AB25090C06934959F9/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198017114958', pname: '4thwrldmrshl', time: '8:17.002', rank: 1
+},], },
+{id: '2450215071', record_count: 2, title: 'kingTut',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1815489115761681411/140C0114924CD637F5C78763C9020448B6749884/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198086413850', pname: 'shockrah (✿◠‿◠)', time: '1:08.341', rank: 1
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '3:09.538', rank: 2
+},], },
+{id: '2274553454', record_count: 0, title: 'ISS_09',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1761443812501310011/A6264A4B6A5195F7832E390A438404290FAF4E0A/', youtube_url: '',
+lazy_load_img: false,
+records: [], },
+{id: '2258938523', record_count: 6, title: 'Outpost',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1653343413889545242/AF2C9CC3623A0B22C7A8FACBBE1E49BA1FADDB88/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '30.571', rank: 1
+},{
+pid: '76561198120524395', pname: 'wm_cosmo', time: '32.043', rank: 2
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '32.508', rank: 3
+},{
+pid: '76561198027469185', pname: 'Vene', time: '43.013', rank: 4
+},{
+pid: '76561198154940563', pname: 'n00kie', time: '46.969', rank: 5
+},{
+pid: '76561198017114958', pname: '4thwrldmrshl', time: '49.080', rank: 6
+},], },
+{id: '2248681262', record_count: 19, title: 'Aztech',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1625194981785590279/82262F72440AAA0A7C91C039BF38D6CFF3D82345/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198028155877', pname: 'dzy', time: '31.773', rank: 1
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '32.173', rank: 2
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '32.196', rank: 3
+},{
+pid: '76561198120524395', pname: 'wm_cosmo', time: '32.292', rank: 4
+},{
+pid: '76561198031006273', pname: 'tofu', time: '33.056', rank: 5
+},{
+pid: '76561198277481408', pname: 'DIM', time: '34.552', rank: 6
+},], },
+{id: '2241889870', record_count: 4, title: 'night bday party',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1543003681395089515/840A4288DA3EA0A3FC4B9D221C2E93ED36A54BBF/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '16.201', rank: 1
+},{
+pid: '76561198031006273', pname: 'tofu', time: '17.680', rank: 2
+},{
+pid: '76561198256690336', pname: 'loveaddicts', time: '19.833', rank: 3
+},{
+pid: '76561197979635028', pname: 'KraXXXel', time: '21.698', rank: 4
+},], },
+{id: '2236202825', record_count: 5, title: 'Allegorical',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1545255515278104970/3ACAC3AC877BE92C1E42C45283138DDDBB71483F/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '13.094', rank: 1
+},{
+pid: '76561198049452471', pname: 'lolograde', time: '13.556', rank: 2
+},{
+pid: '76561198017114958', pname: '4thwrldmrshl', time: '13.691', rank: 3
+},{
+pid: '76561198022059713', pname: 'sjn|merry', time: '13.779', rank: 4
+},{
+pid: '76561198103198986', pname: 'HiT333', time: '13.914', rank: 5
+},], },
+{id: '2234670317', record_count: 7, title: 'sharq-Quickie3',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1622941938847987902/B24E43936996938AF6F15DCFC827755D67B687FC/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '21.173', rank: 1
+},{
+pid: '76561198031006273', pname: 'tofu', time: '22.055', rank: 2
+},{
+pid: '76561198052093491', pname: 'Svyt', time: '23.622', rank: 3
+},{
+pid: '76561198103198986', pname: 'HiT333', time: '24.424', rank: 4
+},{
+pid: '76561198017114958', pname: '4thwrldmrshl', time: '24.791', rank: 5
+},{
+pid: '76561198049452471', pname: 'lolograde', time: '25.578', rank: 6
+},], },
+{id: '2218146670', record_count: 5, title: 'Leeway Plasma',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1630821647947236012/61E58A70487408D488E54742B18BBEFB900E47A4/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561197985488000', pname: 'writhe', time: '17.263', rank: 1
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '17.937', rank: 2
+},{
+pid: '76561198024660114', pname: 'doombro', time: '19.643', rank: 3
+},{
+pid: '76561198022059713', pname: 'sjn|merry', time: '19.743', rank: 4
+},{
+pid: '76561198256690336', pname: 'loveaddicts', time: '21.021', rank: 5
+},], },
+{id: '2205035235', record_count: 3, title: 'Pasiphae',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1490083042201517093/D8885D113AADA8B11E635C285AB322E53F5E89C6/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561197986675995', pname: 'WD!!! night', time: '16.876', rank: 1
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '22.143', rank: 2
+},{
+pid: '76561198029388379', pname: 'panikborke', time: '27.033', rank: 3
+},], },
+{id: '2201192042', record_count: 6, title: 'jump_hyosung',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1479949612887634228/1BD23560D0B4BCE93089FF67A8E6F4FF6DD0B6CA/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '23.403', rank: 1
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '23.683', rank: 2
+},{
+pid: '76561198052093491', pname: 'Svyt', time: '32.862', rank: 3
+},{
+pid: '76561198038891770', pname: 'ParkourGrip', time: '33.024', rank: 4
+},{
+pid: '76561197991605256', pname: 'borgborg', time: '36.462', rank: 5
+},{
+pid: '76561197979635028', pname: 'KraXXXel', time: '42.823', rank: 6
+},], },
+{id: '2161757859', record_count: 11, title: 'Waterfront',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1327949551205759573/D84CE56703B58563FB52F5B8F3F62D49335AC24C/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561197986675995', pname: 'WD!!! night', time: '24.940', rank: 1
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '25.266', rank: 2
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '26.964', rank: 3
+},{
+pid: '76561198004249966', pname: 'Daan', time: '28.350', rank: 4
+},{
+pid: '76561197979635028', pname: 'KraXXXel', time: '28.730', rank: 5
+},{
+pid: '76561198103198986', pname: 'HiT333', time: '29.753', rank: 6
+},], },
+{id: '2161724233', record_count: 15, title: 'sharq-Ethereal 2',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1327949551205638162/98FAB36A6702E192AE8A706C92A67AA9F0C932B3/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '26.849', rank: 1
+},{
+pid: '76561197986675995', pname: 'WD!!! night', time: '26.949', rank: 2
+},{
+pid: '76561198031006273', pname: 'tofu', time: '29.780', rank: 3
+},{
+pid: '76561198021107656', pname: 'Thorec', time: '30.393', rank: 4
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '30.462', rank: 5
+},{
+pid: '76561198027469185', pname: 'Vene', time: '32.081', rank: 6
+},], },
+{id: '2161672236', record_count: 0, title: '[Teamrace] Mensa society reception room',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1327949551205425158/C2C8D5FC91AAD75E0DEB60007D64BDA862F60DE8/', youtube_url: '',
+lazy_load_img: false,
+records: [], },
+{id: '2149748904', record_count: 0, title: 'rr_smile4',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1300927428721829611/F9A9A5A06F27A4509CCAF784588004D48445FD1D/', youtube_url: '',
+lazy_load_img: false,
+records: [], },
+{id: '2149709716', record_count: 4, title: 'jump_out_of_order',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1285164580811869554/FD7089FE079ADFE5399C649BDB4DF83E19020CAB/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561197986675995', pname: 'WD!!! night', time: '19.185', rank: 1
+},{
+pid: '76561198249285586', pname: 'victoor', time: '19.710', rank: 2
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '21.826', rank: 3
+},{
+pid: '76561197979635028', pname: 'KraXXXel', time: '32.907', rank: 4
+},], },
+{id: '2110098766', record_count: 38, title: 'br-infinity',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1054351884899341025/19539395D1654EED1D5E7F316346AC9028E931FF/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561197986675995', pname: 'WD!!! night', time: '19.384', rank: 1
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '19.787', rank: 2
+},{
+pid: '76561198120524395', pname: 'wm_cosmo', time: '20.178', rank: 3
+},{
+pid: '76561198031006273', pname: 'tofu', time: '20.250', rank: 4
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '20.379', rank: 5
+},{
+pid: '76561197984977458', pname: 'wm_stitch', time: '20.450', rank: 6
+},], },
+{id: '2108627741', record_count: 0, title: 'TJ_Dingo11 - Tri Room',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1017196946788599712/A8E60900371F7763373273C93AB056255FF84B22/', youtube_url: '',
+lazy_load_img: false,
+records: [], },
+{id: '2106676330', record_count: 7, title: 'Pixel',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1007063757512962515/6375AD2A770C4ABDAB2C2253922B9764D3A829EB/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198031006273', pname: 'tofu', time: '10.322', rank: 1
+},{
+pid: '76561197984977458', pname: 'wm_stitch', time: '13.626', rank: 2
+},{
+pid: '76561198024660114', pname: 'doombro', time: '14.455', rank: 3
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '14.890', rank: 4
+},{
+pid: '76561197979635028', pname: 'KraXXXel', time: '15.358', rank: 5
+},{
+pid: '76561198017114958', pname: '4thwrldmrshl', time: '15.569', rank: 6
+},], },
+{id: '2100077806', record_count: 10, title: 'Fourth-1',
+preview_url: '', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561197986675995', pname: 'WD!!! night', time: '06.591', rank: 1
+},{
+pid: '76561198009937727', pname: 'salakalastaja', time: '06.606', rank: 2
+},{
+pid: '76561198027897188', pname: 'CrazyAl', time: '09.224', rank: 3
+},{
+pid: '76561198004249966', pname: 'Daan', time: '10.898', rank: 4
+},{
+pid: '76561198249285586', pname: 'victoor', time: '10.987', rank: 5
+},{
+pid: '76561198058399060', pname: 'brandon', time: '11.567', rank: 6
+},], },
+{id: '2098301452', record_count: 11, title: 'Sorry',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1018322064541313062/07DD59FE83B9B6C42462F8179DBFB0C461F126AF/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198004249966', pname: 'Daan', time: '08.296', rank: 1
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '08.925', rank: 2
+},{
+pid: '76561198249285586', pname: 'victoor', time: '08.951', rank: 3
+},{
+pid: '76561197984977458', pname: 'wm_stitch', time: '08.966', rank: 4
+},{
+pid: '76561198009937727', pname: 'salakalastaja', time: '08.994', rank: 5
+},{
+pid: '76561198075648076', pname: 'Donald', time: '09.226', rank: 6
+},], },
+{id: '2096550894', record_count: 0, title: 'Minecrap',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1004811119657601033/579464673381614867867D038DD8838724C3BC81/', youtube_url: '',
+lazy_load_img: false,
+records: [], },
+{id: '2095488435', record_count: 11, title: 'sharq-Dream',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1013818222220228562/37F8DA83F698DCF832781353A10AEA296C95F0D3/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561197985488000', pname: 'writhe', time: '02.847', rank: 1
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '02.848', rank: 2
+},{
+pid: '76561198075648076', pname: 'Donald', time: '02.881', rank: 3
+},{
+pid: '76561198031006273', pname: 'tofu', time: '03.284', rank: 4
+},{
+pid: '76561198024660114', pname: 'doombro', time: '03.790', rank: 5
+},{
+pid: '76561198022059713', pname: 'sjn|merry', time: '04.146', rank: 6
+},], },
+{id: '2089020868', record_count: 5, title: 'jump_blackmetal',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1009314216199186722/EE00EA22DF3B02A2C4222223C69A168BBD7FDDB7/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198031006273', pname: 'tofu', time: '57.310', rank: 1
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '1:22.453', rank: 2
+},{
+pid: '76561198052093491', pname: 'Svyt', time: '1:34.953', rank: 3
+},{
+pid: '76561198024660114', pname: 'doombro', time: '3:07.048', rank: 4
+},{
+pid: '76561198017114958', pname: '4thwrldmrshl', time: '6:28.717', rank: 5
+},], },
+{id: '2083433227', record_count: 11, title: 'jump_finalbreak',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1003684202570601560/98D0997FA74BC9B036C1624F30B5846D5C96B370/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561197986675995', pname: 'WD!!! night', time: '16.207', rank: 1
+},{
+pid: '76561198004249966', pname: 'Daan', time: '16.736', rank: 2
+},{
+pid: '76561197979635028', pname: 'KraXXXel', time: '19.425', rank: 3
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '20.782', rank: 4
+},{
+pid: '76561197984977458', pname: 'wm_stitch', time: '21.221', rank: 5
+},{
+pid: '76561198024660114', pname: 'doombro', time: '28.321', rank: 6
+},], },
+{id: '2078641030', record_count: 5, title: 'slicc',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1008187508772417133/3ADBD9A41ECD35FEAA0F2EF1AFAB1664177AAA43/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '46.814', rank: 1
+},{
+pid: '76561197986675995', pname: 'WD!!! night', time: '47.169', rank: 2
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '51.655', rank: 3
+},{
+pid: '76561198021107656', pname: 'Thorec', time: '54.101', rank: 4
+},{
+pid: '76561197979635028', pname: 'KraXXXel', time: '1:04.225', rank: 5
+},], },
+{id: '2073538120', record_count: 7, title: 'jump_breakme_v3',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1002557624588147422/5C27E35B0A79A9240DF5E557EB491797F5068F18/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198249285586', pname: 'victoor', time: '10.525', rank: 1
+},{
+pid: '76561197984977458', pname: 'wm_stitch', time: '10.711', rank: 2
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '10.808', rank: 3
+},{
+pid: '76561198031006273', pname: 'tofu', time: '11.703', rank: 4
+},{
+pid: '76561198128359939', pname: 'Zen Manifold', time: '11.706', rank: 5
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '11.792', rank: 6
+},], },
+{id: '2071098717', record_count: 10, title: 'CLIMB MARATHON',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1007061026498059731/CBA1638C57A00CD541BA150875E58537B2EE6FFE/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561197986675995', pname: 'WD!!! night', time: '6:11.080', rank: 1
+},{
+pid: '76561198075648076', pname: 'Donald', time: '6:50.149', rank: 2
+},{
+pid: '76561198058399060', pname: 'brandon', time: '6:59.426', rank: 3
+},{
+pid: '76561197984977458', pname: 'wm_stitch', time: '7:04.427', rank: 4
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '7:29.101', rank: 5
+},{
+pid: '76561198249285586', pname: 'victoor', time: '9:06.521', rank: 6
+},], },
+{id: '2070830668', record_count: 16, title: 'sharq-Hall 2',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1007060921467121903/6AD0662C8DB23FFEEBB954ED558A19BC4452AD3D/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561197986675995', pname: 'WD!!! night', time: '14.633', rank: 1
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '14.924', rank: 2
+},{
+pid: '76561198031006273', pname: 'tofu', time: '15.255', rank: 3
+},{
+pid: '76561197984977458', pname: 'wm_stitch', time: '15.383', rank: 4
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '16.104', rank: 5
+},{
+pid: '76561198249285586', pname: 'victoor', time: '17.139', rank: 6
+},], },
+{id: '2067726945', record_count: 18, title: 'rek-mesa_m',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1027329308949256679/35BA542D94E3AD68DA14A0EF18BF98EE92D86AA4/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561197984977458', pname: 'wm_stitch', time: '12.420', rank: 1
+},{
+pid: '76561198249285586', pname: 'victoor', time: '12.635', rank: 2
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '12.851', rank: 3
+},{
+pid: '76561198031006273', pname: 'tofu', time: '13.277', rank: 4
+},{
+pid: '76561198052093491', pname: 'Svyt', time: '13.585', rank: 5
+},{
+pid: '76561198021107656', pname: 'Thorec', time: '13.818', rank: 6
+},], },
+{id: '2067599761', record_count: 8, title: 'fs-ecute_m',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1020571541116352416/596B98D7021E18FC6FF9BD633060C0459A5FA199/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561197986675995', pname: 'WD!!! night', time: '11.365', rank: 1
+},{
+pid: '76561198082734424', pname: '中国MCDONALDS！！！', time: '11.494', rank: 2
+},{
+pid: '76561197984977458', pname: 'wm_stitch', time: '11.911', rank: 3
+},{
+pid: '76561198031006273', pname: 'tofu', time: '12.174', rank: 4
+},{
+pid: '76561198277481408', pname: 'DIM', time: '12.304', rank: 5
+},{
+pid: '76561198052093491', pname: 'Svyt', time: '12.626', rank: 6
+},], },
+{id: '2067045967', record_count: 4, title: 'jump_breakme2',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1002557061107327733/E211A7C95F096D7131DCF0C01FEF78A6C1A65FFE/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561197986675995', pname: 'WD!!! night', time: '07.492', rank: 1
+},{
+pid: '76561197984977458', pname: 'wm_stitch', time: '07.560', rank: 2
+},{
+pid: '76561198249285586', pname: 'victoor', time: '07.607', rank: 3
+},{
+pid: '76561197979635028', pname: 'KraXXXel', time: '42.270', rank: 4
+},], },
+{id: '2056379178', record_count: 23, title: 'Emancipator',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1005933936504567751/DBF36487411830684D4C2C34C48108C8342C990E/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561197986675995', pname: 'WD!!! night', time: '12.877', rank: 1
+},{
+pid: '76561198027887207', pname: 'LA.slobo^-', time: '12.999', rank: 2
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '14.237', rank: 3
+},{
+pid: '76561197984977458', pname: 'wm_stitch', time: '14.238', rank: 4
+},{
+pid: '76561198249285586', pname: 'victoor', time: '14.499', rank: 5
+},{
+pid: '76561198018666316', pname: 'Komier', time: '14.528', rank: 6
+},], },
+{id: '2051228499', record_count: 2, title: 'Koala5',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1023948024860127864/BF318F35A6307ED82F5A002086D0DED0C07A0782/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561197986675995', pname: 'WD!!! night', time: '24.787', rank: 1
+},{
+pid: '76561198009937727', pname: 'salakalastaja', time: '17:33.157', rank: 2
+},], },];
+
+
+function render_map_box(map) {
+var html = `
+<div class="column is-narrow">
+    <div class="map-box">
+        <a href="./maps/${map.id}.html">
+            <figure class="image">`;
+            if (map.lazy_load_img) {
+                html += `<img src="./img/blank_grey.png" data-src="${map.preview_url}"/>`;
+            } else {
+                html += `<img src="${map.preview_url}"/>`;
+            }
+            html += `<div class="is-overlay">
+                <div class="map-box-title-rect">
+                    <div class="map-title">${map.title}</div>
+                </div>
+                <div class="map-box-total-records tag is-black">
+                    ${map.record_count} Record(s)
+                </div>
+                <div class="yt-cover-link"></div>`;
+                
+            if (map.youtube_url !== '') { 
+                html += `<div class="map-box-yt">
+                            <a href="${map.youtube_url}">
+                                <span class="icon is-large">
+                                    <span class="fa-stack">
+                                        <i class="fa fa-square fa-stack-1x" aria-hidden="true"></i>
+                                        <i class="fa fa-youtube-play fa-stack-2x" aria-hidden="true"></i>
+                                    </span>
+                                </span>
+                            </a>
+                        </div>`; 
+            }
+
+            html += `
+                </div>
+            </figure>
+        </a>
+    </div>
+    <div class="map-box-top-players">`;
+
+        for(var ri = 0; ri < map.records.length; ++ri) {
+                html += `
+<nav class="level is-mobile player-entry ${( ri==0 ? 'first-place':'')}">
+    <div class="level-left">
+        <div class="level-item">
+            <span class="player-name"><a href="./players/${map.records[ri].pid}.html">${map.records[ri].pname}</a></span>
+        </div>
+    </div>
+    <div class="level-right">
+        <div class="level-item">
+            <span class="player-score">${map.records[ri].time}</span>
+        </div>
+    </div>
+</nav>`;
+        }
+
+
+    html += `</div>
+</div>`;
+
+return html;
+}
+
+
+
+        var divMapsList = document.querySelector('#maps_list');
+
+        var html = ``;
+        for (var i = 0; i < maps.length; ++i) {
+            html += render_map_box(maps[i]);
+        }
+
+        divMapsList.innerHTML = html;
+
+
+</script>
+</body>
+</html>
+

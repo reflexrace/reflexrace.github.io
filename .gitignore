@@ -1,0 +1,4 @@
+app.yaml
+*.exe
+*.pdb
+*.exe.config
