@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE =edge">
+        <meta name="viewport" content="width =device-width, initial-scale=1">
+        <link rel="shortcut icon" href="/reflex_favicon.ico" type="image/x-icon" />
+        
+        
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+<!--<script src="/js/sorttable.js"></script>-->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css" />
+<link rel="stylesheet" href="/css/styles.css">
+<script src="https://use.fontawesome.com/d8bf0cbc69.js"></script>
+
+
+<title>d1m.easyeffects - Reflex Race Leaderboards</title>
+</head>
+<body>
+
+    
+<div class="container is-fluid">    
+    <nav class="level page-title-bar">
+        <div class="level-left">
+            <div class="level-item">
+                <a href="/" class="link-no-style">
+                    <figure class="image is-40x40">
+                        <img src="/img/reflex-logo.png" class="img-responsive logo-img" />
+                    </figure>
+                </a>
+            </div>
+            <div class="level-item is-hidden-mobile page-title-divider">&nbsp;</div>
+            <div class="level-item">
+                <div>
+                    <a href="/" class="link-no-style">
+                        <span class="page-title is-uppercase">Reflex Race Leaderboards</span>
+                    </a>
+                    <nav class="level">
+                        <div class="level-left">
+                            <div class="level-item">
+                                <a href="/" class="page-nav-item">Home</a>
+                            </div>
+                            <div class="level-item">
+                                <a href="/players" class="page-nav-item">Players </a>
+                            </div>
+                            <div class="level-item">
+                                <a href="/maps" class="page-nav-item">Maps </a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="level-right">
+            <div class="level-item">
+                <span class="nav-text">Last update: Mar 05, &#39;20, 18:08</span>
+            </div>
+            <div class="level-item">
+                <span class="nav-text">17652 Total Records</span>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container is-fluid page-nav-horizontal-divider is-marginless">&nbsp;</div>
+
+
+    <div class="container">
+        <div class="columns is-mobile is-centered">
+            <div class="column">
+                <div class="mapinformation">
+                    <figure class="image mapbg">
+                        <img src="https://steamuserimages-a.akamaihd.net/ugc/856109701856772051/CA2CC316DB0040237B63454B18162A626FB14954/" />
+                    </figure>
+                    <div class="general">
+                        <div class="general-wrapper">
+
+                            <div class="mapname">d1m.easyeffects</div>
+
+                            <div class="icons">
+
+                                <span class="icon is-medium">
+                                    <a href="http://steamcommunity.com/sharedfiles/filedetails/?id=1200875943" style="text-decoration : none;" target="_blank">
+                                        <span class="steam fa-stack">
+                                            <i class="fa fa-square fa-stack-2x"></i>
+                                            <i class="fa fa-steam-square fa-stack-2x"></i>
+                                        </span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-narrow" id="players-list">
+
+                <ul class="pagination" style="display:none;"></ul>
+
+                <table class="table reflex show-sort-icons">
+                    <thead>
+                        <tr>
+                            <th style="width:100px"><button class="sort" data-sort="record-rank">Rank</button></th>
+                            <th>
+                                <button class="sort" data-sort="player-name">Player</button>
+                                <div class="field">
+                                    <p class="control has-icons-left">
+                                        <input class="input is-small grey-placeholder search" type="text" placeholder="Search...">
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-search"></i>
+                                        </span>      
+                                    </p>
+                                </div>
+                            </th>
+                            <th style="width:120px"><button class="sort" data-sort="record-time">Time</button></th>
+                            <th style="width:150px"><button class="sort" data-sort="record-top-speed">Top Speed</button></th>
+                            <th style="width:150px"><button class="sort" data-sort="record-distance">Distance</button></th>
+                        </tr>
+                    </thead>
+                    <tbody class="listjs-container">
+                            <tr>
+                                <td class="record-rank has-text-right">1/6</td>
+                                <td><a href="/players/76561198009937727" class="player-name">salakalastaja</a></td>
+                                <td class="has-text-right">
+                                    <span class="record-time" style="display:none">12517</span>
+                                    12.517
+                                </td>
+                                <td class="has-text-right">
+                                    <span class="record-top-speed" style="display:none">889</span>
+                                    889
+                                </td>
+                                <td class="has-text-right">
+                                    <span class="record-distance" style="display:none">8848</span>
+                                    8,848
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="record-rank has-text-right">2/6</td>
+                                <td><a href="/players/76561198277481408" class="player-name">schneesturm</a></td>
+                                <td class="has-text-right">
+                                    <span class="record-time" style="display:none">12765</span>
+                                    12.765
+                                </td>
+                                <td class="has-text-right">
+                                    <span class="record-top-speed" style="display:none">813</span>
+                                    813
+                                </td>
+                                <td class="has-text-right">
+                                    <span class="record-distance" style="display:none">8666</span>
+                                    8,666
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="record-rank has-text-right">3/6</td>
+                                <td><a href="/players/76561198021107656" class="player-name">Thorec</a></td>
+                                <td class="has-text-right">
+                                    <span class="record-time" style="display:none">12883</span>
+                                    12.883
+                                </td>
+                                <td class="has-text-right">
+                                    <span class="record-top-speed" style="display:none">779</span>
+                                    779
+                                </td>
+                                <td class="has-text-right">
+                                    <span class="record-distance" style="display:none">8749</span>
+                                    8,749
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="record-rank has-text-right">4/6</td>
+                                <td><a href="/players/76561198000832954" class="player-name">permastoned</a></td>
+                                <td class="has-text-right">
+                                    <span class="record-time" style="display:none">12941</span>
+                                    12.941
+                                </td>
+                                <td class="has-text-right">
+                                    <span class="record-top-speed" style="display:none">781</span>
+                                    781
+                                </td>
+                                <td class="has-text-right">
+                                    <span class="record-distance" style="display:none">8642</span>
+                                    8,642
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="record-rank has-text-right">5/6</td>
+                                <td><a href="/players/76561198024660114" class="player-name">doombro</a></td>
+                                <td class="has-text-right">
+                                    <span class="record-time" style="display:none">13031</span>
+                                    13.031
+                                </td>
+                                <td class="has-text-right">
+                                    <span class="record-top-speed" style="display:none">761</span>
+                                    761
+                                </td>
+                                <td class="has-text-right">
+                                    <span class="record-distance" style="display:none">8635</span>
+                                    8,635
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="record-rank has-text-right">6/6</td>
+                                <td><a href="/players/76561198037910583" class="player-name">lisk</a></td>
+                                <td class="has-text-right">
+                                    <span class="record-time" style="display:none">13295</span>
+                                    13.295
+                                </td>
+                                <td class="has-text-right">
+                                    <span class="record-top-speed" style="display:none">762</span>
+                                    762
+                                </td>
+                                <td class="has-text-right">
+                                    <span class="record-distance" style="display:none">8641</span>
+                                    8,641
+                                </td>
+                            </tr>
+                    </tbody>
+                </table>  
+                
+                <div class="columns is-mobile">
+                    <div class="column">
+                        <p class="field has-addons is-pulled-right page-ticker">
+                            <a class="button is-small is-black" id="table-left-btn">
+                                <span class="icon is-small">
+                                    <i class="fa fa-chevron-left"></i>
+                                </span>
+                            </a>
+                            <a class="button is-small is-static is-black " id="table-page-text"></a>
+                            <a class="button is-small is-black" id="table-right-btn">
+                                <span class="icon is-small">
+                                    <i class="fa fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </p>
+                    </div>
+                </div>              
+
+            </div>            
+        </div>
+
+
+    </div>
+    <footer class="footer">
+    <div class="container">
+        <div class="content">
+            <p><a href="/submit-video">Submit a Video</a><br/>
+            Developed and designed by <a href="http://steamcommunity.com/profiles/76561198058399060">brandon</a></p>
+        </div>
+    </div>
+</footer>
+
+    
+    <script>
+
+        function br_get_total_pages(list) {
+    return Math.ceil(list.matchingItems.length / list.page);
+}
+
+function br_get_current_page(list) {
+    return Math.ceil(list.i / list.page);
+}
+
+function br_update_table_page_text(list, el) {
+    el.textContent = br_get_current_page(list) + "/" + br_get_total_pages(list);
+}
+
+function br_show_next_page(list){
+    if (list.i + list.page <= list.matchingItems.length) {
+        list.show(list.i + list.page, list.page);        
+    }
+}
+
+function br_show_previous_page(list){
+    if (list.i > 1) {
+        var i = list.i - list.page;
+        if (i < 1) {
+            i = 1;
+        }
+        list.show(i, list.page);        
+    }
+}
+
+        var records_list = new List('players-list', {
+            listClass: 'listjs-container',
+            valueNames: ['record-rank', 'player-name', 'record-time', 'record-top-speed', 'record-distance'],
+            page: 20,
+            pagination: true
+        });
+
+        
+        var table_page_text_el = document.getElementById("table-page-text");
+
+        
+        br_update_table_page_text(records_list, table_page_text_el);
+
+        records_list.on('searchComplete', function () {
+            br_update_table_page_text(records_list, table_page_text_el);
+        });
+
+        document.getElementById("table-right-btn").onclick = function () {
+            br_show_next_page(records_list);
+            br_update_table_page_text(records_list, table_page_text_el);
+        }
+
+        document.getElementById("table-left-btn").onclick = function () {
+            br_show_previous_page(records_list);
+            br_update_table_page_text(records_list, table_page_text_el);
+        }
+
+
+    </script>
+</body>
+</html>
