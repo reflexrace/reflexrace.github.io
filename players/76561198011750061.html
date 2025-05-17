@@ -1,0 +1,490 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE =edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="../reflex_favicon.ico" type="image/x-icon"/>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css"/>
+<link rel="stylesheet" href="../css/styles.css" >
+<script src="https://use.fontawesome.com/d8bf0cbc69.js"></script>
+    <title>(竚絶密 ﾍ慳・ﾍ｡笆ｧ) - Reflex Race Leaderboards</title>
+</head>
+<body>
+    
+<div class="container is-fluid">    
+    <nav class="level page-title-bar">
+        <div class="level-left">
+            <div class="level-item">
+                <a href="../" class="link-no-style">
+                    <figure class="image is-40x40">
+                        <img src="../img/reflex-logo.png" class="img-responsive logo-img" />
+                    </figure>
+                </a>
+            </div>
+            <div class="level-item is-hidden-mobile page-title-divider">&nbsp;</div>
+            <div class="level-item">
+                <div>
+                    <a href="../" class="link-no-style">
+                        <span class="page-title is-uppercase">Reflex Race Leaderboards</span>
+                    </a>
+                    <nav class="level">
+                        <div class="level-left">
+                            <div class="level-item">
+                                <a href="../" class="page-nav-item">Home</a>
+                            </div>
+                            <div class="level-item">
+                                <a href="../players" class="page-nav-item">Players</a>
+                            </div>
+                            <div class="level-item">
+                                <a href="../maps" class="page-nav-item">Maps</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="level-right">
+            <div class="level-item">
+                <span class="nav-text">Last update: may 18, '25, 00:39</span>
+            </div>
+            <div class="level-item">
+                <span class="nav-text">[20841 Total Records]</span>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container is-fluid page-nav-horizontal-divider is-marginless">&nbsp;</div>
+
+
+
+<div class="container">
+        <div class="columns is-centered">
+
+            <div class="column is-narrow">
+                <div class="playerinformation">
+                    <div class="playername">      
+                        <span class="icons">
+                            <span class="icon is-medium">
+                                <a href="http://steamcommunity.com/profiles/76561198011750061" style="text-decoration : none;" target="_blank">
+                                    <span class="steam fa-stack">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-steam-square fa-stack-2x"></i>
+                                    </span>
+                                </a>
+                            </span>
+                        </span>                      
+                        <span>(竚絶密 ﾍ慳・ﾍ｡笆ｧ)</span>                    
+                    </div>
+                    
+                    <div class="tags has-addons">
+                        <span class="tag is-black">Records</span>
+                        <span class="tag is-dark">82</span>
+                    </div>
+                    <div class="tags has-addons">
+                        <span class="tag is-black">Average Rank</span>
+                        <span class="tag is-dark">35,12</span>
+                    </div>
+<div class="tags has-addons">
+                            <span class="tag is-black">Top 3</span>
+                            <span class="tag is-dark">3</span>
+                        </div>
+<div class="tags has-addons">
+                            <span class="tag is-black">Top 5</span>
+                            <span class="tag is-dark">3</span>
+                        </div>
+
+                </div>                
+            </div>
+
+            <div class="column is-narrow" id="records-list">
+
+                <ul class="pagination" style="display:none;"></ul>
+
+                <table class="table is-fullwidth reflex show-sort-icons">
+                    <thead>
+                        <tr>
+                            <th style="width:100px"><button class="sort" data-sort="record-rank">Rank</button></th>
+                            <th>
+                                <button class="sort" data-sort="player-name">Map</button>
+                                <div class="field">
+                                    <p class="control has-icons-left">
+                                        <input class="input is-small grey-placeholder search" type="text" placeholder="Search...">
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-search"></i>
+                                        </span>
+                                    </p>
+                                </div>
+                            </th>
+                            <th style="width:120px"><button class="sort" data-sort="record-time">Time</button></th>
+                        </tr>
+                    </thead>
+                    <tbody class="listjs-container" id="player_records_list">
+                    </tbody>
+                </table>
+
+                <div class="columns is-mobile">
+                    <div class="column">
+                        <p class="field has-addons is-pulled-right page-ticker">
+                            <a class="button is-small is-black" id="table-left-btn">
+                                <span class="icon is-small">
+                                    <i class="fa fa-chevron-left"></i>
+                                </span>
+                            </a>
+                            <a class="button is-small is-static is-black " id="table-page-text"></a>
+                            <a class="button is-small is-black" id="table-right-btn">
+                                <span class="icon is-small">
+                                    <i class="fa fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="content">            
+            Developed and designed by <a href="http://steamcommunity.com/profiles/76561198058399060">brandon</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    var records = [{
+map_id: '1443468206', map_name: 'd1m.strafe', map_record_count: 12,
+score: 56576, time: '56.576', rank: 11
+},{
+map_id: '1232203504', map_name: 'd1m.mine', map_record_count: 12,
+score: 28399, time: '28.399', rank: 12
+},{
+map_id: '1219929284', map_name: 'runstrafe2', map_record_count: 43,
+score: 8678, time: '08.678', rank: 2
+},{
+map_id: '1154408919', map_name: 'd1m.easypads', map_record_count: 18,
+score: 13247, time: '13.247', rank: 12
+},{
+map_id: '933992274', map_name: 'Dunes', map_record_count: 48,
+score: 38752, time: '38.752', rank: 37
+},{
+map_id: '930589047', map_name: 'Q3_ImoorR3_Remix', map_record_count: 44,
+score: 24211, time: '24.211', rank: 19
+},{
+map_id: '920825843', map_name: 'Virus', map_record_count: 56,
+score: 29360, time: '29.360', rank: 12
+},{
+map_id: '901344435', map_name: 'Eclipse', map_record_count: 25,
+score: 29324, time: '29.324', rank: 14
+},{
+map_id: '892309734', map_name: 'New_Moon', map_record_count: 101,
+score: 23866, time: '23.866', rank: 15
+},{
+map_id: '1414751525', map_name: 'RRWC18-2 (Station 5)', map_record_count: 16,
+score: 69729, time: '1:09.729', rank: 11
+},{
+map_id: '1343775000', map_name: 'dfwc2017-6', map_record_count: 137,
+score: 53053, time: '53.053', rank: 12
+},{
+map_id: '1333349395', map_name: 'o3j-Velocity', map_record_count: 12,
+score: 38865, time: '38.865', rank: 6
+},{
+map_id: '1185055002', map_name: 'gdfcomp08', map_record_count: 28,
+score: 26836, time: '26.836', rank: 20
+},{
+map_id: '1172000287', map_name: 'Override', map_record_count: 83,
+score: 31053, time: '31.053', rank: 30
+},{
+map_id: '1154814875', map_name: 'Fountain', map_record_count: 116,
+score: 25854, time: '25.854', rank: 38
+},{
+map_id: '1154814226', map_name: 'Caution', map_record_count: 77,
+score: 25959, time: '25.959', rank: 34
+},{
+map_id: '1092013787', map_name: 'Finalspace Experiment', map_record_count: 13,
+score: 208471, time: '3:28.471', rank: 10
+},{
+map_id: '1138452079', map_name: 'd-corners', map_record_count: 37,
+score: 19460, time: '19.460', rank: 15
+},{
+map_id: '1130995312', map_name: 'The Lions Moustache', map_record_count: 133,
+score: 39131, time: '39.131', rank: 60
+},{
+map_id: '1126699081', map_name: 'DownTown', map_record_count: 33,
+score: 27199, time: '27.199', rank: 11
+},{
+map_id: '1116759105', map_name: 'daan-ramparound', map_record_count: 66,
+score: 13774, time: '13.774', rank: 28
+},{
+map_id: '1115999475', map_name: 'profoundvelocity-cobra', map_record_count: 39,
+score: 9139, time: '09.139', rank: 3
+},{
+map_id: '873516814', map_name: 'Tokyo', map_record_count: 34,
+score: 13984, time: '13.984', rank: 20
+},{
+map_id: '1108505626', map_name: '1.2 wen', map_record_count: 15,
+score: 10543, time: '10.543', rank: 12
+},{
+map_id: '1092014470', map_name: 'Finalspace Short-Run 1', map_record_count: 38,
+score: 13116, time: '13.116', rank: 24
+},{
+map_id: '1088048589', map_name: 'Red Eclipse', map_record_count: 35,
+score: 21817, time: '21.817', rank: 9
+},{
+map_id: '1076261167', map_name: 'I think I can see the light!', map_record_count: 21,
+score: 36852, time: '36.852', rank: 18
+},{
+map_id: '962929610', map_name: 'wurst-ramps', map_record_count: 55,
+score: 29115, time: '29.115', rank: 19
+},{
+map_id: '961550587', map_name: 'br-guard', map_record_count: 40,
+score: 29712, time: '29.712', rank: 18
+},{
+map_id: '954570170', map_name: 'CastleStrafe Extended', map_record_count: 29,
+score: 33169, time: '33.169', rank: 9
+},{
+map_id: '949305140', map_name: 'castlestrafe', map_record_count: 68,
+score: 19052, time: '19.052', rank: 12
+},{
+map_id: '937054205', map_name: 'Happyrox', map_record_count: 15,
+score: 36295, time: '36.295', rank: 11
+},{
+map_id: '941927549', map_name: 'Slique_Valley', map_record_count: 123,
+score: 24056, time: '24.056', rank: 22
+},{
+map_id: '919519396', map_name: 'bejrek-Curveageddon', map_record_count: 166,
+score: 53595, time: '53.595', rank: 13
+},{
+map_id: '919767944', map_name: 'bej-Skyfall', map_record_count: 83,
+score: 44093, time: '44.093', rank: 83
+},{
+map_id: '919106036', map_name: 'rek-Jury', map_record_count: 161,
+score: 33670, time: '33.670', rank: 49
+},{
+map_id: '911686032', map_name: '2R2H - Drowsy journey', map_record_count: 74,
+score: 24279, time: '24.279', rank: 21
+},{
+map_id: '911694846', map_name: '2R2H - Astral fields', map_record_count: 105,
+score: 24066, time: '24.066', rank: 31
+},{
+map_id: '910002219', map_name: 'Kaw-Moonlight', map_record_count: 203,
+score: 195059, time: '3:15.059', rank: 184
+},{
+map_id: '904744724', map_name: 'Slopyy', map_record_count: 91,
+score: 28518, time: '28.518', rank: 87
+},{
+map_id: '899481392', map_name: 'best race in universe', map_record_count: 85,
+score: 22873, time: '22.873', rank: 15
+},{
+map_id: '899961193', map_name: 'Escape from Maldoran', map_record_count: 124,
+score: 35885, time: '35.885', rank: 8
+},{
+map_id: '899132299', map_name: 'Sunny Strafe', map_record_count: 87,
+score: 18773, time: '18.773', rank: 22
+},{
+map_id: '898757379', map_name: 'Escape from Maldoran (weapons)', map_record_count: 72,
+score: 34542, time: '34.542', rank: 20
+},{
+map_id: '893558904', map_name: 'daan-switchingitup', map_record_count: 14,
+score: 44741, time: '44.741', rank: 8
+},{
+map_id: '893454235', map_name: 'RadiantFINAL', map_record_count: 112,
+score: 76411, time: '1:16.411', rank: 17
+},{
+map_id: '892705664', map_name: 'daan-strafehall', map_record_count: 134,
+score: 9522, time: '09.522', rank: 38
+},{
+map_id: '892221513', map_name: 'San Phobos', map_record_count: 29,
+score: 11177, time: '11.177', rank: 12
+},{
+map_id: '890904516', map_name: 'niilzon-run-2-flubblecrank', map_record_count: 49,
+score: 22388, time: '22.388', rank: 13
+},{
+map_id: '890156561', map_name: 'Pornstar-Shorty-v3', map_record_count: 85,
+score: 14059, time: '14.059', rank: 31
+},{
+map_id: '880066237', map_name: 'well well well', map_record_count: 75,
+score: 11437, time: '11.437', rank: 13
+},{
+map_id: '875038931', map_name: 'dbro-race3', map_record_count: 100,
+score: 19762, time: '19.762', rank: 14
+},{
+map_id: '871333149', map_name: 'Omega', map_record_count: 60,
+score: 24835, time: '24.835', rank: 29
+},{
+map_id: '866468466', map_name: 'LA Dreams (sleep edit)', map_record_count: 86,
+score: 40633, time: '40.633', rank: 64
+},{
+map_id: '848946397', map_name: 'Descent', map_record_count: 47,
+score: 19141, time: '19.141', rank: 16
+},{
+map_id: '833570380', map_name: 'd-tombstrafe', map_record_count: 30,
+score: 5263, time: '05.263', rank: 6
+},{
+map_id: '825402658', map_name: 'pornstar-kaine', map_record_count: 385,
+score: 18647, time: '18.647', rank: 56
+},{
+map_id: '828369372', map_name: 'LA Hattberg', map_record_count: 62,
+score: 37284, time: '37.284', rank: 29
+},{
+map_id: '705024866', map_name: 'pornstar-bless', map_record_count: 147,
+score: 22670, time: '22.670', rank: 22
+},{
+map_id: '705024862', map_name: 'pornstar-slopin', map_record_count: 268,
+score: 28304, time: '28.304', rank: 2
+},{
+map_id: '812451528', map_name: 'bo-Clueless', map_record_count: 28,
+score: 56331, time: '56.331', rank: 18
+},{
+map_id: '801895299', map_name: 'bej-black', map_record_count: 386,
+score: 24753, time: '24.753', rank: 53
+},{
+map_id: '811803357', map_name: 'The Mustard Tiger', map_record_count: 1174,
+score: 29424, time: '29.424', rank: 146
+},{
+map_id: '801889792', map_name: 'bej-Red', map_record_count: 362,
+score: 21781, time: '21.781', rank: 23
+},{
+map_id: '785511879', map_name: 'br-drive', map_record_count: 87,
+score: 62980, time: '1:02.980', rank: 22
+},{
+map_id: '779810013', map_name: 'Encounter the Monolith', map_record_count: 202,
+score: 24724, time: '24.724', rank: 32
+},{
+map_id: '770954976', map_name: 'bull-highway', map_record_count: 199,
+score: 21828, time: '21.828', rank: 21
+},{
+map_id: '754106892', map_name: 'easy skills challenge', map_record_count: 204,
+score: 28387, time: '28.387', rank: 64
+},{
+map_id: '761700632', map_name: 'dbro-race2', map_record_count: 241,
+score: 7458, time: '07.458', rank: 59
+},{
+map_id: '720205365', map_name: 'LA Tetris Strafes', map_record_count: 47,
+score: 15866, time: '15.866', rank: 16
+},{
+map_id: '713944306', map_name: 'Uber-Strafer-1', map_record_count: 18,
+score: 38452, time: '38.452', rank: 7
+},{
+map_id: '707554788', map_name: 'rek-Royal', map_record_count: 104,
+score: 147281, time: '2:27.281', rank: 80
+},{
+map_id: '710513973', map_name: 'Run robot, run!', map_record_count: 17,
+score: 28710, time: '28.710', rank: 12
+},{
+map_id: '706795253', map_name: 'The Edge Abyss', map_record_count: 399,
+score: 10133, time: '10.133', rank: 35
+},{
+map_id: '686523741', map_name: 'OverGrown-Rocket', map_record_count: 30,
+score: 23500, time: '23.500', rank: 17
+},{
+map_id: '654073183', map_name: 'LA Dreams', map_record_count: 120,
+score: 28974, time: '28.974', rank: 40
+},{
+map_id: '651920580', map_name: 'rek-Staro', map_record_count: 53,
+score: 118494, time: '1:58.494', rank: 33
+},{
+map_id: '652256992', map_name: 'rek-Real', map_record_count: 571,
+score: 25633, time: '25.633', rank: 74
+},{
+map_id: '647445993', map_name: 'bejrek-Sandzibar', map_record_count: 202,
+score: 18281, time: '18.281', rank: 41
+},{
+map_id: '625879981', map_name: 'Reflextrain', map_record_count: 656,
+score: 160277, time: '2:40.277', rank: 559
+},{
+map_id: '625671715', map_name: 'Time Cube', map_record_count: 8,
+score: 38281, time: '38.281', rank: 7
+},{
+map_id: '608605169', map_name: 'Castle Run', map_record_count: 62,
+score: 12306, time: '12.306', rank: 32
+},];
+
+    var divRecordsList = document.querySelector('#player_records_list');
+
+        var html = ``;
+        for (var i = 0; i < records.length; ++i) {
+            html += `
+<tr>
+    <td class="record-rank has-text-right">${records[i].rank}/${records[i].map_record_count}</td>
+    <td><a href="../maps/${records[i].map_id}.html" class="map-name">${records[i].map_name}</a></td>
+    <td class="has-text-right">
+        <span class="record-time" style="display:none">${records[i].score}</span>
+        ${records[i].time}
+    </td>
+</tr>`;
+        }
+
+        divRecordsList.innerHTML = html;
+
+
+
+        
+function br_get_total_pages(list) {
+    return Math.ceil(list.matchingItems.length / list.page);
+}
+
+function br_get_current_page(list) {
+    return Math.ceil(list.i / list.page);
+}
+
+function br_update_table_page_text(list, el) {
+    el.textContent = br_get_current_page(list) + "/" + br_get_total_pages(list);
+}
+
+function br_show_next_page(list){
+    if (list.i + list.page <= list.matchingItems.length) {
+        list.show(list.i + list.page, list.page);        
+    }
+}
+
+function br_show_previous_page(list){
+    if (list.i > 1) {
+        var i = list.i - list.page;
+        if (i < 1) {
+            i = 1;
+        }
+        list.show(i, list.page);        
+    }
+}
+
+
+        var records_list = new List('records-list', {
+            listClass: 'listjs-container',
+            valueNames: ['record-rank', 'map-name', 'record-time'],
+            page: 20,
+            pagination: true
+        });
+
+        
+        var table_page_text_el = document.getElementById('table-page-text');
+        
+        br_update_table_page_text(records_list, table_page_text_el);
+
+        records_list.on('searchComplete', function () {
+            br_update_table_page_text(records_list, table_page_text_el);
+        });
+
+        document.getElementById('table-right-btn').onclick = function () {
+            br_show_next_page(records_list);
+            br_update_table_page_text(records_list, table_page_text_el);
+        }
+
+        document.getElementById('table-left-btn').onclick = function () {
+            br_show_previous_page(records_list);
+            br_update_table_page_text(records_list, table_page_text_el);
+        }
+
+    </script>
+</body>
+</html>
+

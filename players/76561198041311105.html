@@ -1,0 +1,305 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE =edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="../reflex_favicon.ico" type="image/x-icon"/>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css"/>
+<link rel="stylesheet" href="../css/styles.css" >
+<script src="https://use.fontawesome.com/d8bf0cbc69.js"></script>
+    <title>Micrine - Reflex Race Leaderboards</title>
+</head>
+<body>
+    
+<div class="container is-fluid">    
+    <nav class="level page-title-bar">
+        <div class="level-left">
+            <div class="level-item">
+                <a href="../" class="link-no-style">
+                    <figure class="image is-40x40">
+                        <img src="../img/reflex-logo.png" class="img-responsive logo-img" />
+                    </figure>
+                </a>
+            </div>
+            <div class="level-item is-hidden-mobile page-title-divider">&nbsp;</div>
+            <div class="level-item">
+                <div>
+                    <a href="../" class="link-no-style">
+                        <span class="page-title is-uppercase">Reflex Race Leaderboards</span>
+                    </a>
+                    <nav class="level">
+                        <div class="level-left">
+                            <div class="level-item">
+                                <a href="../" class="page-nav-item">Home</a>
+                            </div>
+                            <div class="level-item">
+                                <a href="../players" class="page-nav-item">Players</a>
+                            </div>
+                            <div class="level-item">
+                                <a href="../maps" class="page-nav-item">Maps</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="level-right">
+            <div class="level-item">
+                <span class="nav-text">Last update: may 18, '25, 00:39</span>
+            </div>
+            <div class="level-item">
+                <span class="nav-text">[20841 Total Records]</span>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container is-fluid page-nav-horizontal-divider is-marginless">&nbsp;</div>
+
+
+
+<div class="container">
+        <div class="columns is-centered">
+
+            <div class="column is-narrow">
+                <div class="playerinformation">
+                    <div class="playername">      
+                        <span class="icons">
+                            <span class="icon is-medium">
+                                <a href="http://steamcommunity.com/profiles/76561198041311105" style="text-decoration : none;" target="_blank">
+                                    <span class="steam fa-stack">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-steam-square fa-stack-2x"></i>
+                                    </span>
+                                </a>
+                            </span>
+                        </span>                      
+                        <span>Micrine</span>                    
+                    </div>
+                    
+                    <div class="tags has-addons">
+                        <span class="tag is-black">Records</span>
+                        <span class="tag is-dark">23</span>
+                    </div>
+                    <div class="tags has-addons">
+                        <span class="tag is-black">Average Rank</span>
+                        <span class="tag is-dark">108,48</span>
+                    </div>
+
+                </div>                
+            </div>
+
+            <div class="column is-narrow" id="records-list">
+
+                <ul class="pagination" style="display:none;"></ul>
+
+                <table class="table is-fullwidth reflex show-sort-icons">
+                    <thead>
+                        <tr>
+                            <th style="width:100px"><button class="sort" data-sort="record-rank">Rank</button></th>
+                            <th>
+                                <button class="sort" data-sort="player-name">Map</button>
+                                <div class="field">
+                                    <p class="control has-icons-left">
+                                        <input class="input is-small grey-placeholder search" type="text" placeholder="Search...">
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-search"></i>
+                                        </span>
+                                    </p>
+                                </div>
+                            </th>
+                            <th style="width:120px"><button class="sort" data-sort="record-time">Time</button></th>
+                        </tr>
+                    </thead>
+                    <tbody class="listjs-container" id="player_records_list">
+                    </tbody>
+                </table>
+
+                <div class="columns is-mobile">
+                    <div class="column">
+                        <p class="field has-addons is-pulled-right page-ticker">
+                            <a class="button is-small is-black" id="table-left-btn">
+                                <span class="icon is-small">
+                                    <i class="fa fa-chevron-left"></i>
+                                </span>
+                            </a>
+                            <a class="button is-small is-static is-black " id="table-page-text"></a>
+                            <a class="button is-small is-black" id="table-right-btn">
+                                <span class="icon is-small">
+                                    <i class="fa fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="content">            
+            Developed and designed by <a href="http://steamcommunity.com/profiles/76561198058399060">brandon</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    var records = [{
+map_id: '905831574', map_name: 'Consumed', map_record_count: 69,
+score: 37042, time: '37.042', rank: 50
+},{
+map_id: '1226923479', map_name: 'Starside', map_record_count: 39,
+score: 22679, time: '22.679', rank: 29
+},{
+map_id: '1172000287', map_name: 'Override', map_record_count: 83,
+score: 34539, time: '34.539', rank: 56
+},{
+map_id: '1100559661', map_name: 'Short strange', map_record_count: 15,
+score: 8300, time: '08.300', rank: 13
+},{
+map_id: '908083124', map_name: 'wurst-glass', map_record_count: 50,
+score: 12975, time: '12.975', rank: 33
+},{
+map_id: '904744724', map_name: 'Slopyy', map_record_count: 91,
+score: 20040, time: '20.040', rank: 69
+},{
+map_id: '899481392', map_name: 'best race in universe', map_record_count: 85,
+score: 36971, time: '36.971', rank: 80
+},{
+map_id: '899132299', map_name: 'Sunny Strafe', map_record_count: 87,
+score: 24453, time: '24.453', rank: 83
+},{
+map_id: '890904516', map_name: 'niilzon-run-2-flubblecrank', map_record_count: 49,
+score: 28819, time: '28.819', rank: 44
+},{
+map_id: '875038931', map_name: 'dbro-race3', map_record_count: 100,
+score: 28646, time: '28.646', rank: 89
+},{
+map_id: '705024866', map_name: 'pornstar-bless', map_record_count: 147,
+score: 26228, time: '26.228', rank: 80
+},{
+map_id: '814233804', map_name: 'r7-redd', map_record_count: 110,
+score: 61328, time: '1:01.328', rank: 95
+},{
+map_id: '814118171', map_name: 'r7-ka1n-v2', map_record_count: 36,
+score: 75504, time: '1:15.504', rank: 26
+},{
+map_id: '811803357', map_name: 'The Mustard Tiger', map_record_count: 1174,
+score: 34984, time: '34.984', rank: 391
+},{
+map_id: '801889792', map_name: 'bej-Red', map_record_count: 362,
+score: 36328, time: '36.328', rank: 293
+},{
+map_id: '779810013', map_name: 'Encounter the Monolith', map_record_count: 202,
+score: 36993, time: '36.993', rank: 111
+},{
+map_id: '713127198', map_name: 'br-vacation', map_record_count: 125,
+score: 451208, time: '7:31.208', rank: 109
+},{
+map_id: '707554788', map_name: 'rek-Royal', map_record_count: 104,
+score: 196223, time: '3:16.223', rank: 89
+},{
+map_id: '666490106', map_name: 'Escape', map_record_count: 310,
+score: 11522, time: '11.522', rank: 201
+},{
+map_id: '651920580', map_name: 'rek-Staro', map_record_count: 53,
+score: 120678, time: '2:00.678', rank: 34
+},{
+map_id: '652256992', map_name: 'rek-Real', map_record_count: 571,
+score: 29400, time: '29.400', rank: 277
+},{
+map_id: '647445993', map_name: 'bejrek-Sandzibar', map_record_count: 202,
+score: 19309, time: '19.309', rank: 71
+},{
+map_id: '625879981', map_name: 'Reflextrain', map_record_count: 656,
+score: 10627, time: '10.627', rank: 172
+},];
+
+    var divRecordsList = document.querySelector('#player_records_list');
+
+        var html = ``;
+        for (var i = 0; i < records.length; ++i) {
+            html += `
+<tr>
+    <td class="record-rank has-text-right">${records[i].rank}/${records[i].map_record_count}</td>
+    <td><a href="../maps/${records[i].map_id}.html" class="map-name">${records[i].map_name}</a></td>
+    <td class="has-text-right">
+        <span class="record-time" style="display:none">${records[i].score}</span>
+        ${records[i].time}
+    </td>
+</tr>`;
+        }
+
+        divRecordsList.innerHTML = html;
+
+
+
+        
+function br_get_total_pages(list) {
+    return Math.ceil(list.matchingItems.length / list.page);
+}
+
+function br_get_current_page(list) {
+    return Math.ceil(list.i / list.page);
+}
+
+function br_update_table_page_text(list, el) {
+    el.textContent = br_get_current_page(list) + "/" + br_get_total_pages(list);
+}
+
+function br_show_next_page(list){
+    if (list.i + list.page <= list.matchingItems.length) {
+        list.show(list.i + list.page, list.page);        
+    }
+}
+
+function br_show_previous_page(list){
+    if (list.i > 1) {
+        var i = list.i - list.page;
+        if (i < 1) {
+            i = 1;
+        }
+        list.show(i, list.page);        
+    }
+}
+
+
+        var records_list = new List('records-list', {
+            listClass: 'listjs-container',
+            valueNames: ['record-rank', 'map-name', 'record-time'],
+            page: 20,
+            pagination: true
+        });
+
+        
+        var table_page_text_el = document.getElementById('table-page-text');
+        
+        br_update_table_page_text(records_list, table_page_text_el);
+
+        records_list.on('searchComplete', function () {
+            br_update_table_page_text(records_list, table_page_text_el);
+        });
+
+        document.getElementById('table-right-btn').onclick = function () {
+            br_show_next_page(records_list);
+            br_update_table_page_text(records_list, table_page_text_el);
+        }
+
+        document.getElementById('table-left-btn').onclick = function () {
+            br_show_previous_page(records_list);
+            br_update_table_page_text(records_list, table_page_text_el);
+        }
+
+    </script>
+</body>
+</html>
+

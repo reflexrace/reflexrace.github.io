@@ -1,0 +1,367 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE =edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="../reflex_favicon.ico" type="image/x-icon"/>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css"/>
+<link rel="stylesheet" href="../css/styles.css" >
+<script src="https://use.fontawesome.com/d8bf0cbc69.js"></script>
+    
+    <title>br-guard - Reflex Race Leaderboards</title>
+</head>
+<body>
+    
+<div class="container is-fluid">    
+    <nav class="level page-title-bar">
+        <div class="level-left">
+            <div class="level-item">
+                <a href="../" class="link-no-style">
+                    <figure class="image is-40x40">
+                        <img src="../img/reflex-logo.png" class="img-responsive logo-img" />
+                    </figure>
+                </a>
+            </div>
+            <div class="level-item is-hidden-mobile page-title-divider">&nbsp;</div>
+            <div class="level-item">
+                <div>
+                    <a href="../" class="link-no-style">
+                        <span class="page-title is-uppercase">Reflex Race Leaderboards</span>
+                    </a>
+                    <nav class="level">
+                        <div class="level-left">
+                            <div class="level-item">
+                                <a href="../" class="page-nav-item">Home</a>
+                            </div>
+                            <div class="level-item">
+                                <a href="../players" class="page-nav-item">Players</a>
+                            </div>
+                            <div class="level-item">
+                                <a href="../maps" class="page-nav-item">Maps</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="level-right">
+            <div class="level-item">
+                <span class="nav-text">Last update: may 18, '25, 00:39</span>
+            </div>
+            <div class="level-item">
+                <span class="nav-text">[20841 Total Records]</span>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container is-fluid page-nav-horizontal-divider is-marginless">&nbsp;</div>
+
+
+
+    <div class="container">
+        <div class="columns is-mobile is-centered">
+            <div class="column">
+                <div class="mapinformation">
+                    <figure class="image mapbg">
+                        <img src="https://images.steamusercontent.com/ugc/848216091241812259/CE85D5007D548193C09C636605C4EBAE43DE3F1F/"/>
+                    </figure>
+                    <div class="general">
+                        <div class="general-wrapper">
+
+                            <div class="mapname">br-guard</div>
+
+                            <div class="icons">
+
+                                <span class="icon is-medium">
+                                    <a href="http://steamcommunity.com/sharedfiles/filedetails/?id=961550587" style="text-decoration : none;" target="_blank">
+                                        <span class="steam fa-stack">
+                                            <i class="fa fa-square fa-stack-2x"></i>
+                                            <i class="fa fa-steam-square fa-stack-2x"></i>
+                                        </span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-narrow" id="players-list">
+
+                <ul class="pagination" style="display:none;"></ul>
+
+                <table class="table reflex show-sort-icons">
+                    <thead>
+                        <tr>
+                            <th style="width:100px"><button class="sort" data-sort="record-rank">Rank</button></th>
+                            <th>
+                                <button class="sort" data-sort="player-name">Player</button>
+                                <div class="field">
+                                    <p class="control has-icons-left">
+                                        <input class="input is-small grey-placeholder search" type="text" placeholder="Search...">
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-search"></i>
+                                        </span>      
+                                    </p>
+                                </div>
+                            </th>
+                            <th style="width:120px"><button class="sort" data-sort="record-time">Time</button></th>
+                            <th style="width:150px"><button class="sort" data-sort="record-top-speed">Top Speed</button></th>
+                            <th style="width:150px"><button class="sort" data-sort="record-distance">Distance</button></th>
+                        </tr>
+                    </thead>
+                    <tbody class="listjs-container" id="map_records_list">
+                    </tbody>
+                </table>  
+                
+                <div class="columns is-mobile">
+                    <div class="column">
+                        <p class="field has-addons is-pulled-right page-ticker">
+                            <a class="button is-small is-black" id="table-left-btn">
+                                <span class="icon is-small">
+                                    <i class="fa fa-chevron-left"></i>
+                                </span>
+                            </a>
+                            <a class="button is-small is-static is-black " id="table-page-text"></a>
+                            <a class="button is-small is-black" id="table-right-btn">
+                                <span class="icon is-small">
+                                    <i class="fa fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </p>
+                    </div>
+                </div>              
+            </div>            
+        </div>
+    </div>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="content">            
+            Developed and designed by <a href="http://steamcommunity.com/profiles/76561198058399060">brandon</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+
+var records = [{
+pid: '76561198290382656', pname: 'allan', score: 24788, time: '24.788', rank: 1,
+dist: 19842, dist_str: '19.842', top_speed: 1015, top_speed_str: '1.015'
+},{
+pid: '76561198033793341', pname: 'breaker', score: 24900, time: '24.900', rank: 2,
+dist: 19674, dist_str: '19.674', top_speed: 1029, top_speed_str: '1.029'
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', score: 25515, time: '25.515', rank: 3,
+dist: 19850, dist_str: '19.850', top_speed: 1050, top_speed_str: '1.050'
+},{
+pid: '76561198033171295', pname: 'lith', score: 25560, time: '25.560', rank: 4,
+dist: 19646, dist_str: '19.646', top_speed: 1085, top_speed_str: '1.085'
+},{
+pid: '76561198009937727', pname: 'salakalastaja', score: 25834, time: '25.834', rank: 5,
+dist: 19860, dist_str: '19.860', top_speed: 1000, top_speed_str: '1.000'
+},{
+pid: '76561198058399060', pname: 'brandon', score: 26034, time: '26.034', rank: 6,
+dist: 19826, dist_str: '19.826', top_speed: 995, top_speed_str: '995'
+},{
+pid: '76561198047164818', pname: 'H0ax', score: 26077, time: '26.077', rank: 7,
+dist: 19732, dist_str: '19.732', top_speed: 984, top_speed_str: '984'
+},{
+pid: '76561198120524395', pname: 'wm_Cosmo', score: 26435, time: '26.435', rank: 8,
+dist: 20195, dist_str: '20.195', top_speed: 1020, top_speed_str: '1.020'
+},{
+pid: '76561198115817963', pname: 'Boost', score: 26486, time: '26.486', rank: 9,
+dist: 20239, dist_str: '20.239', top_speed: 1043, top_speed_str: '1.043'
+},{
+pid: '76561198024660114', pname: 'doombro', score: 26555, time: '26.555', rank: 10,
+dist: 19953, dist_str: '19.953', top_speed: 990, top_speed_str: '990'
+},{
+pid: '76561198082734424', pname: 'sharqosity', score: 27070, time: '27.070', rank: 11,
+dist: 19930, dist_str: '19.930', top_speed: 1018, top_speed_str: '1.018'
+},{
+pid: '76561198017906677', pname: 'Toni43', score: 27429, time: '27.429', rank: 12,
+dist: 20140, dist_str: '20.140', top_speed: 991, top_speed_str: '991'
+},{
+pid: '76561198103198986', pname: 'Hit Gone Fishin', score: 27694, time: '27.694', rank: 13,
+dist: 20047, dist_str: '20.047', top_speed: 1056, top_speed_str: '1.056'
+},{
+pid: '76561198050926014', pname: ':gator:衰:gator:', score: 28185, time: '28.185', rank: 14,
+dist: 20388, dist_str: '20.388', top_speed: 1025, top_speed_str: '1.025'
+},{
+pid: '76561198021107656', pname: 'Thorec', score: 28637, time: '28.637', rank: 15,
+dist: 20095, dist_str: '20.095', top_speed: 986, top_speed_str: '986'
+},{
+pid: '76561198148310354', pname: 'Woeste Wessel', score: 28741, time: '28.741', rank: 16,
+dist: 20545, dist_str: '20.545', top_speed: 920, top_speed_str: '920'
+},{
+pid: '76561197990632009', pname: 'lumpp 櫨櫨櫨', score: 29361, time: '29.361', rank: 17,
+dist: 20081, dist_str: '20.081', top_speed: 909, top_speed_str: '909'
+},{
+pid: '76561198011750061', pname: '(竚絶密 ﾍ慳・ﾍ｡笆ｧ)', score: 29712, time: '29.712', rank: 18,
+dist: 20285, dist_str: '20.285', top_speed: 886, top_speed_str: '886'
+},{
+pid: '76561198040956774', pname: 'RP`v3nture', score: 29850, time: '29.850', rank: 19,
+dist: 20093, dist_str: '20.093', top_speed: 947, top_speed_str: '947'
+},{
+pid: '76561197972268829', pname: 'MAD_ALiEN多室', score: 29872, time: '29.872', rank: 20,
+dist: 19853, dist_str: '19.853', top_speed: 958, top_speed_str: '958'
+},{
+pid: '76561198017114958', pname: '4thwrldmrshl', score: 29968, time: '29.968', rank: 21,
+dist: 20054, dist_str: '20.054', top_speed: 934, top_speed_str: '934'
+},{
+pid: '76561198241529442', pname: 'Upside-DownFish', score: 29986, time: '29.986', rank: 22,
+dist: 20029, dist_str: '20.029', top_speed: 948, top_speed_str: '948'
+},{
+pid: '76561198060655554', pname: 'gimmick', score: 30023, time: '30.023', rank: 23,
+dist: 20168, dist_str: '20.168', top_speed: 929, top_speed_str: '929'
+},{
+pid: '76561198008916040', pname: 'Zohd', score: 30271, time: '30.271', rank: 24,
+dist: 20098, dist_str: '20.098', top_speed: 1020, top_speed_str: '1.020'
+},{
+pid: '76561197960390445', pname: 'Warven', score: 30625, time: '30.625', rank: 25,
+dist: 20369, dist_str: '20.369', top_speed: 843, top_speed_str: '843'
+},{
+pid: '76561198120301921', pname: 'orion', score: 30693, time: '30.693', rank: 26,
+dist: 20171, dist_str: '20.171', top_speed: 848, top_speed_str: '848'
+},{
+pid: '76561198077547676', pname: 'Erneo1337', score: 31083, time: '31.083', rank: 27,
+dist: 19641, dist_str: '19.641', top_speed: 962, top_speed_str: '962'
+},{
+pid: '76561198035798985', pname: 'Sug4r', score: 31372, time: '31.372', rank: 28,
+dist: 19784, dist_str: '19.784', top_speed: 857, top_speed_str: '857'
+},{
+pid: '76561197979635028', pname: 'KraXXXel', score: 31974, time: '31.974', rank: 29,
+dist: 20283, dist_str: '20.283', top_speed: 879, top_speed_str: '879'
+},{
+pid: '76561197988440887', pname: 'Kawumm', score: 32786, time: '32.786', rank: 30,
+dist: 20110, dist_str: '20.110', top_speed: 828, top_speed_str: '828'
+},{
+pid: '76561198162045213', pname: 'pure', score: 33070, time: '33.070', rank: 31,
+dist: 19996, dist_str: '19.996', top_speed: 857, top_speed_str: '857'
+},{
+pid: '76561199163428333', pname: '\u003e\u003eFeather.', score: 33630, time: '33.630', rank: 32,
+dist: 20323, dist_str: '20.323', top_speed: 892, top_speed_str: '892'
+},{
+pid: '76561198416172670', pname: 'cutcher', score: 35320, time: '35.320', rank: 33,
+dist: 20292, dist_str: '20.292', top_speed: 833, top_speed_str: '833'
+},{
+pid: '76561198084857058', pname: 'Vucko/dll3z', score: 37505, time: '37.505', rank: 34,
+dist: 19756, dist_str: '19.756', top_speed: 810, top_speed_str: '810'
+},{
+pid: '76561198156256600', pname: 'marrrlowe', score: 37837, time: '37.837', rank: 35,
+dist: 20753, dist_str: '20.753', top_speed: 823, top_speed_str: '823'
+},{
+pid: '76561198267451963', pname: 'gambit', score: 38498, time: '38.498', rank: 36,
+dist: 19964, dist_str: '19.964', top_speed: 705, top_speed_str: '705'
+},{
+pid: '76561198056582536', pname: 'Wobble Fox', score: 38644, time: '38.644', rank: 37,
+dist: 19593, dist_str: '19.593', top_speed: 869, top_speed_str: '869'
+},{
+pid: '76561198073967688', pname: 'i dont even know anymore', score: 41590, time: '41.590', rank: 38,
+dist: 19693, dist_str: '19.693', top_speed: 789, top_speed_str: '789'
+},{
+pid: '76561198028281057', pname: '\u003c blank \u003e', score: 43203, time: '43.203', rank: 39,
+dist: 19806, dist_str: '19.806', top_speed: 752, top_speed_str: '752'
+},{
+pid: '76561197995378175', pname: 'ACIDZOMBIE6516', score: 60740, time: '1:00.740', rank: 40,
+dist: 19554, dist_str: '19.554', top_speed: 421, top_speed_str: '421'
+},];
+
+
+        var divRecordsList = document.querySelector('#map_records_list');
+
+        var html = ``;
+        for (var i = 0; i < records.length; ++i) {
+            html += `
+<tr>
+    <td class="record-rank has-text-right">${records[i].rank}/40</td>
+    <td><a href="../players/${records[i].pid}.html" class="player-name">${records[i].pname}</a></td>
+    <td class="has-text-right">
+        <span class="record-time" style="display:none">${records[i].score}</span>
+        ${records[i].time}
+    </td>
+    <td class="has-text-right">
+        <span class="record-top-speed" style="display:none">${records[i].top_speed}</span>
+        ${records[i].top_speed_str}
+    </td>
+    <td class="has-text-right">
+        <span class="record-distance" style="display:none">${records[i].dist}</span>
+        ${records[i].dist_str}
+    </td>
+</tr>`;
+        }
+
+        divRecordsList.innerHTML = html;
+
+
+function br_get_total_pages(list) {
+    return Math.ceil(list.matchingItems.length / list.page);
+}
+
+function br_get_current_page(list) {
+    return Math.ceil(list.i / list.page);
+}
+
+function br_update_table_page_text(list, el) {
+    el.textContent = br_get_current_page(list) + "/" + br_get_total_pages(list);
+}
+
+function br_show_next_page(list){
+    if (list.i + list.page <= list.matchingItems.length) {
+        list.show(list.i + list.page, list.page);        
+    }
+}
+
+function br_show_previous_page(list){
+    if (list.i > 1) {
+        var i = list.i - list.page;
+        if (i < 1) {
+            i = 1;
+        }
+        list.show(i, list.page);        
+    }
+}
+
+
+        var records_list = new List('players-list', {
+            listClass: 'listjs-container',
+            valueNames: ['record-rank', 'player-name', 'record-time', 'record-top-speed', 'record-distance'],
+            page: 20,
+            pagination: true
+        });
+
+        
+        var table_page_text_el = document.getElementById('table-page-text');
+
+        
+        br_update_table_page_text(records_list, table_page_text_el);
+
+        records_list.on('searchComplete', function () {
+            br_update_table_page_text(records_list, table_page_text_el);
+        });
+
+        document.getElementById('table-right-btn').onclick = function () {
+            br_show_next_page(records_list);
+            br_update_table_page_text(records_list, table_page_text_el);
+        }
+
+        document.getElementById('table-left-btn').onclick = function () {
+            br_show_previous_page(records_list);
+            br_update_table_page_text(records_list, table_page_text_el);
+        }
+
+</script>
+</body>
+</html>
+

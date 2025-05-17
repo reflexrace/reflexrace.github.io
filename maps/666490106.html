@@ -1,0 +1,1177 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE =edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="../reflex_favicon.ico" type="image/x-icon"/>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css"/>
+<link rel="stylesheet" href="../css/styles.css" >
+<script src="https://use.fontawesome.com/d8bf0cbc69.js"></script>
+    
+    <title>Escape - Reflex Race Leaderboards</title>
+</head>
+<body>
+    
+<div class="container is-fluid">    
+    <nav class="level page-title-bar">
+        <div class="level-left">
+            <div class="level-item">
+                <a href="../" class="link-no-style">
+                    <figure class="image is-40x40">
+                        <img src="../img/reflex-logo.png" class="img-responsive logo-img" />
+                    </figure>
+                </a>
+            </div>
+            <div class="level-item is-hidden-mobile page-title-divider">&nbsp;</div>
+            <div class="level-item">
+                <div>
+                    <a href="../" class="link-no-style">
+                        <span class="page-title is-uppercase">Reflex Race Leaderboards</span>
+                    </a>
+                    <nav class="level">
+                        <div class="level-left">
+                            <div class="level-item">
+                                <a href="../" class="page-nav-item">Home</a>
+                            </div>
+                            <div class="level-item">
+                                <a href="../players" class="page-nav-item">Players</a>
+                            </div>
+                            <div class="level-item">
+                                <a href="../maps" class="page-nav-item">Maps</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="level-right">
+            <div class="level-item">
+                <span class="nav-text">Last update: may 18, '25, 00:39</span>
+            </div>
+            <div class="level-item">
+                <span class="nav-text">[20841 Total Records]</span>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container is-fluid page-nav-horizontal-divider is-marginless">&nbsp;</div>
+
+
+
+    <div class="container">
+        <div class="columns is-mobile is-centered">
+            <div class="column">
+                <div class="mapinformation">
+                    <figure class="image mapbg">
+                        <img src="https://images.steamusercontent.com/ugc/284100092852559248/517E747E7C9B82859EEDC52D663AD4097416872A/"/>
+                    </figure>
+                    <div class="general">
+                        <div class="general-wrapper">
+
+                            <div class="mapname">Escape</div>
+
+                            <div class="icons">
+
+                                <span class="icon is-medium">
+                                    <a href="http://steamcommunity.com/sharedfiles/filedetails/?id=666490106" style="text-decoration : none;" target="_blank">
+                                        <span class="steam fa-stack">
+                                            <i class="fa fa-square fa-stack-2x"></i>
+                                            <i class="fa fa-steam-square fa-stack-2x"></i>
+                                        </span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-narrow" id="players-list">
+
+                <ul class="pagination" style="display:none;"></ul>
+
+                <table class="table reflex show-sort-icons">
+                    <thead>
+                        <tr>
+                            <th style="width:100px"><button class="sort" data-sort="record-rank">Rank</button></th>
+                            <th>
+                                <button class="sort" data-sort="player-name">Player</button>
+                                <div class="field">
+                                    <p class="control has-icons-left">
+                                        <input class="input is-small grey-placeholder search" type="text" placeholder="Search...">
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-search"></i>
+                                        </span>      
+                                    </p>
+                                </div>
+                            </th>
+                            <th style="width:120px"><button class="sort" data-sort="record-time">Time</button></th>
+                            <th style="width:150px"><button class="sort" data-sort="record-top-speed">Top Speed</button></th>
+                            <th style="width:150px"><button class="sort" data-sort="record-distance">Distance</button></th>
+                        </tr>
+                    </thead>
+                    <tbody class="listjs-container" id="map_records_list">
+                    </tbody>
+                </table>  
+                
+                <div class="columns is-mobile">
+                    <div class="column">
+                        <p class="field has-addons is-pulled-right page-ticker">
+                            <a class="button is-small is-black" id="table-left-btn">
+                                <span class="icon is-small">
+                                    <i class="fa fa-chevron-left"></i>
+                                </span>
+                            </a>
+                            <a class="button is-small is-static is-black " id="table-page-text"></a>
+                            <a class="button is-small is-black" id="table-right-btn">
+                                <span class="icon is-small">
+                                    <i class="fa fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </p>
+                    </div>
+                </div>              
+            </div>            
+        </div>
+    </div>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="content">            
+            Developed and designed by <a href="http://steamcommunity.com/profiles/76561198058399060">brandon</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+
+var records = [{
+pid: '76561198031006273', pname: 'tofu', score: 5836, time: '05.836', rank: 1,
+dist: 8417, dist_str: '8.417', top_speed: 1832, top_speed_str: '1.832'
+},{
+pid: '76561198004249966', pname: 'Daan', score: 6593, time: '06.593', rank: 2,
+dist: 8332, dist_str: '8.332', top_speed: 1524, top_speed_str: '1.524'
+},{
+pid: '76561198013857375', pname: 'Paul Ankh', score: 6970, time: '06.970', rank: 3,
+dist: 8464, dist_str: '8.464', top_speed: 1508, top_speed_str: '1.508'
+},{
+pid: '76561198277481408', pname: 'myztical', score: 6982, time: '06.982', rank: 4,
+dist: 8367, dist_str: '8.367', top_speed: 1523, top_speed_str: '1.523'
+},{
+pid: '76561198033793341', pname: 'breaker', score: 7009, time: '07.009', rank: 5,
+dist: 8358, dist_str: '8.358', top_speed: 1411, top_speed_str: '1.411'
+},{
+pid: '76561198065249435', pname: 'NHK', score: 7219, time: '07.219', rank: 6,
+dist: 8448, dist_str: '8.448', top_speed: 1317, top_speed_str: '1.317'
+},{
+pid: '76561197960934040', pname: 'homeless buns', score: 7507, time: '07.507', rank: 7,
+dist: 8632, dist_str: '8.632', top_speed: 1308, top_speed_str: '1.308'
+},{
+pid: '76561198009937727', pname: 'salakalastaja', score: 7683, time: '07.683', rank: 8,
+dist: 8467, dist_str: '8.467', top_speed: 1340, top_speed_str: '1.340'
+},{
+pid: '76561198145208163', pname: 'defi', score: 7687, time: '07.687', rank: 9,
+dist: 8412, dist_str: '8.412', top_speed: 1344, top_speed_str: '1.344'
+},{
+pid: '76561198256690336', pname: '(oﾂｴ縲ｰ`o)笙｡*・溪愆*・｡', score: 7850, time: '07.850', rank: 10,
+dist: 8405, dist_str: '8.405', top_speed: 1271, top_speed_str: '1.271'
+},{
+pid: '76561198090069885', pname: 'wurst', score: 7890, time: '07.890', rank: 11,
+dist: 8194, dist_str: '8.194', top_speed: 1296, top_speed_str: '1.296'
+},{
+pid: '76561198018666316', pname: 'Komier', score: 7938, time: '07.938', rank: 12,
+dist: 8383, dist_str: '8.383', top_speed: 1267, top_speed_str: '1.267'
+},{
+pid: '76561198082734424', pname: 'sharqosity', score: 7980, time: '07.980', rank: 13,
+dist: 8547, dist_str: '8.547', top_speed: 1345, top_speed_str: '1.345'
+},{
+pid: '76561197981880484', pname: 'Bucki', score: 8032, time: '08.032', rank: 14,
+dist: 8469, dist_str: '8.469', top_speed: 1119, top_speed_str: '1.119'
+},{
+pid: '76561197972351788', pname: 'deekay', score: 8196, time: '08.196', rank: 15,
+dist: 8380, dist_str: '8.380', top_speed: 1165, top_speed_str: '1.165'
+},{
+pid: '76561198052093491', pname: 'Svyt', score: 8234, time: '08.234', rank: 16,
+dist: 8517, dist_str: '8.517', top_speed: 1351, top_speed_str: '1.351'
+},{
+pid: '76561198037910583', pname: 'lisk', score: 8246, time: '08.246', rank: 17,
+dist: 8348, dist_str: '8.348', top_speed: 1247, top_speed_str: '1.247'
+},{
+pid: '76561197985488000', pname: 'writhe', score: 8266, time: '08.266', rank: 18,
+dist: 8225, dist_str: '8.225', top_speed: 1243, top_speed_str: '1.243'
+},{
+pid: '76561198105508164', pname: 'vaffel', score: 8266, time: '08.266', rank: 19,
+dist: 8476, dist_str: '8.476', top_speed: 1295, top_speed_str: '1.295'
+},{
+pid: '76561198040941120', pname: 'CHINA', score: 8267, time: '08.267', rank: 20,
+dist: 8512, dist_str: '8.512', top_speed: 1134, top_speed_str: '1.134'
+},{
+pid: '76561198330103432', pname: 'Soothsayer', score: 8267, time: '08.267', rank: 21,
+dist: 8243, dist_str: '8.243', top_speed: 1140, top_speed_str: '1.140'
+},{
+pid: '76561198048264028', pname: 'D-X', score: 8290, time: '08.290', rank: 22,
+dist: 8334, dist_str: '8.334', top_speed: 1198, top_speed_str: '1.198'
+},{
+pid: '76561198037887223', pname: 'hoodie', score: 8300, time: '08.300', rank: 23,
+dist: 8426, dist_str: '8.426', top_speed: 1196, top_speed_str: '1.196'
+},{
+pid: '76561198400235007', pname: 'jaroslaw', score: 8336, time: '08.336', rank: 24,
+dist: 8516, dist_str: '8.516', top_speed: 1217, top_speed_str: '1.217'
+},{
+pid: '76561198027887207', pname: 'LA.slobo^-', score: 8386, time: '08.386', rank: 25,
+dist: 8557, dist_str: '8.557', top_speed: 1284, top_speed_str: '1.284'
+},{
+pid: '76561198029525828', pname: 'donny', score: 8428, time: '08.428', rank: 26,
+dist: 8214, dist_str: '8.214', top_speed: 1174, top_speed_str: '1.174'
+},{
+pid: '76561198121413699', pname: 'haitian router', score: 8517, time: '08.517', rank: 27,
+dist: 8389, dist_str: '8.389', top_speed: 1098, top_speed_str: '1.098'
+},{
+pid: '76561198027897188', pname: 'CrazyAl', score: 8537, time: '08.537', rank: 28,
+dist: 8201, dist_str: '8.201', top_speed: 1157, top_speed_str: '1.157'
+},{
+pid: '76561198254556347', pname: 'LoubiTek54', score: 8550, time: '08.550', rank: 29,
+dist: 8368, dist_str: '8.368', top_speed: 1191, top_speed_str: '1.191'
+},{
+pid: '76561198069716970', pname: 'Mugi', score: 8553, time: '08.553', rank: 30,
+dist: 8363, dist_str: '8.363', top_speed: 1308, top_speed_str: '1.308'
+},{
+pid: '76561198019400968', pname: 'qutebones', score: 8628, time: '08.628', rank: 31,
+dist: 8417, dist_str: '8.417', top_speed: 1199, top_speed_str: '1.199'
+},{
+pid: '76561197984231840', pname: 'hyp3r', score: 8631, time: '08.631', rank: 32,
+dist: 8331, dist_str: '8.331', top_speed: 1213, top_speed_str: '1.213'
+},{
+pid: '76561198131187493', pname: 'Yotoon', score: 8654, time: '08.654', rank: 33,
+dist: 8433, dist_str: '8.433', top_speed: 1332, top_speed_str: '1.332'
+},{
+pid: '76561198290382656', pname: 'allan', score: 8773, time: '08.773', rank: 34,
+dist: 8447, dist_str: '8.447', top_speed: 1164, top_speed_str: '1.164'
+},{
+pid: '76561198017114958', pname: '4thwrldmrshl', score: 8790, time: '08.790', rank: 35,
+dist: 8319, dist_str: '8.319', top_speed: 1185, top_speed_str: '1.185'
+},{
+pid: '76561197960321182', pname: 'picks', score: 8849, time: '08.849', rank: 36,
+dist: 8604, dist_str: '8.604', top_speed: 1125, top_speed_str: '1.125'
+},{
+pid: '76561197988440887', pname: 'Kawumm', score: 8854, time: '08.854', rank: 37,
+dist: 8193, dist_str: '8.193', top_speed: 1148, top_speed_str: '1.148'
+},{
+pid: '76561198129645082', pname: 'shoegazer', score: 8856, time: '08.856', rank: 38,
+dist: 8302, dist_str: '8.302', top_speed: 1183, top_speed_str: '1.183'
+},{
+pid: '76561198003420074', pname: 'niilzon', score: 8874, time: '08.874', rank: 39,
+dist: 8278, dist_str: '8.278', top_speed: 1099, top_speed_str: '1.099'
+},{
+pid: '76561197971280724', pname: 'iioran', score: 8884, time: '08.884', rank: 40,
+dist: 8553, dist_str: '8.553', top_speed: 1201, top_speed_str: '1.201'
+},{
+pid: '76561198042084264', pname: 'JaXx', score: 8953, time: '08.953', rank: 41,
+dist: 8403, dist_str: '8.403', top_speed: 1208, top_speed_str: '1.208'
+},{
+pid: '76561198006502679', pname: 'snowi', score: 8979, time: '08.979', rank: 42,
+dist: 8373, dist_str: '8.373', top_speed: 1138, top_speed_str: '1.138'
+},{
+pid: '76561198128359939', pname: 'Zen Manifold', score: 9050, time: '09.050', rank: 43,
+dist: 8438, dist_str: '8.438', top_speed: 1225, top_speed_str: '1.225'
+},{
+pid: '76561198120524395', pname: 'wm_Cosmo', score: 9057, time: '09.057', rank: 44,
+dist: 8440, dist_str: '8.440', top_speed: 1150, top_speed_str: '1.150'
+},{
+pid: '76561198047164818', pname: 'H0ax', score: 9065, time: '09.065', rank: 45,
+dist: 8283, dist_str: '8.283', top_speed: 1198, top_speed_str: '1.198'
+},{
+pid: '76561198257409925', pname: 'am1go', score: 9097, time: '09.097', rank: 46,
+dist: 8482, dist_str: '8.482', top_speed: 1318, top_speed_str: '1.318'
+},{
+pid: '76561198058399060', pname: 'brandon', score: 9206, time: '09.206', rank: 47,
+dist: 8515, dist_str: '8.515', top_speed: 1133, top_speed_str: '1.133'
+},{
+pid: '76561197996828921', pname: 'blasdfa', score: 9230, time: '09.230', rank: 48,
+dist: 8287, dist_str: '8.287', top_speed: 1166, top_speed_str: '1.166'
+},{
+pid: '76561197995192152', pname: 'Vienonen', score: 9235, time: '09.235', rank: 49,
+dist: 8389, dist_str: '8.389', top_speed: 1129, top_speed_str: '1.129'
+},{
+pid: '76561197981143530', pname: 'segre', score: 9306, time: '09.306', rank: 50,
+dist: 8447, dist_str: '8.447', top_speed: 1169, top_speed_str: '1.169'
+},{
+pid: '76561198043642345', pname: 'Meatsausage', score: 9335, time: '09.335', rank: 51,
+dist: 8241, dist_str: '8.241', top_speed: 1140, top_speed_str: '1.140'
+},{
+pid: '76561198022059713', pname: 'sjn|merry', score: 9344, time: '09.344', rank: 52,
+dist: 8334, dist_str: '8.334', top_speed: 1348, top_speed_str: '1.348'
+},{
+pid: '76561198024660114', pname: 'doombro', score: 9356, time: '09.356', rank: 53,
+dist: 8203, dist_str: '8.203', top_speed: 1114, top_speed_str: '1.114'
+},{
+pid: '76561197961205199', pname: 'amb', score: 9358, time: '09.358', rank: 54,
+dist: 8257, dist_str: '8.257', top_speed: 1153, top_speed_str: '1.153'
+},{
+pid: '76561198052343768', pname: 'Lx', score: 9364, time: '09.364', rank: 55,
+dist: 8611, dist_str: '8.611', top_speed: 1096, top_speed_str: '1.096'
+},{
+pid: '76561198006674839', pname: 'foo', score: 9398, time: '09.398', rank: 56,
+dist: 8282, dist_str: '8.282', top_speed: 1168, top_speed_str: '1.168'
+},{
+pid: '76561198004962821', pname: 'LA.Monti', score: 9400, time: '09.400', rank: 57,
+dist: 8364, dist_str: '8.364', top_speed: 1135, top_speed_str: '1.135'
+},{
+pid: '76561198105219463', pname: 'iigle', score: 9402, time: '09.402', rank: 58,
+dist: 8297, dist_str: '8.297', top_speed: 1127, top_speed_str: '1.127'
+},{
+pid: '76561198018811106', pname: 'NoPanNight 2nd Heaven | ReSurfed', score: 9435, time: '09.435', rank: 59,
+dist: 8113, dist_str: '8.113', top_speed: 1241, top_speed_str: '1.241'
+},{
+pid: '76561197992593520', pname: 'Raven', score: 9440, time: '09.440', rank: 60,
+dist: 8331, dist_str: '8.331', top_speed: 1228, top_speed_str: '1.228'
+},{
+pid: '76561198002556866', pname: 'iBondza', score: 9450, time: '09.450', rank: 61,
+dist: 8211, dist_str: '8.211', top_speed: 1188, top_speed_str: '1.188'
+},{
+pid: '76561198021430693', pname: 'Roo', score: 9481, time: '09.481', rank: 62,
+dist: 8348, dist_str: '8.348', top_speed: 1183, top_speed_str: '1.183'
+},{
+pid: '76561198049452471', pname: 'lolograde', score: 9488, time: '09.488', rank: 63,
+dist: 8340, dist_str: '8.340', top_speed: 1178, top_speed_str: '1.178'
+},{
+pid: '76561197978840222', pname: 'b3wz', score: 9519, time: '09.519', rank: 64,
+dist: 8335, dist_str: '8.335', top_speed: 1096, top_speed_str: '1.096'
+},{
+pid: '76561197971897418', pname: 'Jaguar', score: 9522, time: '09.522', rank: 65,
+dist: 8348, dist_str: '8.348', top_speed: 1102, top_speed_str: '1.102'
+},{
+pid: '76561198000832954', pname: 'permastoned', score: 9531, time: '09.531', rank: 66,
+dist: 8231, dist_str: '8.231', top_speed: 1122, top_speed_str: '1.122'
+},{
+pid: '76561198148310354', pname: 'Woeste Wessel', score: 9585, time: '09.585', rank: 67,
+dist: 8346, dist_str: '8.346', top_speed: 1161, top_speed_str: '1.161'
+},{
+pid: '76561198040956774', pname: 'RP`v3nture', score: 9604, time: '09.604', rank: 68,
+dist: 8353, dist_str: '8.353', top_speed: 1166, top_speed_str: '1.166'
+},{
+pid: '76561197990002701', pname: 'Owl.', score: 9630, time: '09.630', rank: 69,
+dist: 8257, dist_str: '8.257', top_speed: 1097, top_speed_str: '1.097'
+},{
+pid: '76561197960390445', pname: 'Warven', score: 9655, time: '09.655', rank: 70,
+dist: 8311, dist_str: '8.311', top_speed: 1112, top_speed_str: '1.112'
+},{
+pid: '76561198016219817', pname: 'neon purple', score: 9684, time: '09.684', rank: 71,
+dist: 8320, dist_str: '8.320', top_speed: 1186, top_speed_str: '1.186'
+},{
+pid: '76561197966844603', pname: 'Inane', score: 9692, time: '09.692', rank: 72,
+dist: 8217, dist_str: '8.217', top_speed: 1144, top_speed_str: '1.144'
+},{
+pid: '76561198048622511', pname: 'skjill', score: 9698, time: '09.698', rank: 73,
+dist: 8367, dist_str: '8.367', top_speed: 1054, top_speed_str: '1.054'
+},{
+pid: '76561197999650830', pname: 'loki_cpm', score: 9699, time: '09.699', rank: 74,
+dist: 8426, dist_str: '8.426', top_speed: 941, top_speed_str: '941'
+},{
+pid: '76561198009094223', pname: 'legerity', score: 9702, time: '09.702', rank: 75,
+dist: 8275, dist_str: '8.275', top_speed: 1089, top_speed_str: '1.089'
+},{
+pid: '76561198016750028', pname: 'veRRo', score: 9717, time: '09.717', rank: 76,
+dist: 8411, dist_str: '8.411', top_speed: 1061, top_speed_str: '1.061'
+},{
+pid: '76561198257219064', pname: '[deleted]', score: 9721, time: '09.721', rank: 77,
+dist: 8302, dist_str: '8.302', top_speed: 1103, top_speed_str: '1.103'
+},{
+pid: '76561198008916040', pname: 'Zohd', score: 9723, time: '09.723', rank: 78,
+dist: 8405, dist_str: '8.405', top_speed: 1091, top_speed_str: '1.091'
+},{
+pid: '76561198009208057', pname: 'Baz', score: 9724, time: '09.724', rank: 79,
+dist: 8185, dist_str: '8.185', top_speed: 1082, top_speed_str: '1.082'
+},{
+pid: '76561198038891770', pname: 'ParkourGrip', score: 9724, time: '09.724', rank: 80,
+dist: 8283, dist_str: '8.283', top_speed: 1103, top_speed_str: '1.103'
+},{
+pid: '76561198003326058', pname: 'oderi', score: 9744, time: '09.744', rank: 81,
+dist: 8338, dist_str: '8.338', top_speed: 1114, top_speed_str: '1.114'
+},{
+pid: '76561197975526518', pname: 'Dishwasher', score: 9747, time: '09.747', rank: 82,
+dist: 8358, dist_str: '8.358', top_speed: 1132, top_speed_str: '1.132'
+},{
+pid: '76561197978884790', pname: 'ReTLoM', score: 9750, time: '09.750', rank: 83,
+dist: 8349, dist_str: '8.349', top_speed: 1028, top_speed_str: '1.028'
+},{
+pid: '76561197965029487', pname: 'jebpk', score: 9756, time: '09.756', rank: 84,
+dist: 8210, dist_str: '8.210', top_speed: 1077, top_speed_str: '1.077'
+},{
+pid: '76561198074451339', pname: 'cozy', score: 9778, time: '09.778', rank: 85,
+dist: 8317, dist_str: '8.317', top_speed: 1093, top_speed_str: '1.093'
+},{
+pid: '76561198021107656', pname: 'Thorec', score: 9782, time: '09.782', rank: 86,
+dist: 8323, dist_str: '8.323', top_speed: 1108, top_speed_str: '1.108'
+},{
+pid: '76561197999125106', pname: '.DeaTh', score: 9793, time: '09.793', rank: 87,
+dist: 8313, dist_str: '8.313', top_speed: 1122, top_speed_str: '1.122'
+},{
+pid: '76561198200895795', pname: 'narwhal', score: 9801, time: '09.801', rank: 88,
+dist: 8460, dist_str: '8.460', top_speed: 1069, top_speed_str: '1.069'
+},{
+pid: '76561198029388379', pname: 'borke', score: 9803, time: '09.803', rank: 89,
+dist: 8451, dist_str: '8.451', top_speed: 989, top_speed_str: '989'
+},{
+pid: '76561197960427897', pname: 'demsix', score: 9807, time: '09.807', rank: 90,
+dist: 8302, dist_str: '8.302', top_speed: 1120, top_speed_str: '1.120'
+},{
+pid: '76561198050811421', pname: 'Mikan', score: 9809, time: '09.809', rank: 91,
+dist: 8203, dist_str: '8.203', top_speed: 1071, top_speed_str: '1.071'
+},{
+pid: '76561198079369364', pname: 'sad', score: 9817, time: '09.817', rank: 92,
+dist: 8263, dist_str: '8.263', top_speed: 1085, top_speed_str: '1.085'
+},{
+pid: '76561197968539760', pname: 'vlnc', score: 9819, time: '09.819', rank: 93,
+dist: 8427, dist_str: '8.427', top_speed: 1122, top_speed_str: '1.122'
+},{
+pid: '76561197991605256', pname: 'borgborg', score: 9823, time: '09.823', rank: 94,
+dist: 8445, dist_str: '8.445', top_speed: 1058, top_speed_str: '1.058'
+},{
+pid: '76561198070215161', pname: 'Terifire', score: 9855, time: '09.855', rank: 95,
+dist: 8258, dist_str: '8.258', top_speed: 1133, top_speed_str: '1.133'
+},{
+pid: '76561198016422942', pname: 'Fean', score: 9860, time: '09.860', rank: 96,
+dist: 8350, dist_str: '8.350', top_speed: 1069, top_speed_str: '1.069'
+},{
+pid: '76561198041634710', pname: 'Goo', score: 9898, time: '09.898', rank: 97,
+dist: 8342, dist_str: '8.342', top_speed: 1050, top_speed_str: '1.050'
+},{
+pid: '76561198416379415', pname: 'amnesium00', score: 9926, time: '09.926', rank: 98,
+dist: 8512, dist_str: '8.512', top_speed: 1122, top_speed_str: '1.122'
+},{
+pid: '76561198043952282', pname: 'Smilecythe', score: 9932, time: '09.932', rank: 99,
+dist: 8255, dist_str: '8.255', top_speed: 1029, top_speed_str: '1.029'
+},{
+pid: '76561197996101433', pname: 'B0H', score: 9933, time: '09.933', rank: 100,
+dist: 8377, dist_str: '8.377', top_speed: 1031, top_speed_str: '1.031'
+},{
+pid: '76561197990310720', pname: 'Zohdin', score: 9937, time: '09.937', rank: 101,
+dist: 8263, dist_str: '8.263', top_speed: 1013, top_speed_str: '1.013'
+},{
+pid: '76561198051250614', pname: 'Jagge', score: 9986, time: '09.986', rank: 102,
+dist: 8429, dist_str: '8.429', top_speed: 1021, top_speed_str: '1.021'
+},{
+pid: '76561198082013304', pname: 'phazeCS', score: 9986, time: '09.986', rank: 103,
+dist: 8332, dist_str: '8.332', top_speed: 1082, top_speed_str: '1.082'
+},{
+pid: '76561198035560908', pname: 'seekax', score: 9999, time: '09.999', rank: 104,
+dist: 8432, dist_str: '8.432', top_speed: 997, top_speed_str: '997'
+},{
+pid: '76561197967283485', pname: 'booboy', score: 10036, time: '10.036', rank: 105,
+dist: 8225, dist_str: '8.225', top_speed: 1042, top_speed_str: '1.042'
+},{
+pid: '76561198120104773', pname: 'MeTzGoRe-iND', score: 10036, time: '10.036', rank: 106,
+dist: 8439, dist_str: '8.439', top_speed: 1052, top_speed_str: '1.052'
+},{
+pid: '76561197980127011', pname: 'Hans!', score: 10040, time: '10.040', rank: 107,
+dist: 8368, dist_str: '8.368', top_speed: 961, top_speed_str: '961'
+},{
+pid: '76561197990632009', pname: 'lumpp 櫨櫨櫨', score: 10044, time: '10.044', rank: 108,
+dist: 8341, dist_str: '8.341', top_speed: 1037, top_speed_str: '1.037'
+},{
+pid: '76561197976176829', pname: 'pUlseEater', score: 10048, time: '10.048', rank: 109,
+dist: 8455, dist_str: '8.455', top_speed: 1040, top_speed_str: '1.040'
+},{
+pid: '76561197980505162', pname: 'SabbiS', score: 10048, time: '10.048', rank: 110,
+dist: 8492, dist_str: '8.492', top_speed: 1014, top_speed_str: '1.014'
+},{
+pid: '76561198380535233', pname: 'SitiHapib', score: 10056, time: '10.056', rank: 111,
+dist: 8295, dist_str: '8.295', top_speed: 1100, top_speed_str: '1.100'
+},{
+pid: '76561198046134055', pname: 'Merlinou', score: 10084, time: '10.084', rank: 112,
+dist: 8388, dist_str: '8.388', top_speed: 986, top_speed_str: '986'
+},{
+pid: '76561197984977458', pname: 'wm_stitch', score: 10104, time: '10.104', rank: 113,
+dist: 8480, dist_str: '8.480', top_speed: 1005, top_speed_str: '1.005'
+},{
+pid: '76561198138976972', pname: 'Hanshiro', score: 10105, time: '10.105', rank: 114,
+dist: 8335, dist_str: '8.335', top_speed: 1052, top_speed_str: '1.052'
+},{
+pid: '76561197971308062', pname: 'DEAD ASTAIRE', score: 10109, time: '10.109', rank: 115,
+dist: 8281, dist_str: '8.281', top_speed: 1002, top_speed_str: '1.002'
+},{
+pid: '76561198160946380', pname: 'yawoi', score: 10116, time: '10.116', rank: 116,
+dist: 8530, dist_str: '8.530', top_speed: 997, top_speed_str: '997'
+},{
+pid: '76561198095639158', pname: '笙･sara', score: 10130, time: '10.130', rank: 117,
+dist: 8060, dist_str: '8.060', top_speed: 1024, top_speed_str: '1.024'
+},{
+pid: '76561197966473469', pname: 'rekk0r', score: 10143, time: '10.143', rank: 118,
+dist: 8404, dist_str: '8.404', top_speed: 1043, top_speed_str: '1.043'
+},{
+pid: '76561198056363213', pname: 'KetamineWarrior', score: 10155, time: '10.155', rank: 119,
+dist: 8510, dist_str: '8.510', top_speed: 1096, top_speed_str: '1.096'
+},{
+pid: '76561198010122101', pname: 'juzef', score: 10167, time: '10.167', rank: 120,
+dist: 8275, dist_str: '8.275', top_speed: 982, top_speed_str: '982'
+},{
+pid: '76561197991623601', pname: 'klemn', score: 10191, time: '10.191', rank: 121,
+dist: 8395, dist_str: '8.395', top_speed: 1032, top_speed_str: '1.032'
+},{
+pid: '76561198166790786', pname: 'Kevnator', score: 10204, time: '10.204', rank: 122,
+dist: 8280, dist_str: '8.280', top_speed: 1028, top_speed_str: '1.028'
+},{
+pid: '76561198054890004', pname: 'Fb62', score: 10205, time: '10.205', rank: 123,
+dist: 8332, dist_str: '8.332', top_speed: 991, top_speed_str: '991'
+},{
+pid: '76561198043313359', pname: 'kerN', score: 10218, time: '10.218', rank: 124,
+dist: 8527, dist_str: '8.527', top_speed: 979, top_speed_str: '979'
+},{
+pid: '76561198103198986', pname: 'Hit Gone Fishin', score: 10218, time: '10.218', rank: 125,
+dist: 8399, dist_str: '8.399', top_speed: 1041, top_speed_str: '1.041'
+},{
+pid: '76561198035079630', pname: 'Curse Starwind', score: 10221, time: '10.221', rank: 126,
+dist: 8371, dist_str: '8.371', top_speed: 945, top_speed_str: '945'
+},{
+pid: '76561198093009114', pname: 'Broken', score: 10230, time: '10.230', rank: 127,
+dist: 8460, dist_str: '8.460', top_speed: 1034, top_speed_str: '1.034'
+},{
+pid: '76561197961843971', pname: 'Antiklimax', score: 10236, time: '10.236', rank: 128,
+dist: 8696, dist_str: '8.696', top_speed: 1015, top_speed_str: '1.015'
+},{
+pid: '76561198035798985', pname: 'Sug4r', score: 10255, time: '10.255', rank: 129,
+dist: 8302, dist_str: '8.302', top_speed: 1005, top_speed_str: '1.005'
+},{
+pid: '76561198041285102', pname: '009EFF', score: 10282, time: '10.282', rank: 130,
+dist: 8471, dist_str: '8.471', top_speed: 1020, top_speed_str: '1.020'
+},{
+pid: '76561198193222937', pname: 'Cthulhu', score: 10329, time: '10.329', rank: 131,
+dist: 8322, dist_str: '8.322', top_speed: 1136, top_speed_str: '1.136'
+},{
+pid: '76561198084857058', pname: 'Vucko/dll3z', score: 10343, time: '10.343', rank: 132,
+dist: 8408, dist_str: '8.408', top_speed: 911, top_speed_str: '911'
+},{
+pid: '76561198100598038', pname: 'TiLin', score: 10353, time: '10.353', rank: 133,
+dist: 8470, dist_str: '8.470', top_speed: 1036, top_speed_str: '1.036'
+},{
+pid: '76561197975275853', pname: 'Panix', score: 10370, time: '10.370', rank: 134,
+dist: 8440, dist_str: '8.440', top_speed: 1052, top_speed_str: '1.052'
+},{
+pid: '76561197987881545', pname: 'Beat0n', score: 10386, time: '10.386', rank: 135,
+dist: 8323, dist_str: '8.323', top_speed: 1002, top_speed_str: '1.002'
+},{
+pid: '76561198058792875', pname: 'Ch4bby', score: 10400, time: '10.400', rank: 136,
+dist: 8377, dist_str: '8.377', top_speed: 992, top_speed_str: '992'
+},{
+pid: '76561197987259887', pname: 'Tac', score: 10415, time: '10.415', rank: 137,
+dist: 8376, dist_str: '8.376', top_speed: 975, top_speed_str: '975'
+},{
+pid: '76561198967149214', pname: 'Flipper', score: 10452, time: '10.452', rank: 138,
+dist: 8325, dist_str: '8.325', top_speed: 1181, top_speed_str: '1.181'
+},{
+pid: '76561197970625089', pname: 'eaglbeagl', score: 10503, time: '10.503', rank: 139,
+dist: 8321, dist_str: '8.321', top_speed: 933, top_speed_str: '933'
+},{
+pid: '76561197984723561', pname: 'jalla', score: 10527, time: '10.527', rank: 140,
+dist: 8256, dist_str: '8.256', top_speed: 936, top_speed_str: '936'
+},{
+pid: '76561198015717316', pname: 'JohnnyScoutRush', score: 10535, time: '10.535', rank: 141,
+dist: 8532, dist_str: '8.532', top_speed: 992, top_speed_str: '992'
+},{
+pid: '76561198257431734', pname: 'Arctic', score: 10542, time: '10.542', rank: 142,
+dist: 8344, dist_str: '8.344', top_speed: 973, top_speed_str: '973'
+},{
+pid: '76561198042983069', pname: 'messik', score: 10552, time: '10.552', rank: 143,
+dist: 8591, dist_str: '8.591', top_speed: 957, top_speed_str: '957'
+},{
+pid: '76561198058232147', pname: 'bitt', score: 10600, time: '10.600', rank: 144,
+dist: 8544, dist_str: '8.544', top_speed: 1019, top_speed_str: '1.019'
+},{
+pid: '76561198017906677', pname: 'Toni43', score: 10602, time: '10.602', rank: 145,
+dist: 8558, dist_str: '8.558', top_speed: 1019, top_speed_str: '1.019'
+},{
+pid: '76561198141871806', pname: 'I\u0027m really bad', score: 10604, time: '10.604', rank: 146,
+dist: 8476, dist_str: '8.476', top_speed: 989, top_speed_str: '989'
+},{
+pid: '76561197983374284', pname: 'Phil', score: 10616, time: '10.616', rank: 147,
+dist: 8372, dist_str: '8.372', top_speed: 989, top_speed_str: '989'
+},{
+pid: '76561198241529442', pname: 'Upside-DownFish', score: 10619, time: '10.619', rank: 148,
+dist: 8521, dist_str: '8.521', top_speed: 1041, top_speed_str: '1.041'
+},{
+pid: '76561198205703741', pname: 'ox', score: 10620, time: '10.620', rank: 149,
+dist: 8420, dist_str: '8.420', top_speed: 954, top_speed_str: '954'
+},{
+pid: '76561198250843380', pname: 'snarl marx', score: 10644, time: '10.644', rank: 150,
+dist: 8260, dist_str: '8.260', top_speed: 977, top_speed_str: '977'
+},{
+pid: '76561197979975793', pname: 'DSHARP3', score: 10669, time: '10.669', rank: 151,
+dist: 8558, dist_str: '8.558', top_speed: 979, top_speed_str: '979'
+},{
+pid: '76561198120301921', pname: 'orion', score: 10676, time: '10.676', rank: 152,
+dist: 8422, dist_str: '8.422', top_speed: 997, top_speed_str: '997'
+},{
+pid: '76561197994007011', pname: '[deleted]', score: 10685, time: '10.685', rank: 153,
+dist: 8252, dist_str: '8.252', top_speed: 953, top_speed_str: '953'
+},{
+pid: '76561198369924438', pname: 'xxxx', score: 10706, time: '10.706', rank: 154,
+dist: 8337, dist_str: '8.337', top_speed: 904, top_speed_str: '904'
+},{
+pid: '76561198112454867', pname: 'The Piep', score: 10743, time: '10.743', rank: 155,
+dist: 8316, dist_str: '8.316', top_speed: 971, top_speed_str: '971'
+},{
+pid: '76561197990909644', pname: 'joxx', score: 10760, time: '10.760', rank: 156,
+dist: 8260, dist_str: '8.260', top_speed: 995, top_speed_str: '995'
+},{
+pid: '76561198040396027', pname: 'Arw0x', score: 10765, time: '10.765', rank: 157,
+dist: 8274, dist_str: '8.274', top_speed: 921, top_speed_str: '921'
+},{
+pid: '76561197993936471', pname: 'Curious', score: 10777, time: '10.777', rank: 158,
+dist: 8319, dist_str: '8.319', top_speed: 950, top_speed_str: '950'
+},{
+pid: '76561198155763996', pname: 'klz', score: 10779, time: '10.779', rank: 159,
+dist: 8513, dist_str: '8.513', top_speed: 862, top_speed_str: '862'
+},{
+pid: '76561197997395873', pname: 'hyperm4n', score: 10788, time: '10.788', rank: 160,
+dist: 8296, dist_str: '8.296', top_speed: 997, top_speed_str: '997'
+},{
+pid: '76561198044873438', pname: 'Coyster', score: 10798, time: '10.798', rank: 161,
+dist: 8305, dist_str: '8.305', top_speed: 965, top_speed_str: '965'
+},{
+pid: '76561198013152190', pname: 'tfkmaster', score: 10813, time: '10.813', rank: 162,
+dist: 8330, dist_str: '8.330', top_speed: 997, top_speed_str: '997'
+},{
+pid: '76561198011964322', pname: 'notilt.$ilverTips', score: 10845, time: '10.845', rank: 163,
+dist: 8280, dist_str: '8.280', top_speed: 882, top_speed_str: '882'
+},{
+pid: '76561198036045118', pname: 'wAly', score: 10848, time: '10.848', rank: 164,
+dist: 8475, dist_str: '8.475', top_speed: 973, top_speed_str: '973'
+},{
+pid: '76561197964570466', pname: 'PhunkMazter', score: 10909, time: '10.909', rank: 165,
+dist: 8327, dist_str: '8.327', top_speed: 927, top_speed_str: '927'
+},{
+pid: '76561197996615830', pname: 'dare', score: 10911, time: '10.911', rank: 166,
+dist: 8242, dist_str: '8.242', top_speed: 955, top_speed_str: '955'
+},{
+pid: '76561197990348465', pname: 'Prophy', score: 10912, time: '10.912', rank: 167,
+dist: 8360, dist_str: '8.360', top_speed: 904, top_speed_str: '904'
+},{
+pid: '76561197984432299', pname: 'AcrylicAsh', score: 10914, time: '10.914', rank: 168,
+dist: 8408, dist_str: '8.408', top_speed: 1138, top_speed_str: '1.138'
+},{
+pid: '76561197973878234', pname: 'phulp', score: 10924, time: '10.924', rank: 169,
+dist: 8430, dist_str: '8.430', top_speed: 861, top_speed_str: '861'
+},{
+pid: '76561197981044085', pname: 'Ayomeer', score: 10924, time: '10.924', rank: 170,
+dist: 8225, dist_str: '8.225', top_speed: 895, top_speed_str: '895'
+},{
+pid: '76561198077547676', pname: 'Erneo1337', score: 10952, time: '10.952', rank: 171,
+dist: 8479, dist_str: '8.479', top_speed: 979, top_speed_str: '979'
+},{
+pid: '76561198044377894', pname: 'Jill', score: 10959, time: '10.959', rank: 172,
+dist: 8461, dist_str: '8.461', top_speed: 915, top_speed_str: '915'
+},{
+pid: '76561197971851000', pname: 'mor-', score: 10993, time: '10.993', rank: 173,
+dist: 8344, dist_str: '8.344', top_speed: 925, top_speed_str: '925'
+},{
+pid: '76561198068871674', pname: 'Fingertipth', score: 11000, time: '11.000', rank: 174,
+dist: 8324, dist_str: '8.324', top_speed: 974, top_speed_str: '974'
+},{
+pid: '76561197970780919', pname: 'SaiKo', score: 11055, time: '11.055', rank: 175,
+dist: 8583, dist_str: '8.583', top_speed: 925, top_speed_str: '925'
+},{
+pid: '76561197979635028', pname: 'KraXXXel', score: 11055, time: '11.055', rank: 176,
+dist: 8416, dist_str: '8.416', top_speed: 966, top_speed_str: '966'
+},{
+pid: '76561198023936148', pname: 'Speedy Gonzales', score: 11089, time: '11.089', rank: 177,
+dist: 8324, dist_str: '8.324', top_speed: 946, top_speed_str: '946'
+},{
+pid: '76561198115681018', pname: 'Advarium', score: 11094, time: '11.094', rank: 178,
+dist: 8514, dist_str: '8.514', top_speed: 920, top_speed_str: '920'
+},{
+pid: '76561197967878254', pname: '縺励ｍ縺・・縺冬', score: 11095, time: '11.095', rank: 179,
+dist: 8386, dist_str: '8.386', top_speed: 952, top_speed_str: '952'
+},{
+pid: '76561197989215791', pname: 'GBAE', score: 11137, time: '11.137', rank: 180,
+dist: 8585, dist_str: '8.585', top_speed: 1014, top_speed_str: '1.014'
+},{
+pid: '76561198053456316', pname: 'Braveshart', score: 11138, time: '11.138', rank: 181,
+dist: 8340, dist_str: '8.340', top_speed: 1041, top_speed_str: '1.041'
+},{
+pid: '76561198009250273', pname: 'Heretic Kitsune', score: 11159, time: '11.159', rank: 182,
+dist: 8218, dist_str: '8.218', top_speed: 907, top_speed_str: '907'
+},{
+pid: '76561197971460824', pname: '窶笙ｦyﾃ殪窶', score: 11162, time: '11.162', rank: 183,
+dist: 8593, dist_str: '8.593', top_speed: 875, top_speed_str: '875'
+},{
+pid: '76561198447453333', pname: 'Addictus', score: 11175, time: '11.175', rank: 184,
+dist: 8357, dist_str: '8.357', top_speed: 863, top_speed_str: '863'
+},{
+pid: '76561198017000805', pname: 'fuckkkkk', score: 11178, time: '11.178', rank: 185,
+dist: 8358, dist_str: '8.358', top_speed: 959, top_speed_str: '959'
+},{
+pid: '76561197982091486', pname: 'intro to vibe coding (53:12)', score: 11223, time: '11.223', rank: 186,
+dist: 8365, dist_str: '8.365', top_speed: 892, top_speed_str: '892'
+},{
+pid: '76561198017925635', pname: 'CoredusK', score: 11225, time: '11.225', rank: 187,
+dist: 8557, dist_str: '8.557', top_speed: 885, top_speed_str: '885'
+},{
+pid: '76561198011728884', pname: 'Warlord Wossman', score: 11232, time: '11.232', rank: 188,
+dist: 8307, dist_str: '8.307', top_speed: 899, top_speed_str: '899'
+},{
+pid: '76561198155299428', pname: 'ﾊ榾淤・', score: 11257, time: '11.257', rank: 189,
+dist: 8254, dist_str: '8.254', top_speed: 895, top_speed_str: '895'
+},{
+pid: '76561197995143699', pname: 'HappyShepard', score: 11265, time: '11.265', rank: 190,
+dist: 8521, dist_str: '8.521', top_speed: 853, top_speed_str: '853'
+},{
+pid: '76561198022422594', pname: 'Phasen', score: 11288, time: '11.288', rank: 191,
+dist: 8531, dist_str: '8.531', top_speed: 884, top_speed_str: '884'
+},{
+pid: '76561198162045213', pname: 'pure', score: 11310, time: '11.310', rank: 192,
+dist: 8399, dist_str: '8.399', top_speed: 856, top_speed_str: '856'
+},{
+pid: '76561197995463277', pname: 'huluvu', score: 11337, time: '11.337', rank: 193,
+dist: 8232, dist_str: '8.232', top_speed: 910, top_speed_str: '910'
+},{
+pid: '76561197971108024', pname: 'Greed', score: 11409, time: '11.409', rank: 194,
+dist: 8475, dist_str: '8.475', top_speed: 941, top_speed_str: '941'
+},{
+pid: '76561198067294545', pname: 'Nandi', score: 11419, time: '11.419', rank: 195,
+dist: 8388, dist_str: '8.388', top_speed: 907, top_speed_str: '907'
+},{
+pid: '76561198000997435', pname: 'panda', score: 11424, time: '11.424', rank: 196,
+dist: 8635, dist_str: '8.635', top_speed: 909, top_speed_str: '909'
+},{
+pid: '76561197978208565', pname: '[TC]Ciaﾐｸﾑ配 ITA', score: 11434, time: '11.434', rank: 197,
+dist: 8268, dist_str: '8.268', top_speed: 890, top_speed_str: '890'
+},{
+pid: '76561198068602411', pname: 'Zoltan', score: 11480, time: '11.480', rank: 198,
+dist: 8345, dist_str: '8.345', top_speed: 885, top_speed_str: '885'
+},{
+pid: '76561198000154325', pname: 'Jean-Pierre Mﾃｩmo', score: 11497, time: '11.497', rank: 199,
+dist: 8557, dist_str: '8.557', top_speed: 930, top_speed_str: '930'
+},{
+pid: '76561197972931840', pname: 'Bogs', score: 11504, time: '11.504', rank: 200,
+dist: 8590, dist_str: '8.590', top_speed: 901, top_speed_str: '901'
+},{
+pid: '76561198041311105', pname: 'Micrine', score: 11522, time: '11.522', rank: 201,
+dist: 8731, dist_str: '8.731', top_speed: 882, top_speed_str: '882'
+},{
+pid: '76561197987688539', pname: 'ﾐ渙ｰﾐｲﾐｵﾐｻ', score: 11546, time: '11.546', rank: 202,
+dist: 8219, dist_str: '8.219', top_speed: 834, top_speed_str: '834'
+},{
+pid: '76561198028615035', pname: 'CaD', score: 11548, time: '11.548', rank: 203,
+dist: 8357, dist_str: '8.357', top_speed: 815, top_speed_str: '815'
+},{
+pid: '76561198101640021', pname: 'vAc', score: 11563, time: '11.563', rank: 204,
+dist: 8334, dist_str: '8.334', top_speed: 866, top_speed_str: '866'
+},{
+pid: '76561197967061788', pname: 'Xhep', score: 11614, time: '11.614', rank: 205,
+dist: 8333, dist_str: '8.333', top_speed: 884, top_speed_str: '884'
+},{
+pid: '76561198050611961', pname: 't.tv/fubibii', score: 11629, time: '11.629', rank: 206,
+dist: 8685, dist_str: '8.685', top_speed: 953, top_speed_str: '953'
+},{
+pid: '76561198012692998', pname: 'A', score: 11641, time: '11.641', rank: 207,
+dist: 8548, dist_str: '8.548', top_speed: 894, top_speed_str: '894'
+},{
+pid: '76561198020080134', pname: 'Reki', score: 11651, time: '11.651', rank: 208,
+dist: 8352, dist_str: '8.352', top_speed: 875, top_speed_str: '875'
+},{
+pid: '76561198046784022', pname: 'bathtubshitter', score: 11682, time: '11.682', rank: 209,
+dist: 8336, dist_str: '8.336', top_speed: 799, top_speed_str: '799'
+},{
+pid: '76561198150082020', pname: 'Berserker_BG', score: 11689, time: '11.689', rank: 210,
+dist: 8594, dist_str: '8.594', top_speed: 887, top_speed_str: '887'
+},{
+pid: '76561197984927295', pname: 'Namﾄ経r', score: 11692, time: '11.692', rank: 211,
+dist: 8368, dist_str: '8.368', top_speed: 825, top_speed_str: '825'
+},{
+pid: '76561198048405525', pname: 'twitch.tv/lolisamurai', score: 11699, time: '11.699', rank: 212,
+dist: 8240, dist_str: '8.240', top_speed: 864, top_speed_str: '864'
+},{
+pid: '76561197996095202', pname: 'human flesh slider combo', score: 11721, time: '11.721', rank: 213,
+dist: 8210, dist_str: '8.210', top_speed: 792, top_speed_str: '792'
+},{
+pid: '76561198039690908', pname: 'Rose Vierna Hall', score: 11814, time: '11.814', rank: 214,
+dist: 8322, dist_str: '8.322', top_speed: 835, top_speed_str: '835'
+},{
+pid: '76561198095720174', pname: 'cuppajoeman', score: 11879, time: '11.879', rank: 215,
+dist: 8323, dist_str: '8.323', top_speed: 844, top_speed_str: '844'
+},{
+pid: '76561197978753110', pname: 'cpma larsa', score: 11972, time: '11.972', rank: 216,
+dist: 8487, dist_str: '8.487', top_speed: 976, top_speed_str: '976'
+},{
+pid: '76561198089571210', pname: 'bella', score: 12080, time: '12.080', rank: 217,
+dist: 8304, dist_str: '8.304', top_speed: 864, top_speed_str: '864'
+},{
+pid: '76561198044671269', pname: 'SMOKO', score: 12093, time: '12.093', rank: 218,
+dist: 8374, dist_str: '8.374', top_speed: 841, top_speed_str: '841'
+},{
+pid: '76561197985277617', pname: 'jOORRi', score: 12094, time: '12.094', rank: 219,
+dist: 8499, dist_str: '8.499', top_speed: 848, top_speed_str: '848'
+},{
+pid: '76561197999359332', pname: 'God Emperor Rage', score: 12158, time: '12.158', rank: 220,
+dist: 8399, dist_str: '8.399', top_speed: 792, top_speed_str: '792'
+},{
+pid: '76561198073838292', pname: 'def', score: 12187, time: '12.187', rank: 221,
+dist: 8740, dist_str: '8.740', top_speed: 851, top_speed_str: '851'
+},{
+pid: '76561198041520679', pname: 'Hooten', score: 12206, time: '12.206', rank: 222,
+dist: 8617, dist_str: '8.617', top_speed: 906, top_speed_str: '906'
+},{
+pid: '76561197970122853', pname: 'phendrana', score: 12209, time: '12.209', rank: 223,
+dist: 8491, dist_str: '8.491', top_speed: 782, top_speed_str: '782'
+},{
+pid: '76561198206498517', pname: 'Witblitsﾂｮ', score: 12223, time: '12.223', rank: 224,
+dist: 8419, dist_str: '8.419', top_speed: 1010, top_speed_str: '1.010'
+},{
+pid: '76561198042097721', pname: 'Owley', score: 12239, time: '12.239', rank: 225,
+dist: 8674, dist_str: '8.674', top_speed: 842, top_speed_str: '842'
+},{
+pid: '76561198156256600', pname: 'marrrlowe', score: 12244, time: '12.244', rank: 226,
+dist: 8461, dist_str: '8.461', top_speed: 846, top_speed_str: '846'
+},{
+pid: '76561197970429385', pname: 'Elim Garak', score: 12264, time: '12.264', rank: 227,
+dist: 8626, dist_str: '8.626', top_speed: 848, top_speed_str: '848'
+},{
+pid: '76561198022250119', pname: 'M4RCiiBOY', score: 12299, time: '12.299', rank: 228,
+dist: 8349, dist_str: '8.349', top_speed: 778, top_speed_str: '778'
+},{
+pid: '76561198034847279', pname: 'el-mo', score: 12369, time: '12.369', rank: 229,
+dist: 8458, dist_str: '8.458', top_speed: 796, top_speed_str: '796'
+},{
+pid: '76561197979891465', pname: 'whtwl', score: 12555, time: '12.555', rank: 230,
+dist: 8400, dist_str: '8.400', top_speed: 903, top_speed_str: '903'
+},{
+pid: '76561198058444348', pname: 'Standarts', score: 12710, time: '12.710', rank: 231,
+dist: 8670, dist_str: '8.670', top_speed: 806, top_speed_str: '806'
+},{
+pid: '76561198863856183', pname: 'Seek_y', score: 12724, time: '12.724', rank: 232,
+dist: 8413, dist_str: '8.413', top_speed: 867, top_speed_str: '867'
+},{
+pid: '76561198285293675', pname: 'Sireli Bobo', score: 12801, time: '12.801', rank: 233,
+dist: 8300, dist_str: '8.300', top_speed: 762, top_speed_str: '762'
+},{
+pid: '76561198052092018', pname: 'virtual wizard', score: 12834, time: '12.834', rank: 234,
+dist: 8973, dist_str: '8.973', top_speed: 859, top_speed_str: '859'
+},{
+pid: '76561198132884420', pname: 'lemon', score: 12868, time: '12.868', rank: 235,
+dist: 8524, dist_str: '8.524', top_speed: 773, top_speed_str: '773'
+},{
+pid: '76561198037090483', pname: 'Dexter Ripper', score: 13071, time: '13.071', rank: 236,
+dist: 8254, dist_str: '8.254', top_speed: 772, top_speed_str: '772'
+},{
+pid: '76561198380413828', pname: '治ｋ㈲巻ｋ2004', score: 13100, time: '13.100', rank: 237,
+dist: 8378, dist_str: '8.378', top_speed: 883, top_speed_str: '883'
+},{
+pid: '76561197984482738', pname: 'Goober', score: 13109, time: '13.109', rank: 238,
+dist: 8489, dist_str: '8.489', top_speed: 812, top_speed_str: '812'
+},{
+pid: '76561198007465499', pname: 'busdriver', score: 13225, time: '13.225', rank: 239,
+dist: 8868, dist_str: '8.868', top_speed: 833, top_speed_str: '833'
+},{
+pid: '76561198094629078', pname: 'giant rat', score: 13265, time: '13.265', rank: 240,
+dist: 8552, dist_str: '8.552', top_speed: 780, top_speed_str: '780'
+},{
+pid: '76561198062436619', pname: 'Dre3wx', score: 13306, time: '13.306', rank: 241,
+dist: 8321, dist_str: '8.321', top_speed: 756, top_speed_str: '756'
+},{
+pid: '76561198384733880', pname: 'aviator', score: 13307, time: '13.307', rank: 242,
+dist: 8310, dist_str: '8.310', top_speed: 699, top_speed_str: '699'
+},{
+pid: '76561198382446932', pname: '盞ﾋ｢videogamer3D', score: 13317, time: '13.317', rank: 243,
+dist: 8360, dist_str: '8.360', top_speed: 745, top_speed_str: '745'
+},{
+pid: '76561198159863541', pname: 'lukna66', score: 13325, time: '13.325', rank: 244,
+dist: 8332, dist_str: '8.332', top_speed: 889, top_speed_str: '889'
+},{
+pid: '76561198041929410', pname: 'orpheusti', score: 13337, time: '13.337', rank: 245,
+dist: 8489, dist_str: '8.489', top_speed: 792, top_speed_str: '792'
+},{
+pid: '76561198020686097', pname: 'Mogoyooo', score: 13338, time: '13.338', rank: 246,
+dist: 8446, dist_str: '8.446', top_speed: 738, top_speed_str: '738'
+},{
+pid: '76561198053103433', pname: 'mucopurulento', score: 13352, time: '13.352', rank: 247,
+dist: 8517, dist_str: '8.517', top_speed: 746, top_speed_str: '746'
+},{
+pid: '76561198273605839', pname: 'ffuw', score: 13366, time: '13.366', rank: 248,
+dist: 8460, dist_str: '8.460', top_speed: 838, top_speed_str: '838'
+},{
+pid: '76561198414283080', pname: 'ﾐ頒ｶﾐｾﾐｽﾐｽﾐｸ ﾐ頒ｸﾐｻﾐｴﾐｾ', score: 13544, time: '13.544', rank: 249,
+dist: 8738, dist_str: '8.738', top_speed: 816, top_speed_str: '816'
+},{
+pid: '76561197980286932', pname: 'Phoenix', score: 13685, time: '13.685', rank: 250,
+dist: 8809, dist_str: '8.809', top_speed: 773, top_speed_str: '773'
+},{
+pid: '76561198072521518', pname: 'owo', score: 13786, time: '13.786', rank: 251,
+dist: 8626, dist_str: '8.626', top_speed: 709, top_speed_str: '709'
+},{
+pid: '76561198157669098', pname: 'supra ego', score: 13902, time: '13.902', rank: 252,
+dist: 8642, dist_str: '8.642', top_speed: 771, top_speed_str: '771'
+},{
+pid: '76561198053494824', pname: 'daenaath', score: 13936, time: '13.936', rank: 253,
+dist: 8506, dist_str: '8.506', top_speed: 754, top_speed_str: '754'
+},{
+pid: '76561198095192074', pname: 'suv', score: 13996, time: '13.996', rank: 254,
+dist: 8949, dist_str: '8.949', top_speed: 728, top_speed_str: '728'
+},{
+pid: '76561198059562033', pname: 'NoLoGGic', score: 14015, time: '14.015', rank: 255,
+dist: 8354, dist_str: '8.354', top_speed: 767, top_speed_str: '767'
+},{
+pid: '76561198093891507', pname: 'Nitro', score: 14157, time: '14.157', rank: 256,
+dist: 8727, dist_str: '8.727', top_speed: 767, top_speed_str: '767'
+},{
+pid: '76561198287122190', pname: 'John Hill', score: 14164, time: '14.164', rank: 257,
+dist: 8536, dist_str: '8.536', top_speed: 703, top_speed_str: '703'
+},{
+pid: '76561198332115913', pname: 'Erwan', score: 14175, time: '14.175', rank: 258,
+dist: 8730, dist_str: '8.730', top_speed: 704, top_speed_str: '704'
+},{
+pid: '76561197974685701', pname: 'amkacz', score: 14217, time: '14.217', rank: 259,
+dist: 8725, dist_str: '8.725', top_speed: 801, top_speed_str: '801'
+},{
+pid: '76561198036435499', pname: 'Jack left town', score: 14251, time: '14.251', rank: 260,
+dist: 8699, dist_str: '8.699', top_speed: 831, top_speed_str: '831'
+},{
+pid: '76561198121249271', pname: 'Floyd', score: 14316, time: '14.316', rank: 261,
+dist: 7993, dist_str: '7.993', top_speed: 675, top_speed_str: '675'
+},{
+pid: '76561197992021072', pname: 'solotany', score: 14339, time: '14.339', rank: 262,
+dist: 8676, dist_str: '8.676', top_speed: 708, top_speed_str: '708'
+},{
+pid: '76561197989996507', pname: 'BakeMyCake', score: 14464, time: '14.464', rank: 263,
+dist: 8612, dist_str: '8.612', top_speed: 753, top_speed_str: '753'
+},{
+pid: '76561197998494596', pname: 'Krakens', score: 14489, time: '14.489', rank: 264,
+dist: 8523, dist_str: '8.523', top_speed: 729, top_speed_str: '729'
+},{
+pid: '76561198278696539', pname: 'pat', score: 14614, time: '14.614', rank: 265,
+dist: 8462, dist_str: '8.462', top_speed: 693, top_speed_str: '693'
+},{
+pid: '76561198071047016', pname: 'goodrun', score: 14662, time: '14.662', rank: 266,
+dist: 8459, dist_str: '8.459', top_speed: 686, top_speed_str: '686'
+},{
+pid: '76561198374785185', pname: 'Ashlander', score: 14682, time: '14.682', rank: 267,
+dist: 8312, dist_str: '8.312', top_speed: 677, top_speed_str: '677'
+},{
+pid: '76561198002606844', pname: 'N.Jacobs | STiX', score: 14759, time: '14.759', rank: 268,
+dist: 8393, dist_str: '8.393', top_speed: 632, top_speed_str: '632'
+},{
+pid: '76561198157335611', pname: 'XieLian', score: 14833, time: '14.833', rank: 269,
+dist: 8336, dist_str: '8.336', top_speed: 723, top_speed_str: '723'
+},{
+pid: '76561198267720830', pname: 'DNS', score: 14837, time: '14.837', rank: 270,
+dist: 8846, dist_str: '8.846', top_speed: 719, top_speed_str: '719'
+},{
+pid: '76561198267451963', pname: 'gambit', score: 14838, time: '14.838', rank: 271,
+dist: 8541, dist_str: '8.541', top_speed: 678, top_speed_str: '678'
+},{
+pid: '76561198094525128', pname: 'rasta|blaster', score: 14981, time: '14.981', rank: 272,
+dist: 8552, dist_str: '8.552', top_speed: 729, top_speed_str: '729'
+},{
+pid: '76561198044847063', pname: '^buu!', score: 15060, time: '15.060', rank: 273,
+dist: 8701, dist_str: '8.701', top_speed: 690, top_speed_str: '690'
+},{
+pid: '76561198045605427', pname: 'Lancener', score: 15084, time: '15.084', rank: 274,
+dist: 8273, dist_str: '8.273', top_speed: 794, top_speed_str: '794'
+},{
+pid: '76561198050599664', pname: 'Anaxa', score: 15096, time: '15.096', rank: 275,
+dist: 8322, dist_str: '8.322', top_speed: 688, top_speed_str: '688'
+},{
+pid: '76561198044570619', pname: 'AJ', score: 15129, time: '15.129', rank: 276,
+dist: 8790, dist_str: '8.790', top_speed: 710, top_speed_str: '710'
+},{
+pid: '76561198319603992', pname: 'Hagbard23', score: 15425, time: '15.425', rank: 277,
+dist: 8971, dist_str: '8.971', top_speed: 758, top_speed_str: '758'
+},{
+pid: '76561198020860246', pname: 'Gorbino', score: 15488, time: '15.488', rank: 278,
+dist: 8693, dist_str: '8.693', top_speed: 710, top_speed_str: '710'
+},{
+pid: '76561198026543907', pname: 'Dedazen', score: 15689, time: '15.689', rank: 279,
+dist: 8600, dist_str: '8.600', top_speed: 839, top_speed_str: '839'
+},{
+pid: '76561197976728425', pname: 'Sirkka', score: 15850, time: '15.850', rank: 280,
+dist: 8710, dist_str: '8.710', top_speed: 743, top_speed_str: '743'
+},{
+pid: '76561198015133378', pname: 'Bumbow', score: 15947, time: '15.947', rank: 281,
+dist: 8384, dist_str: '8.384', top_speed: 628, top_speed_str: '628'
+},{
+pid: '76561198034317842', pname: 'xXxpu$$yDesrtoyerxXx1335', score: 16035, time: '16.035', rank: 282,
+dist: 8997, dist_str: '8.997', top_speed: 725, top_speed_str: '725'
+},{
+pid: '76561198256993464', pname: 'Muaddib', score: 16086, time: '16.086', rank: 283,
+dist: 9083, dist_str: '9.083', top_speed: 776, top_speed_str: '776'
+},{
+pid: '76561199163428333', pname: '\u003e\u003eFeather.', score: 16141, time: '16.141', rank: 284,
+dist: 8654, dist_str: '8.654', top_speed: 760, top_speed_str: '760'
+},{
+pid: '76561198034515168', pname: 'Datlisk', score: 16146, time: '16.146', rank: 285,
+dist: 8794, dist_str: '8.794', top_speed: 649, top_speed_str: '649'
+},{
+pid: '76561198011307461', pname: 'C.Y.B.O.R.G.S.', score: 16244, time: '16.244', rank: 286,
+dist: 8440, dist_str: '8.440', top_speed: 690, top_speed_str: '690'
+},{
+pid: '76561198238719638', pname: 'kiai', score: 16816, time: '16.816', rank: 287,
+dist: 8884, dist_str: '8.884', top_speed: 597, top_speed_str: '597'
+},{
+pid: '76561198118872778', pname: 'Athis', score: 16881, time: '16.881', rank: 288,
+dist: 8384, dist_str: '8.384', top_speed: 597, top_speed_str: '597'
+},{
+pid: '76561197970386755', pname: 'Cobra', score: 16950, time: '16.950', rank: 289,
+dist: 8716, dist_str: '8.716', top_speed: 704, top_speed_str: '704'
+},{
+pid: '76561198001750815', pname: 'Karlson', score: 17044, time: '17.044', rank: 290,
+dist: 8526, dist_str: '8.526', top_speed: 611, top_speed_str: '611'
+},{
+pid: '76561198007546494', pname: 'ArchRhythm', score: 17064, time: '17.064', rank: 291,
+dist: 8321, dist_str: '8.321', top_speed: 568, top_speed_str: '568'
+},{
+pid: '76561198053267416', pname: 'Hellusion', score: 17391, time: '17.391', rank: 292,
+dist: 8658, dist_str: '8.658', top_speed: 620, top_speed_str: '620'
+},{
+pid: '76561198077636045', pname: 'Tab', score: 17506, time: '17.506', rank: 293,
+dist: 8698, dist_str: '8.698', top_speed: 630, top_speed_str: '630'
+},{
+pid: '76561198972198795', pname: 'Batgirl57', score: 17552, time: '17.552', rank: 294,
+dist: 8804, dist_str: '8.804', top_speed: 535, top_speed_str: '535'
+},{
+pid: '76561198151971268', pname: 'PinK', score: 17715, time: '17.715', rank: 295,
+dist: 8553, dist_str: '8.553', top_speed: 598, top_speed_str: '598'
+},{
+pid: '76561198096342370', pname: 'JIM', score: 18940, time: '18.940', rank: 296,
+dist: 8815, dist_str: '8.815', top_speed: 608, top_speed_str: '608'
+},{
+pid: '76561198226052840', pname: 'VCTNGMNG', score: 19651, time: '19.651', rank: 297,
+dist: 8569, dist_str: '8.569', top_speed: 601, top_speed_str: '601'
+},{
+pid: '76561198115147792', pname: 'Broward County Tic Tacs', score: 20024, time: '20.024', rank: 298,
+dist: 8665, dist_str: '8.665', top_speed: 641, top_speed_str: '641'
+},{
+pid: '76561198042046618', pname: 'Hunter', score: 20368, time: '20.368', rank: 299,
+dist: 8595, dist_str: '8.595', top_speed: 518, top_speed_str: '518'
+},{
+pid: '76561198033737706', pname: 'Erdﾃｶs type spatial', score: 20891, time: '20.891', rank: 300,
+dist: 9083, dist_str: '9.083', top_speed: 608, top_speed_str: '608'
+},{
+pid: '76561198061795951', pname: 'Muscles', score: 20934, time: '20.934', rank: 301,
+dist: 8716, dist_str: '8.716', top_speed: 544, top_speed_str: '544'
+},{
+pid: '76561198025589568', pname: 'Zoe Zoe = Zeit + Roe Roe', score: 21188, time: '21.188', rank: 302,
+dist: 9368, dist_str: '9.368', top_speed: 651, top_speed_str: '651'
+},{
+pid: '76561198023324492', pname: 'ArKTi', score: 23035, time: '23.035', rank: 303,
+dist: 8551, dist_str: '8.551', top_speed: 480, top_speed_str: '480'
+},{
+pid: '76561198083688838', pname: 'Blizzerflame Danklin', score: 23504, time: '23.504', rank: 304,
+dist: 8983, dist_str: '8.983', top_speed: 544, top_speed_str: '544'
+},{
+pid: '76561198172538078', pname: 'KOSDID', score: 26730, time: '26.730', rank: 305,
+dist: 10208, dist_str: '10.208', top_speed: 519, top_speed_str: '519'
+},{
+pid: '76561198073278449', pname: 'Squid Bangers', score: 28011, time: '28.011', rank: 306,
+dist: 9318, dist_str: '9.318', top_speed: 391, top_speed_str: '391'
+},{
+pid: '76561198248986620', pname: 'Toto', score: 31013, time: '31.013', rank: 307,
+dist: 11532, dist_str: '11.532', top_speed: 558, top_speed_str: '558'
+},{
+pid: '76561198145593313', pname: 'Vinho Tinto', score: 32127, time: '32.127', rank: 308,
+dist: 10236, dist_str: '10.236', top_speed: 690, top_speed_str: '690'
+},{
+pid: '76561197978998422', pname: 'Worldspawn', score: 38447, time: '38.447', rank: 309,
+dist: 9543, dist_str: '9.543', top_speed: 661, top_speed_str: '661'
+},{
+pid: '76561197961335054', pname: 'uaedude', score: 85981, time: '1:25.981', rank: 310,
+dist: 9227, dist_str: '9.227', top_speed: 677, top_speed_str: '677'
+},];
+
+
+        var divRecordsList = document.querySelector('#map_records_list');
+
+        var html = ``;
+        for (var i = 0; i < records.length; ++i) {
+            html += `
+<tr>
+    <td class="record-rank has-text-right">${records[i].rank}/310</td>
+    <td><a href="../players/${records[i].pid}.html" class="player-name">${records[i].pname}</a></td>
+    <td class="has-text-right">
+        <span class="record-time" style="display:none">${records[i].score}</span>
+        ${records[i].time}
+    </td>
+    <td class="has-text-right">
+        <span class="record-top-speed" style="display:none">${records[i].top_speed}</span>
+        ${records[i].top_speed_str}
+    </td>
+    <td class="has-text-right">
+        <span class="record-distance" style="display:none">${records[i].dist}</span>
+        ${records[i].dist_str}
+    </td>
+</tr>`;
+        }
+
+        divRecordsList.innerHTML = html;
+
+
+function br_get_total_pages(list) {
+    return Math.ceil(list.matchingItems.length / list.page);
+}
+
+function br_get_current_page(list) {
+    return Math.ceil(list.i / list.page);
+}
+
+function br_update_table_page_text(list, el) {
+    el.textContent = br_get_current_page(list) + "/" + br_get_total_pages(list);
+}
+
+function br_show_next_page(list){
+    if (list.i + list.page <= list.matchingItems.length) {
+        list.show(list.i + list.page, list.page);        
+    }
+}
+
+function br_show_previous_page(list){
+    if (list.i > 1) {
+        var i = list.i - list.page;
+        if (i < 1) {
+            i = 1;
+        }
+        list.show(i, list.page);        
+    }
+}
+
+
+        var records_list = new List('players-list', {
+            listClass: 'listjs-container',
+            valueNames: ['record-rank', 'player-name', 'record-time', 'record-top-speed', 'record-distance'],
+            page: 20,
+            pagination: true
+        });
+
+        
+        var table_page_text_el = document.getElementById('table-page-text');
+
+        
+        br_update_table_page_text(records_list, table_page_text_el);
+
+        records_list.on('searchComplete', function () {
+            br_update_table_page_text(records_list, table_page_text_el);
+        });
+
+        document.getElementById('table-right-btn').onclick = function () {
+            br_show_next_page(records_list);
+            br_update_table_page_text(records_list, table_page_text_el);
+        }
+
+        document.getElementById('table-left-btn').onclick = function () {
+            br_show_previous_page(records_list);
+            br_update_table_page_text(records_list, table_page_text_el);
+        }
+
+</script>
+</body>
+</html>
+

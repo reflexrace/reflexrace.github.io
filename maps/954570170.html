@@ -1,0 +1,334 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE =edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="../reflex_favicon.ico" type="image/x-icon"/>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css"/>
+<link rel="stylesheet" href="../css/styles.css" >
+<script src="https://use.fontawesome.com/d8bf0cbc69.js"></script>
+    
+    <title>CastleStrafe Extended - Reflex Race Leaderboards</title>
+</head>
+<body>
+    
+<div class="container is-fluid">    
+    <nav class="level page-title-bar">
+        <div class="level-left">
+            <div class="level-item">
+                <a href="../" class="link-no-style">
+                    <figure class="image is-40x40">
+                        <img src="../img/reflex-logo.png" class="img-responsive logo-img" />
+                    </figure>
+                </a>
+            </div>
+            <div class="level-item is-hidden-mobile page-title-divider">&nbsp;</div>
+            <div class="level-item">
+                <div>
+                    <a href="../" class="link-no-style">
+                        <span class="page-title is-uppercase">Reflex Race Leaderboards</span>
+                    </a>
+                    <nav class="level">
+                        <div class="level-left">
+                            <div class="level-item">
+                                <a href="../" class="page-nav-item">Home</a>
+                            </div>
+                            <div class="level-item">
+                                <a href="../players" class="page-nav-item">Players</a>
+                            </div>
+                            <div class="level-item">
+                                <a href="../maps" class="page-nav-item">Maps</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="level-right">
+            <div class="level-item">
+                <span class="nav-text">Last update: may 18, '25, 00:39</span>
+            </div>
+            <div class="level-item">
+                <span class="nav-text">[20841 Total Records]</span>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container is-fluid page-nav-horizontal-divider is-marginless">&nbsp;</div>
+
+
+
+    <div class="container">
+        <div class="columns is-mobile is-centered">
+            <div class="column">
+                <div class="mapinformation">
+                    <figure class="image mapbg">
+                        <img src="https://images.steamusercontent.com/ugc/848215531432459178/65F9175ADE7798F7188C437242CD42561C513859/"/>
+                    </figure>
+                    <div class="general">
+                        <div class="general-wrapper">
+
+                            <div class="mapname">CastleStrafe Extended</div>
+
+                            <div class="icons">
+
+                                <span class="icon is-medium">
+                                    <a href="http://steamcommunity.com/sharedfiles/filedetails/?id=954570170" style="text-decoration : none;" target="_blank">
+                                        <span class="steam fa-stack">
+                                            <i class="fa fa-square fa-stack-2x"></i>
+                                            <i class="fa fa-steam-square fa-stack-2x"></i>
+                                        </span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-narrow" id="players-list">
+
+                <ul class="pagination" style="display:none;"></ul>
+
+                <table class="table reflex show-sort-icons">
+                    <thead>
+                        <tr>
+                            <th style="width:100px"><button class="sort" data-sort="record-rank">Rank</button></th>
+                            <th>
+                                <button class="sort" data-sort="player-name">Player</button>
+                                <div class="field">
+                                    <p class="control has-icons-left">
+                                        <input class="input is-small grey-placeholder search" type="text" placeholder="Search...">
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-search"></i>
+                                        </span>      
+                                    </p>
+                                </div>
+                            </th>
+                            <th style="width:120px"><button class="sort" data-sort="record-time">Time</button></th>
+                            <th style="width:150px"><button class="sort" data-sort="record-top-speed">Top Speed</button></th>
+                            <th style="width:150px"><button class="sort" data-sort="record-distance">Distance</button></th>
+                        </tr>
+                    </thead>
+                    <tbody class="listjs-container" id="map_records_list">
+                    </tbody>
+                </table>  
+                
+                <div class="columns is-mobile">
+                    <div class="column">
+                        <p class="field has-addons is-pulled-right page-ticker">
+                            <a class="button is-small is-black" id="table-left-btn">
+                                <span class="icon is-small">
+                                    <i class="fa fa-chevron-left"></i>
+                                </span>
+                            </a>
+                            <a class="button is-small is-static is-black " id="table-page-text"></a>
+                            <a class="button is-small is-black" id="table-right-btn">
+                                <span class="icon is-small">
+                                    <i class="fa fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </p>
+                    </div>
+                </div>              
+            </div>            
+        </div>
+    </div>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="content">            
+            Developed and designed by <a href="http://steamcommunity.com/profiles/76561198058399060">brandon</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+
+var records = [{
+pid: '76561198031006273', pname: 'tofu', score: 29167, time: '29.167', rank: 1,
+dist: 42719, dist_str: '42.719', top_speed: 1990, top_speed_str: '1.990'
+},{
+pid: '76561198033793341', pname: 'breaker', score: 29294, time: '29.294', rank: 2,
+dist: 42482, dist_str: '42.482', top_speed: 1938, top_speed_str: '1.938'
+},{
+pid: '76561198006674839', pname: 'foo', score: 29295, time: '29.295', rank: 3,
+dist: 42325, dist_str: '42.325', top_speed: 1925, top_speed_str: '1.925'
+},{
+pid: '76561198120524395', pname: 'wm_Cosmo', score: 29601, time: '29.601', rank: 4,
+dist: 42445, dist_str: '42.445', top_speed: 1940, top_speed_str: '1.940'
+},{
+pid: '76561198009937727', pname: 'salakalastaja', score: 29943, time: '29.943', rank: 5,
+dist: 41497, dist_str: '41.497', top_speed: 1816, top_speed_str: '1.816'
+},{
+pid: '76561198082734424', pname: 'sharqosity', score: 30124, time: '30.124', rank: 6,
+dist: 43732, dist_str: '43.732', top_speed: 1926, top_speed_str: '1.926'
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', score: 30234, time: '30.234', rank: 7,
+dist: 43468, dist_str: '43.468', top_speed: 1906, top_speed_str: '1.906'
+},{
+pid: '76561198115817963', pname: 'Boost', score: 30295, time: '30.295', rank: 8,
+dist: 43621, dist_str: '43.621', top_speed: 1916, top_speed_str: '1.916'
+},{
+pid: '76561198011750061', pname: '(竚絶密 ﾍ慳・ﾍ｡笆ｧ)', score: 33169, time: '33.169', rank: 9,
+dist: 46099, dist_str: '46.099', top_speed: 1745, top_speed_str: '1.745'
+},{
+pid: '76561198024660114', pname: 'doombro', score: 34155, time: '34.155', rank: 10,
+dist: 48036, dist_str: '48.036', top_speed: 1814, top_speed_str: '1.814'
+},{
+pid: '76561198277481408', pname: 'myztical', score: 36508, time: '36.508', rank: 11,
+dist: 50013, dist_str: '50.013', top_speed: 1738, top_speed_str: '1.738'
+},{
+pid: '76561198103198986', pname: 'Hit Gone Fishin', score: 36945, time: '36.945', rank: 12,
+dist: 47923, dist_str: '47.923', top_speed: 1627, top_speed_str: '1.627'
+},{
+pid: '76561198034388669', pname: 'Red!', score: 37567, time: '37.567', rank: 13,
+dist: 49077, dist_str: '49.077', top_speed: 1617, top_speed_str: '1.617'
+},{
+pid: '76561197979635028', pname: 'KraXXXel', score: 38100, time: '38.100', rank: 14,
+dist: 50029, dist_str: '50.029', top_speed: 1678, top_speed_str: '1.678'
+},{
+pid: '76561198120104773', pname: 'MeTzGoRe-iND', score: 38428, time: '38.428', rank: 15,
+dist: 52148, dist_str: '52.148', top_speed: 1652, top_speed_str: '1.652'
+},{
+pid: '76561197960367230', pname: 'Sentinel', score: 38634, time: '38.634', rank: 16,
+dist: 47588, dist_str: '47.588', top_speed: 1436, top_speed_str: '1.436'
+},{
+pid: '76561198074451339', pname: 'cozy', score: 38764, time: '38.764', rank: 17,
+dist: 52920, dist_str: '52.920', top_speed: 1823, top_speed_str: '1.823'
+},{
+pid: '76561198154940563', pname: 'n00kie', score: 38885, time: '38.885', rank: 18,
+dist: 48203, dist_str: '48.203', top_speed: 1555, top_speed_str: '1.555'
+},{
+pid: '76561197990632009', pname: 'lumpp 櫨櫨櫨', score: 39214, time: '39.214', rank: 19,
+dist: 47857, dist_str: '47.857', top_speed: 1472, top_speed_str: '1.472'
+},{
+pid: '76561197999650830', pname: 'loki_cpm', score: 39841, time: '39.841', rank: 20,
+dist: 50807, dist_str: '50.807', top_speed: 1715, top_speed_str: '1.715'
+},{
+pid: '76561198008916040', pname: 'Zohd', score: 40581, time: '40.581', rank: 21,
+dist: 51530, dist_str: '51.530', top_speed: 1637, top_speed_str: '1.637'
+},{
+pid: '76561198049052860', pname: 'ZcarecroW', score: 41888, time: '41.888', rank: 22,
+dist: 51291, dist_str: '51.291', top_speed: 1470, top_speed_str: '1.470'
+},{
+pid: '76561198416379415', pname: 'amnesium00', score: 42494, time: '42.494', rank: 23,
+dist: 52702, dist_str: '52.702', top_speed: 1556, top_speed_str: '1.556'
+},{
+pid: '76561198162045213', pname: 'pure', score: 45110, time: '45.110', rank: 24,
+dist: 52634, dist_str: '52.634', top_speed: 1561, top_speed_str: '1.561'
+},{
+pid: '76561197962974211', pname: 'mwg', score: 45776, time: '45.776', rank: 25,
+dist: 55191, dist_str: '55.191', top_speed: 1578, top_speed_str: '1.578'
+},{
+pid: '76561198254556347', pname: 'LoubiTek54', score: 49697, time: '49.697', rank: 26,
+dist: 53677, dist_str: '53.677', top_speed: 1300, top_speed_str: '1.300'
+},{
+pid: '76561197970429385', pname: 'Elim Garak', score: 50540, time: '50.540', rank: 27,
+dist: 54894, dist_str: '54.894', top_speed: 1430, top_speed_str: '1.430'
+},{
+pid: '76561198157335611', pname: 'XieLian', score: 51545, time: '51.545', rank: 28,
+dist: 56984, dist_str: '56.984', top_speed: 1373, top_speed_str: '1.373'
+},{
+pid: '76561197968839009', pname: 'KraineW', score: 64137, time: '1:04.137', rank: 29,
+dist: 58426, dist_str: '58.426', top_speed: 1393, top_speed_str: '1.393'
+},];
+
+
+        var divRecordsList = document.querySelector('#map_records_list');
+
+        var html = ``;
+        for (var i = 0; i < records.length; ++i) {
+            html += `
+<tr>
+    <td class="record-rank has-text-right">${records[i].rank}/29</td>
+    <td><a href="../players/${records[i].pid}.html" class="player-name">${records[i].pname}</a></td>
+    <td class="has-text-right">
+        <span class="record-time" style="display:none">${records[i].score}</span>
+        ${records[i].time}
+    </td>
+    <td class="has-text-right">
+        <span class="record-top-speed" style="display:none">${records[i].top_speed}</span>
+        ${records[i].top_speed_str}
+    </td>
+    <td class="has-text-right">
+        <span class="record-distance" style="display:none">${records[i].dist}</span>
+        ${records[i].dist_str}
+    </td>
+</tr>`;
+        }
+
+        divRecordsList.innerHTML = html;
+
+
+function br_get_total_pages(list) {
+    return Math.ceil(list.matchingItems.length / list.page);
+}
+
+function br_get_current_page(list) {
+    return Math.ceil(list.i / list.page);
+}
+
+function br_update_table_page_text(list, el) {
+    el.textContent = br_get_current_page(list) + "/" + br_get_total_pages(list);
+}
+
+function br_show_next_page(list){
+    if (list.i + list.page <= list.matchingItems.length) {
+        list.show(list.i + list.page, list.page);        
+    }
+}
+
+function br_show_previous_page(list){
+    if (list.i > 1) {
+        var i = list.i - list.page;
+        if (i < 1) {
+            i = 1;
+        }
+        list.show(i, list.page);        
+    }
+}
+
+
+        var records_list = new List('players-list', {
+            listClass: 'listjs-container',
+            valueNames: ['record-rank', 'player-name', 'record-time', 'record-top-speed', 'record-distance'],
+            page: 20,
+            pagination: true
+        });
+
+        
+        var table_page_text_el = document.getElementById('table-page-text');
+
+        
+        br_update_table_page_text(records_list, table_page_text_el);
+
+        records_list.on('searchComplete', function () {
+            br_update_table_page_text(records_list, table_page_text_el);
+        });
+
+        document.getElementById('table-right-btn').onclick = function () {
+            br_show_next_page(records_list);
+            br_update_table_page_text(records_list, table_page_text_el);
+        }
+
+        document.getElementById('table-left-btn').onclick = function () {
+            br_show_previous_page(records_list);
+            br_update_table_page_text(records_list, table_page_text_el);
+        }
+
+</script>
+</body>
+</html>
+

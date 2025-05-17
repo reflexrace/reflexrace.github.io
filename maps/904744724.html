@@ -1,0 +1,520 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE =edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="../reflex_favicon.ico" type="image/x-icon"/>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css"/>
+<link rel="stylesheet" href="../css/styles.css" >
+<script src="https://use.fontawesome.com/d8bf0cbc69.js"></script>
+    
+    <title>Slopyy - Reflex Race Leaderboards</title>
+</head>
+<body>
+    
+<div class="container is-fluid">    
+    <nav class="level page-title-bar">
+        <div class="level-left">
+            <div class="level-item">
+                <a href="../" class="link-no-style">
+                    <figure class="image is-40x40">
+                        <img src="../img/reflex-logo.png" class="img-responsive logo-img" />
+                    </figure>
+                </a>
+            </div>
+            <div class="level-item is-hidden-mobile page-title-divider">&nbsp;</div>
+            <div class="level-item">
+                <div>
+                    <a href="../" class="link-no-style">
+                        <span class="page-title is-uppercase">Reflex Race Leaderboards</span>
+                    </a>
+                    <nav class="level">
+                        <div class="level-left">
+                            <div class="level-item">
+                                <a href="../" class="page-nav-item">Home</a>
+                            </div>
+                            <div class="level-item">
+                                <a href="../players" class="page-nav-item">Players</a>
+                            </div>
+                            <div class="level-item">
+                                <a href="../maps" class="page-nav-item">Maps</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="level-right">
+            <div class="level-item">
+                <span class="nav-text">Last update: may 18, '25, 00:39</span>
+            </div>
+            <div class="level-item">
+                <span class="nav-text">[20841 Total Records]</span>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container is-fluid page-nav-horizontal-divider is-marginless">&nbsp;</div>
+
+
+
+    <div class="container">
+        <div class="columns is-mobile is-centered">
+            <div class="column">
+                <div class="mapinformation">
+                    <figure class="image mapbg">
+                        <img src="https://images.steamusercontent.com/ugc/808803442774761266/D5C62BE3646C3D55552FA839B49F3F8BD3458382/"/>
+                    </figure>
+                    <div class="general">
+                        <div class="general-wrapper">
+
+                            <div class="mapname">Slopyy</div>
+
+                            <div class="icons">
+
+                                <span class="icon is-medium">
+                                    <a href="http://steamcommunity.com/sharedfiles/filedetails/?id=904744724" style="text-decoration : none;" target="_blank">
+                                        <span class="steam fa-stack">
+                                            <i class="fa fa-square fa-stack-2x"></i>
+                                            <i class="fa fa-steam-square fa-stack-2x"></i>
+                                        </span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-narrow" id="players-list">
+
+                <ul class="pagination" style="display:none;"></ul>
+
+                <table class="table reflex show-sort-icons">
+                    <thead>
+                        <tr>
+                            <th style="width:100px"><button class="sort" data-sort="record-rank">Rank</button></th>
+                            <th>
+                                <button class="sort" data-sort="player-name">Player</button>
+                                <div class="field">
+                                    <p class="control has-icons-left">
+                                        <input class="input is-small grey-placeholder search" type="text" placeholder="Search...">
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-search"></i>
+                                        </span>      
+                                    </p>
+                                </div>
+                            </th>
+                            <th style="width:120px"><button class="sort" data-sort="record-time">Time</button></th>
+                            <th style="width:150px"><button class="sort" data-sort="record-top-speed">Top Speed</button></th>
+                            <th style="width:150px"><button class="sort" data-sort="record-distance">Distance</button></th>
+                        </tr>
+                    </thead>
+                    <tbody class="listjs-container" id="map_records_list">
+                    </tbody>
+                </table>  
+                
+                <div class="columns is-mobile">
+                    <div class="column">
+                        <p class="field has-addons is-pulled-right page-ticker">
+                            <a class="button is-small is-black" id="table-left-btn">
+                                <span class="icon is-small">
+                                    <i class="fa fa-chevron-left"></i>
+                                </span>
+                            </a>
+                            <a class="button is-small is-static is-black " id="table-page-text"></a>
+                            <a class="button is-small is-black" id="table-right-btn">
+                                <span class="icon is-small">
+                                    <i class="fa fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </p>
+                    </div>
+                </div>              
+            </div>            
+        </div>
+    </div>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="content">            
+            Developed and designed by <a href="http://steamcommunity.com/profiles/76561198058399060">brandon</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+
+var records = [{
+pid: '76561198033793341', pname: 'breaker', score: 2594, time: '02.594', rank: 1,
+dist: 3963, dist_str: '3.963', top_speed: 1590, top_speed_str: '1.590'
+},{
+pid: '76561197965029487', pname: 'jebpk', score: 2855, time: '02.855', rank: 2,
+dist: 3976, dist_str: '3.976', top_speed: 1463, top_speed_str: '1.463'
+},{
+pid: '76561197972994076', pname: 'visitor', score: 2954, time: '02.954', rank: 3,
+dist: 3983, dist_str: '3.983', top_speed: 1396, top_speed_str: '1.396'
+},{
+pid: '76561198031006273', pname: 'tofu', score: 3256, time: '03.256', rank: 4,
+dist: 4030, dist_str: '4.030', top_speed: 1339, top_speed_str: '1.339'
+},{
+pid: '76561198004962821', pname: 'LA.Monti', score: 3314, time: '03.314', rank: 5,
+dist: 4055, dist_str: '4.055', top_speed: 1256, top_speed_str: '1.256'
+},{
+pid: '76561198041285102', pname: '009EFF', score: 3381, time: '03.381', rank: 6,
+dist: 4102, dist_str: '4.102', top_speed: 1287, top_speed_str: '1.287'
+},{
+pid: '76561198034336396', pname: 'visualize', score: 3436, time: '03.436', rank: 7,
+dist: 4084, dist_str: '4.084', top_speed: 1250, top_speed_str: '1.250'
+},{
+pid: '76561197988440887', pname: 'Kawumm', score: 3475, time: '03.475', rank: 8,
+dist: 3972, dist_str: '3.972', top_speed: 1189, top_speed_str: '1.189'
+},{
+pid: '76561198053435784', pname: 'PoopGod1423', score: 3496, time: '03.496', rank: 9,
+dist: 4033, dist_str: '4.033', top_speed: 1220, top_speed_str: '1.220'
+},{
+pid: '76561198009937727', pname: 'salakalastaja', score: 4322, time: '04.322', rank: 10,
+dist: 4702, dist_str: '4.702', top_speed: 1184, top_speed_str: '1.184'
+},{
+pid: '76561198024660114', pname: 'doombro', score: 4625, time: '04.625', rank: 11,
+dist: 5221, dist_str: '5.221', top_speed: 1274, top_speed_str: '1.274'
+},{
+pid: '76561198128359939', pname: 'Zen Manifold', score: 5120, time: '05.120', rank: 12,
+dist: 5828, dist_str: '5.828', top_speed: 1515, top_speed_str: '1.515'
+},{
+pid: '76561198105508164', pname: 'vaffel', score: 5303, time: '05.303', rank: 13,
+dist: 5694, dist_str: '5.694', top_speed: 1422, top_speed_str: '1.422'
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', score: 11250, time: '11.250', rank: 14,
+dist: 11354, dist_str: '11.354', top_speed: 1412, top_speed_str: '1.412'
+},{
+pid: '76561198047164818', pname: 'H0ax', score: 11264, time: '11.264', rank: 15,
+dist: 11349, dist_str: '11.349', top_speed: 1383, top_speed_str: '1.383'
+},{
+pid: '76561198105219463', pname: 'iigle', score: 11544, time: '11.544', rank: 16,
+dist: 11476, dist_str: '11.476', top_speed: 1327, top_speed_str: '1.327'
+},{
+pid: '76561198142119191', pname: 'Rex', score: 12093, time: '12.093', rank: 17,
+dist: 12011, dist_str: '12.011', top_speed: 1394, top_speed_str: '1.394'
+},{
+pid: '76561198120524395', pname: 'wm_Cosmo', score: 12295, time: '12.295', rank: 18,
+dist: 12096, dist_str: '12.096', top_speed: 1252, top_speed_str: '1.252'
+},{
+pid: '76561198021430693', pname: 'Roo', score: 12448, time: '12.448', rank: 19,
+dist: 12253, dist_str: '12.253', top_speed: 1364, top_speed_str: '1.364'
+},{
+pid: '76561197992762524', pname: 'AwesomeAndy', score: 12745, time: '12.745', rank: 20,
+dist: 12405, dist_str: '12.405', top_speed: 1383, top_speed_str: '1.383'
+},{
+pid: '76561198040956774', pname: 'RP`v3nture', score: 12774, time: '12.774', rank: 21,
+dist: 12060, dist_str: '12.060', top_speed: 1303, top_speed_str: '1.303'
+},{
+pid: '76561198148310354', pname: 'Woeste Wessel', score: 12817, time: '12.817', rank: 22,
+dist: 12330, dist_str: '12.330', top_speed: 1550, top_speed_str: '1.550'
+},{
+pid: '76561197979200519', pname: 'Plongo', score: 13128, time: '13.128', rank: 23,
+dist: 12145, dist_str: '12.145', top_speed: 1446, top_speed_str: '1.446'
+},{
+pid: '76561198151022705', pname: 'JayF1re', score: 13238, time: '13.238', rank: 24,
+dist: 12198, dist_str: '12.198', top_speed: 1183, top_speed_str: '1.183'
+},{
+pid: '76561198001949575', pname: 'smt', score: 13268, time: '13.268', rank: 25,
+dist: 12447, dist_str: '12.447', top_speed: 1304, top_speed_str: '1.304'
+},{
+pid: '76561198077640530', pname: 'rzmz', score: 13364, time: '13.364', rank: 26,
+dist: 12566, dist_str: '12.566', top_speed: 1433, top_speed_str: '1.433'
+},{
+pid: '76561198031317265', pname: 'kohvee', score: 13498, time: '13.498', rank: 27,
+dist: 12979, dist_str: '12.979', top_speed: 1174, top_speed_str: '1.174'
+},{
+pid: '76561198009751489', pname: 'memphis', score: 13623, time: '13.623', rank: 28,
+dist: 12720, dist_str: '12.720', top_speed: 1392, top_speed_str: '1.392'
+},{
+pid: '76561198000088567', pname: 'nvc', score: 13697, time: '13.697', rank: 29,
+dist: 12483, dist_str: '12.483', top_speed: 1265, top_speed_str: '1.265'
+},{
+pid: '76561198017906677', pname: 'Toni43', score: 13711, time: '13.711', rank: 30,
+dist: 12847, dist_str: '12.847', top_speed: 1340, top_speed_str: '1.340'
+},{
+pid: '76561197990632009', pname: 'lumpp 櫨櫨櫨', score: 13782, time: '13.782', rank: 31,
+dist: 12687, dist_str: '12.687', top_speed: 1543, top_speed_str: '1.543'
+},{
+pid: '76561198090069885', pname: 'wurst', score: 13887, time: '13.887', rank: 32,
+dist: 13486, dist_str: '13.486', top_speed: 1389, top_speed_str: '1.389'
+},{
+pid: '76561198017114958', pname: '4thwrldmrshl', score: 14089, time: '14.089', rank: 33,
+dist: 13245, dist_str: '13.245', top_speed: 1269, top_speed_str: '1.269'
+},{
+pid: '76561198042084264', pname: 'JaXx', score: 14141, time: '14.141', rank: 34,
+dist: 13140, dist_str: '13.140', top_speed: 1527, top_speed_str: '1.527'
+},{
+pid: '76561198075363775', pname: 'Hicksy', score: 14145, time: '14.145', rank: 35,
+dist: 13345, dist_str: '13.345', top_speed: 1541, top_speed_str: '1.541'
+},{
+pid: '76561198093009114', pname: 'Broken', score: 14283, time: '14.283', rank: 36,
+dist: 12849, dist_str: '12.849', top_speed: 1226, top_speed_str: '1.226'
+},{
+pid: '76561198029334063', pname: 'andeh', score: 14691, time: '14.691', rank: 37,
+dist: 12931, dist_str: '12.931', top_speed: 1216, top_speed_str: '1.216'
+},{
+pid: '76561198052093491', pname: 'Svyt', score: 14824, time: '14.824', rank: 38,
+dist: 14131, dist_str: '14.131', top_speed: 1390, top_speed_str: '1.390'
+},{
+pid: '76561198233594800', pname: 'Haru', score: 15010, time: '15.010', rank: 39,
+dist: 12940, dist_str: '12.940', top_speed: 1495, top_speed_str: '1.495'
+},{
+pid: '76561197971897418', pname: 'Jaguar', score: 15084, time: '15.084', rank: 40,
+dist: 14180, dist_str: '14.180', top_speed: 1529, top_speed_str: '1.529'
+},{
+pid: '76561198254556347', pname: 'LoubiTek54', score: 15229, time: '15.229', rank: 41,
+dist: 13865, dist_str: '13.865', top_speed: 1263, top_speed_str: '1.263'
+},{
+pid: '76561197969361607', pname: '[MD] Bill Loordes', score: 15407, time: '15.407', rank: 42,
+dist: 13893, dist_str: '13.893', top_speed: 1506, top_speed_str: '1.506'
+},{
+pid: '76561197972927713', pname: 'subli', score: 15449, time: '15.449', rank: 43,
+dist: 14031, dist_str: '14.031', top_speed: 1393, top_speed_str: '1.393'
+},{
+pid: '76561198155763996', pname: 'klz', score: 15568, time: '15.568', rank: 44,
+dist: 13590, dist_str: '13.590', top_speed: 1130, top_speed_str: '1.130'
+},{
+pid: '76561197971851000', pname: 'mor-', score: 15604, time: '15.604', rank: 45,
+dist: 13677, dist_str: '13.677', top_speed: 1465, top_speed_str: '1.465'
+},{
+pid: '76561197979103444', pname: 'waspcake', score: 15627, time: '15.627', rank: 46,
+dist: 14071, dist_str: '14.071', top_speed: 1428, top_speed_str: '1.428'
+},{
+pid: '76561197970625089', pname: 'eaglbeagl', score: 15694, time: '15.694', rank: 47,
+dist: 13659, dist_str: '13.659', top_speed: 1355, top_speed_str: '1.355'
+},{
+pid: '76561197960390445', pname: 'Warven', score: 15994, time: '15.994', rank: 48,
+dist: 14082, dist_str: '14.082', top_speed: 1351, top_speed_str: '1.351'
+},{
+pid: '76561198103198986', pname: 'Hit Gone Fishin', score: 16047, time: '16.047', rank: 49,
+dist: 13727, dist_str: '13.727', top_speed: 1400, top_speed_str: '1.400'
+},{
+pid: '76561198028615035', pname: 'CaD', score: 16257, time: '16.257', rank: 50,
+dist: 13545, dist_str: '13.545', top_speed: 1357, top_speed_str: '1.357'
+},{
+pid: '76561198086935435', pname: 'vector', score: 16596, time: '16.596', rank: 51,
+dist: 15108, dist_str: '15.108', top_speed: 1248, top_speed_str: '1.248'
+},{
+pid: '76561198034388669', pname: 'Red!', score: 16697, time: '16.697', rank: 52,
+dist: 14745, dist_str: '14.745', top_speed: 1171, top_speed_str: '1.171'
+},{
+pid: '76561198059482731', pname: 'gently', score: 16815, time: '16.815', rank: 53,
+dist: 14896, dist_str: '14.896', top_speed: 1457, top_speed_str: '1.457'
+},{
+pid: '76561198067357839', pname: 'Blindlight', score: 16970, time: '16.970', rank: 54,
+dist: 14503, dist_str: '14.503', top_speed: 1454, top_speed_str: '1.454'
+},{
+pid: '76561197992616667', pname: 'AM', score: 17044, time: '17.044', rank: 55,
+dist: 14167, dist_str: '14.167', top_speed: 1417, top_speed_str: '1.417'
+},{
+pid: '76561198000013666', pname: 'Foo.', score: 17296, time: '17.296', rank: 56,
+dist: 14375, dist_str: '14.375', top_speed: 1317, top_speed_str: '1.317'
+},{
+pid: '76561198016422942', pname: 'Fean', score: 17670, time: '17.670', rank: 57,
+dist: 15348, dist_str: '15.348', top_speed: 1223, top_speed_str: '1.223'
+},{
+pid: '76561198149501776', pname: 'zigg', score: 17681, time: '17.681', rank: 58,
+dist: 15133, dist_str: '15.133', top_speed: 1309, top_speed_str: '1.309'
+},{
+pid: '76561197998529435', pname: 'soc', score: 17881, time: '17.881', rank: 59,
+dist: 14817, dist_str: '14.817', top_speed: 1317, top_speed_str: '1.317'
+},{
+pid: '76561198070823791', pname: 'Ricky', score: 18005, time: '18.005', rank: 60,
+dist: 14309, dist_str: '14.309', top_speed: 1244, top_speed_str: '1.244'
+},{
+pid: '76561197996284092', pname: 'Silkcat', score: 18121, time: '18.121', rank: 61,
+dist: 15142, dist_str: '15.142', top_speed: 1246, top_speed_str: '1.246'
+},{
+pid: '76561197976728425', pname: 'Sirkka', score: 18708, time: '18.708', rank: 62,
+dist: 15208, dist_str: '15.208', top_speed: 1267, top_speed_str: '1.267'
+},{
+pid: '76561197999479398', pname: 'dlm', score: 18879, time: '18.879', rank: 63,
+dist: 15565, dist_str: '15.565', top_speed: 1257, top_speed_str: '1.257'
+},{
+pid: '76561198098230689', pname: 'Dryson', score: 18957, time: '18.957', rank: 64,
+dist: 16156, dist_str: '16.156', top_speed: 1310, top_speed_str: '1.310'
+},{
+pid: '76561198010771680', pname: 'Heero22', score: 19266, time: '19.266', rank: 65,
+dist: 16128, dist_str: '16.128', top_speed: 1153, top_speed_str: '1.153'
+},{
+pid: '76561198265604587', pname: '[deleted]', score: 19415, time: '19.415', rank: 66,
+dist: 15425, dist_str: '15.425', top_speed: 1140, top_speed_str: '1.140'
+},{
+pid: '76561198051233568', pname: 'charlatan', score: 19459, time: '19.459', rank: 67,
+dist: 15511, dist_str: '15.511', top_speed: 1119, top_speed_str: '1.119'
+},{
+pid: '76561198092503454', pname: 'alva', score: 19823, time: '19.823', rank: 68,
+dist: 16295, dist_str: '16.295', top_speed: 1105, top_speed_str: '1.105'
+},{
+pid: '76561198041311105', pname: 'Micrine', score: 20040, time: '20.040', rank: 69,
+dist: 16682, dist_str: '16.682', top_speed: 1258, top_speed_str: '1.258'
+},{
+pid: '76561198101640021', pname: 'vAc', score: 20795, time: '20.795', rank: 70,
+dist: 14895, dist_str: '14.895', top_speed: 1191, top_speed_str: '1.191'
+},{
+pid: '76561197960427897', pname: 'demsix', score: 20975, time: '20.975', rank: 71,
+dist: 15717, dist_str: '15.717', top_speed: 1322, top_speed_str: '1.322'
+},{
+pid: '76561198066907360', pname: 'Exopl0x', score: 21035, time: '21.035', rank: 72,
+dist: 15056, dist_str: '15.056', top_speed: 1245, top_speed_str: '1.245'
+},{
+pid: '76561198351626685', pname: '76561198351626685', score: 21292, time: '21.292', rank: 73,
+dist: 16183, dist_str: '16.183', top_speed: 1181, top_speed_str: '1.181'
+},{
+pid: '76561198026683186', pname: 'Meltygun', score: 21462, time: '21.462', rank: 74,
+dist: 15615, dist_str: '15.615', top_speed: 1036, top_speed_str: '1.036'
+},{
+pid: '76561198025117910', pname: 'MidiMightyMoe', score: 22421, time: '22.421', rank: 75,
+dist: 17106, dist_str: '17.106', top_speed: 1158, top_speed_str: '1.158'
+},{
+pid: '76561197963100187', pname: 'dan', score: 22837, time: '22.837', rank: 76,
+dist: 15074, dist_str: '15.074', top_speed: 1193, top_speed_str: '1.193'
+},{
+pid: '76561198054925624', pname: 'gn2', score: 22969, time: '22.969', rank: 77,
+dist: 17529, dist_str: '17.529', top_speed: 1158, top_speed_str: '1.158'
+},{
+pid: '76561198213889971', pname: 'LEEEEEN', score: 23035, time: '23.035', rank: 78,
+dist: 16674, dist_str: '16.674', top_speed: 1200, top_speed_str: '1.200'
+},{
+pid: '76561197997486977', pname: 'Beghty', score: 23654, time: '23.654', rank: 79,
+dist: 17851, dist_str: '17.851', top_speed: 1207, top_speed_str: '1.207'
+},{
+pid: '76561198084857058', pname: 'Vucko/dll3z', score: 24023, time: '24.023', rank: 80,
+dist: 16041, dist_str: '16.041', top_speed: 859, top_speed_str: '859'
+},{
+pid: '76561198129219082', pname: 'Arthour', score: 24201, time: '24.201', rank: 81,
+dist: 19014, dist_str: '19.014', top_speed: 1126, top_speed_str: '1.126'
+},{
+pid: '76561198218010352', pname: 'emulgator', score: 24406, time: '24.406', rank: 82,
+dist: 15935, dist_str: '15.935', top_speed: 1020, top_speed_str: '1.020'
+},{
+pid: '76561198207555423', pname: 'ernesto', score: 26156, time: '26.156', rank: 83,
+dist: 17735, dist_str: '17.735', top_speed: 1122, top_speed_str: '1.122'
+},{
+pid: '76561197965109556', pname: 'tox', score: 27320, time: '27.320', rank: 84,
+dist: 17638, dist_str: '17.638', top_speed: 923, top_speed_str: '923'
+},{
+pid: '76561197971546634', pname: 'marsboer', score: 27376, time: '27.376', rank: 85,
+dist: 18296, dist_str: '18.296', top_speed: 989, top_speed_str: '989'
+},{
+pid: '76561198267451963', pname: 'gambit', score: 27934, time: '27.934', rank: 86,
+dist: 16318, dist_str: '16.318', top_speed: 811, top_speed_str: '811'
+},{
+pid: '76561198011750061', pname: '(竚絶密 ﾍ慳・ﾍ｡笆ｧ)', score: 28518, time: '28.518', rank: 87,
+dist: 25563, dist_str: '25.563', top_speed: 1168, top_speed_str: '1.168'
+},{
+pid: '76561198054949885', pname: 'gemm', score: 29472, time: '29.472', rank: 88,
+dist: 17220, dist_str: '17.220', top_speed: 1086, top_speed_str: '1.086'
+},{
+pid: '76561198316076046', pname: 'eatliftdie', score: 31848, time: '31.848', rank: 89,
+dist: 17356, dist_str: '17.356', top_speed: 899, top_speed_str: '899'
+},{
+pid: '76561198055352701', pname: 'The Alpha Flamingo', score: 42263, time: '42.263', rank: 90,
+dist: 18230, dist_str: '18.230', top_speed: 774, top_speed_str: '774'
+},{
+pid: '76561198244388532', pname: 'pilleater29', score: 48575, time: '48.575', rank: 91,
+dist: 19513, dist_str: '19.513', top_speed: 828, top_speed_str: '828'
+},];
+
+
+        var divRecordsList = document.querySelector('#map_records_list');
+
+        var html = ``;
+        for (var i = 0; i < records.length; ++i) {
+            html += `
+<tr>
+    <td class="record-rank has-text-right">${records[i].rank}/91</td>
+    <td><a href="../players/${records[i].pid}.html" class="player-name">${records[i].pname}</a></td>
+    <td class="has-text-right">
+        <span class="record-time" style="display:none">${records[i].score}</span>
+        ${records[i].time}
+    </td>
+    <td class="has-text-right">
+        <span class="record-top-speed" style="display:none">${records[i].top_speed}</span>
+        ${records[i].top_speed_str}
+    </td>
+    <td class="has-text-right">
+        <span class="record-distance" style="display:none">${records[i].dist}</span>
+        ${records[i].dist_str}
+    </td>
+</tr>`;
+        }
+
+        divRecordsList.innerHTML = html;
+
+
+function br_get_total_pages(list) {
+    return Math.ceil(list.matchingItems.length / list.page);
+}
+
+function br_get_current_page(list) {
+    return Math.ceil(list.i / list.page);
+}
+
+function br_update_table_page_text(list, el) {
+    el.textContent = br_get_current_page(list) + "/" + br_get_total_pages(list);
+}
+
+function br_show_next_page(list){
+    if (list.i + list.page <= list.matchingItems.length) {
+        list.show(list.i + list.page, list.page);        
+    }
+}
+
+function br_show_previous_page(list){
+    if (list.i > 1) {
+        var i = list.i - list.page;
+        if (i < 1) {
+            i = 1;
+        }
+        list.show(i, list.page);        
+    }
+}
+
+
+        var records_list = new List('players-list', {
+            listClass: 'listjs-container',
+            valueNames: ['record-rank', 'player-name', 'record-time', 'record-top-speed', 'record-distance'],
+            page: 20,
+            pagination: true
+        });
+
+        
+        var table_page_text_el = document.getElementById('table-page-text');
+
+        
+        br_update_table_page_text(records_list, table_page_text_el);
+
+        records_list.on('searchComplete', function () {
+            br_update_table_page_text(records_list, table_page_text_el);
+        });
+
+        document.getElementById('table-right-btn').onclick = function () {
+            br_show_next_page(records_list);
+            br_update_table_page_text(records_list, table_page_text_el);
+        }
+
+        document.getElementById('table-left-btn').onclick = function () {
+            br_show_previous_page(records_list);
+            br_update_table_page_text(records_list, table_page_text_el);
+        }
+
+</script>
+</body>
+</html>
+

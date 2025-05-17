@@ -1,0 +1,731 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE =edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="./reflex_favicon.ico" type="image/x-icon"/>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css"/>
+<link rel="stylesheet" href="./css/styles.css" >
+<script src="https://use.fontawesome.com/d8bf0cbc69.js"></script>
+    <title>Reflex Race Leaderboards</title>                
+</head>
+<body>
+    
+<div class="container is-fluid">    
+    <nav class="level page-title-bar">
+        <div class="level-left">
+            <div class="level-item">
+                <a href="./" class="link-no-style">
+                    <figure class="image is-40x40">
+                        <img src="./img/reflex-logo.png" class="img-responsive logo-img" />
+                    </figure>
+                </a>
+            </div>
+            <div class="level-item is-hidden-mobile page-title-divider">&nbsp;</div>
+            <div class="level-item">
+                <div>
+                    <a href="./" class="link-no-style">
+                        <span class="page-title is-uppercase">Reflex Race Leaderboards</span>
+                    </a>
+                    <nav class="level">
+                        <div class="level-left">
+                            <div class="level-item">
+                                <a href="./" class="page-nav-item">Home</a>
+                            </div>
+                            <div class="level-item">
+                                <a href="./players" class="page-nav-item">Players</a>
+                            </div>
+                            <div class="level-item">
+                                <a href="./maps" class="page-nav-item">Maps</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="level-right">
+            <div class="level-item">
+                <span class="nav-text">Last update: may 18, '25, 00:39</span>
+            </div>
+            <div class="level-item">
+                <span class="nav-text">[20841 Total Records]</span>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container is-fluid page-nav-horizontal-divider is-marginless">&nbsp;</div>
+
+
+
+<section class="hero slim is-black">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title has-text-centered">Latest Maps</h1>
+        </div>
+    </div>
+</section>
+
+<div class="container is-fluid">
+    <div class="columns is-multiline is-mobile is-centered" id="maps_list">    
+    </div>
+</div>
+
+    
+<footer class="footer">
+    <div class="container">
+        <div class="content">            
+            Developed and designed by <a href="http://steamcommunity.com/profiles/76561198058399060">brandon</a></p>
+        </div>
+    </div>
+</footer>
+<script>
+var maps = [
+{id: '3456546893', record_count: 1, title: 'Koala6',
+preview_url: 'https://images.steamusercontent.com/ugc/13054916970208410/FF6763FD8195F27D77BD3DC582F4AB3920331147/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198031006273', pname: 'tofu', time: '1:47.545', rank: 1
+},], },
+{id: '3407773189', record_count: 4, title: 'Filament RL',
+preview_url: 'https://images.steamusercontent.com/ugc/2914845466147987/1F40BAFC173D4B0338068C3DE93552BA7E0C4C43/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198075648076', pname: 'Donald', time: '09.721', rank: 1
+},{
+pid: '76561198031006273', pname: 'tofu', time: '10.191', rank: 2
+},{
+pid: '76561198027897188', pname: 'CrazyAl', time: '11.253', rank: 3
+},{
+pid: '76561198024660114', pname: 'doombro', time: '13.529', rank: 4
+},], },
+{id: '3407361155', record_count: 13, title: 'Filament',
+preview_url: 'https://images.steamusercontent.com/ugc/2914211351183270/123F08DF03514810D5A3D5CE515F8D2C78F4C020/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198031006273', pname: 'tofu', time: '11.953', rank: 1
+},{
+pid: '76561197986675995', pname: 'WD!!! night', time: '11.988', rank: 2
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '12.036', rank: 3
+},{
+pid: '76561198290382656', pname: 'allan', time: '13.625', rank: 4
+},{
+pid: '76561198027469185', pname: 'Vene', time: '13.911', rank: 5
+},{
+pid: '76561198082734424', pname: 'sharqosity', time: '14.225', rank: 6
+},], },
+{id: '3399979756', record_count: 12, title: 'Cargo',
+preview_url: 'https://images.steamusercontent.com/ugc/62586453238089924/422227EFECD5138541768DDF3B05495F3F156379/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198031006273', pname: 'tofu', time: '09.826', rank: 1
+},{
+pid: '76561197991052463', pname: 'Hene', time: '10.645', rank: 2
+},{
+pid: '76561198027469185', pname: 'Vene', time: '11.073', rank: 3
+},{
+pid: '76561198024660114', pname: 'doombro', time: '11.265', rank: 4
+},{
+pid: '76561198082734424', pname: 'sharqosity', time: '11.339', rank: 5
+},{
+pid: '76561198013857375', pname: 'Paul Ankh', time: '11.374', rank: 6
+},], },
+{id: '3393345700', record_count: 21, title: 'Discovery',
+preview_url: 'https://images.steamusercontent.com/ugc/27682271820936816/B55EB99070F50E12C92444B876869627AD240180/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198031006273', pname: 'tofu', time: '15.066', rank: 1
+},{
+pid: '76561197986675995', pname: 'WD!!! night', time: '15.072', rank: 2
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '15.171', rank: 3
+},{
+pid: '76561198290382656', pname: 'allan', time: '15.189', rank: 4
+},{
+pid: '76561198120524395', pname: 'wm_Cosmo', time: '15.312', rank: 5
+},{
+pid: '76561198082734424', pname: 'sharqosity', time: '15.412', rank: 6
+},], },
+{id: '3167426651', record_count: 8, title: 'KLK73',
+preview_url: 'https://images.steamusercontent.com/ugc/5938629525070060374/39405870CC75076C3DBC65C1D7CACA77315F251F/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198031006273', pname: 'tofu', time: '45.116', rank: 1
+},{
+pid: '76561198120524395', pname: 'wm_Cosmo', time: '45.473', rank: 2
+},{
+pid: '76561198019400968', pname: 'qutebones', time: '47.942', rank: 3
+},{
+pid: '76561197991052463', pname: 'Hene', time: '48.392', rank: 4
+},{
+pid: '76561198082734424', pname: 'sharqosity', time: '49.118', rank: 5
+},{
+pid: '76561198027469185', pname: 'Vene', time: '49.992', rank: 6
+},], },
+{id: '3156915536', record_count: 5, title: 'sharq2',
+preview_url: 'https://images.steamusercontent.com/ugc/2327867079163695238/799CB86790D7F419C73197C18C6770F0AE82F84F/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '26.379', rank: 1
+},{
+pid: '76561198031006273', pname: 'tofu', time: '26.379', rank: 2
+},{
+pid: '76561198082734424', pname: 'sharqosity', time: '28.287', rank: 3
+},{
+pid: '76561198024660114', pname: 'doombro', time: '37.881', rank: 4
+},{
+pid: '76561197979635028', pname: 'KraXXXel', time: '41.076', rank: 5
+},], },
+{id: '3156780923', record_count: 7, title: 'sharq1',
+preview_url: 'https://images.steamusercontent.com/ugc/2327867079162994507/F6005335F2BF58AA29678C4A8FE1ECB8EEE8681D/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198031006273', pname: 'tofu', time: '19.391', rank: 1
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '19.760', rank: 2
+},{
+pid: '76561198082734424', pname: 'sharqosity', time: '20.722', rank: 3
+},{
+pid: '76561198019400968', pname: 'qutebones', time: '23.832', rank: 4
+},{
+pid: '76561198017114958', pname: '4thwrldmrshl', time: '26.054', rank: 5
+},{
+pid: '76561198024660114', pname: 'doombro', time: '27.199', rank: 6
+},], },
+{id: '3131100878', record_count: 10, title: 'Dust2 Racerev',
+preview_url: 'https://images.steamusercontent.com/ugc/2288456143539145232/E420F56501DC6E62DA05B2A07BA2C98FCEC15E33/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198009937727', pname: 'salakalastaja', time: '17.652', rank: 1
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '17.752', rank: 2
+},{
+pid: '76561198031006273', pname: 'tofu', time: '17.919', rank: 3
+},{
+pid: '76561198082734424', pname: 'sharqosity', time: '18.576', rank: 4
+},{
+pid: '76561198024660114', pname: 'doombro', time: '19.959', rank: 5
+},{
+pid: '76561198057000038', pname: 'Drﾃ､nglender Drﾃ､ngler Dieter', time: '20.734', rank: 6
+},], },
+{id: '3131011748', record_count: 13, title: 'Dust2 Race',
+preview_url: 'https://images.steamusercontent.com/ugc/2289583945767226941/EF0794091940496CB73589FBA434DB05156D8245/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198031006273', pname: 'tofu', time: '15.956', rank: 1
+},{
+pid: '76561198009937727', pname: 'salakalastaja', time: '16.058', rank: 2
+},{
+pid: '76561198082734424', pname: 'sharqosity', time: '16.441', rank: 3
+},{
+pid: '76561198075648076', pname: 'Donald', time: '16.701', rank: 4
+},{
+pid: '76561198057000038', pname: 'Drﾃ､nglender Drﾃ､ngler Dieter', time: '18.487', rank: 5
+},{
+pid: '76561198024660114', pname: 'doombro', time: '19.152', rank: 6
+},], },
+{id: '3104550865', record_count: 15, title: 'New Map 2',
+preview_url: 'https://images.steamusercontent.com/ugc/2264810342758063592/227956B5FA23605EBEFB6A111FCF31E3D074DB78/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198082734424', pname: 'sharqosity', time: '30.042', rank: 1
+},{
+pid: '76561198120524395', pname: 'wm_Cosmo', time: '30.075', rank: 2
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '30.222', rank: 3
+},{
+pid: '76561197985488000', pname: 'writhe', time: '30.825', rank: 4
+},{
+pid: '76561198031006273', pname: 'tofu', time: '31.157', rank: 5
+},{
+pid: '76561198103198986', pname: 'Hit Gone Fishin', time: '33.506', rank: 6
+},], },
+{id: '2982884711', record_count: 1, title: 'Quiet',
+preview_url: 'https://images.steamusercontent.com/ugc/2044117468329946787/1B0C77B85C26546BAC502F3A4E564017BD406C94/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198075648076', pname: 'Donald', time: '11:46.607', rank: 1
+},], },
+{id: '2931421291', record_count: 4, title: 'Towers',
+preview_url: 'https://images.steamusercontent.com/ugc/2095920279733083972/E51460C8601C11D8D65A283E3B3C2EC5650EE3E6/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198022059713', pname: 'sjn|merry', time: '20.327', rank: 1
+},{
+pid: '76561198009937727', pname: 'salakalastaja', time: '32.141', rank: 2
+},{
+pid: '76561198060655554', pname: 'gimmick', time: '50.418', rank: 3
+},{
+pid: '76561198075533766', pname: 'Koala', time: '1:08.132', rank: 4
+},], },
+{id: '2902255433', record_count: 7, title: 'sharq-shitCombo3',
+preview_url: 'https://images.steamusercontent.com/ugc/1976548346805490577/8EADE1DC623E11810CEB9316C89F2E0A9AB0A7F5/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198075648076', pname: 'Donald', time: '25.239', rank: 1
+},{
+pid: '76561197985488000', pname: 'writhe', time: '26.136', rank: 2
+},{
+pid: '76561198022059713', pname: 'sjn|merry', time: '29.269', rank: 3
+},{
+pid: '76561198121260492', pname: 'Oozey', time: '33.730', rank: 4
+},{
+pid: '76561198082734424', pname: 'sharqosity', time: '35.966', rank: 5
+},{
+pid: '76561198024660114', pname: 'doombro', time: '41.153', rank: 6
+},], },
+{id: '2902216270', record_count: 6, title: 'sharqclimb3',
+preview_url: 'https://images.steamusercontent.com/ugc/1976548346805097386/7DCDF1C5765F61C8B9A286DF89B35D6D28DBE4E7/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198075648076', pname: 'Donald', time: '35.985', rank: 1
+},{
+pid: '76561198009937727', pname: 'salakalastaja', time: '44.048', rank: 2
+},{
+pid: '76561198019400968', pname: 'qutebones', time: '50.062', rank: 3
+},{
+pid: '76561198082734424', pname: 'sharqosity', time: '1:10.172', rank: 4
+},{
+pid: '76561198038891770', pname: 'ParkourGrip', time: '1:27.467', rank: 5
+},{
+pid: '76561198024660114', pname: 'doombro', time: '2:35.203', rank: 6
+},], },
+{id: '2902204938', record_count: 11, title: 'New Map',
+preview_url: 'https://images.steamusercontent.com/ugc/1976548346804990049/47E253D67233BEB62FC5C2614376DA502717AAAF/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198031006273', pname: 'tofu', time: '11.964', rank: 1
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '16.667', rank: 2
+},{
+pid: '76561198120524395', pname: 'wm_Cosmo', time: '23.378', rank: 3
+},{
+pid: '76561197985488000', pname: 'writhe', time: '25.079', rank: 4
+},{
+pid: '76561198121260492', pname: 'Oozey', time: '31.316', rank: 5
+},{
+pid: '76561198082734424', pname: 'sharqosity', time: '35.912', rank: 6
+},], },
+{id: '2830404739', record_count: 15, title: 'Kq73',
+preview_url: 'https://images.steamusercontent.com/ugc/1858313783648398190/8BAC03A13B5EA4410FE516AF412555589194C0DB/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '32.765', rank: 1
+},{
+pid: '76561198120524395', pname: 'wm_Cosmo', time: '33.373', rank: 2
+},{
+pid: '76561198018666316', pname: 'Komier', time: '33.871', rank: 3
+},{
+pid: '76561198022059713', pname: 'sjn|merry', time: '34.302', rank: 4
+},{
+pid: '76561198797624384', pname: 'Typhoon', time: '35.081', rank: 5
+},{
+pid: '76561197991052463', pname: 'Hene', time: '35.260', rank: 6
+},], },
+{id: '2822791612', record_count: 33, title: 'Heatsinks',
+preview_url: 'https://images.steamusercontent.com/ugc/1876327019334301078/4A5E6F5238355BADEAA3450CDEADE9A3B8C57A2D/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198290382656', pname: 'allan', time: '13.685', rank: 1
+},{
+pid: '76561198009937727', pname: 'salakalastaja', time: '13.816', rank: 2
+},{
+pid: '76561198159413772', pname: 'iuMui', time: '13.964', rank: 3
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '14.005', rank: 4
+},{
+pid: '76561198002134722', pname: 'tux', time: '14.049', rank: 5
+},{
+pid: '76561198031006273', pname: 'tofu', time: '14.082', rank: 6
+},], },
+{id: '2821767051', record_count: 18, title: 'Surf City',
+preview_url: 'https://images.steamusercontent.com/ugc/1876326764788903559/2C76B4C50A38CB6FE9D1BC02798513EC55BFBA51/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198031006273', pname: 'tofu', time: '30.134', rank: 1
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '30.155', rank: 2
+},{
+pid: '76561198797624384', pname: 'Typhoon', time: '30.637', rank: 3
+},{
+pid: '76561198120524395', pname: 'wm_Cosmo', time: '30.857', rank: 4
+},{
+pid: '76561198018666316', pname: 'Komier', time: '31.093', rank: 5
+},{
+pid: '76561198022059713', pname: 'sjn|merry', time: '31.135', rank: 6
+},], },
+{id: '2804244323', record_count: 1, title: 'TempleLoaf',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1845923589286150159/0EBE89C1B4FA167C2A46B118F5F2EDF368729B87/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198022059713', pname: 'sjn|merry', time: '10.484', rank: 1
+},], },
+{id: '2803028172', record_count: 24, title: 'Orizuru',
+preview_url: 'https://images.steamusercontent.com/ugc/1852678885717766421/6A3E373E465446E1467A994E17EF10560C1618AC/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198031006273', pname: 'tofu', time: '14.147', rank: 1
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '14.225', rank: 2
+},{
+pid: '76561198159413772', pname: 'iuMui', time: '14.348', rank: 3
+},{
+pid: '76561198120524395', pname: 'wm_Cosmo', time: '14.486', rank: 4
+},{
+pid: '76561198103198986', pname: 'Hit Gone Fishin', time: '14.637', rank: 5
+},{
+pid: '76561198018666316', pname: 'Komier', time: '14.670', rank: 6
+},], },
+{id: '2802763520', record_count: 14, title: 'dm_rmg_32',
+preview_url: 'https://images.steamusercontent.com/ugc/1840293821410124822/F2D62EE0BA1675E25A2422CC7E5489EA2DC94F61/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198082734424', pname: 'sharqosity', time: '28.174', rank: 1
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '28.553', rank: 2
+},{
+pid: '76561198018666316', pname: 'Komier', time: '29.227', rank: 3
+},{
+pid: '76561198120524395', pname: 'wm_Cosmo', time: '29.834', rank: 4
+},{
+pid: '76561198027469185', pname: 'Vene', time: '29.839', rank: 5
+},{
+pid: '76561197991052463', pname: 'Hene', time: '30.018', rank: 6
+},], },
+{id: '2802452673', record_count: 14, title: 'SpaceOddity',
+preview_url: 'https://images.steamusercontent.com/ugc/1835789838217334317/E981EAEA7717EE3CD804B10321402B138FF43FDB/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198031006273', pname: 'tofu', time: '27.662', rank: 1
+},{
+pid: '76561198082734424', pname: 'sharqosity', time: '27.666', rank: 2
+},{
+pid: '76561198018666316', pname: 'Komier', time: '27.767', rank: 3
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '27.993', rank: 4
+},{
+pid: '76561198120524395', pname: 'wm_Cosmo', time: '27.993', rank: 5
+},{
+pid: '76561198128359939', pname: 'Zen Manifold', time: '28.079', rank: 6
+},], },
+{id: '2799188114', record_count: 34, title: 'Mistress',
+preview_url: 'https://images.steamusercontent.com/ugc/1852677807216262394/BB505541853568C2619F5D1EA11543CA99A212CF/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198290382656', pname: 'allan', time: '26.544', rank: 1
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '26.986', rank: 2
+},{
+pid: '76561198120524395', pname: 'wm_Cosmo', time: '26.998', rank: 3
+},{
+pid: '76561198082734424', pname: 'sharqosity', time: '27.017', rank: 4
+},{
+pid: '76561198031006273', pname: 'tofu', time: '27.036', rank: 5
+},{
+pid: '76561197985488000', pname: 'writhe', time: '27.413', rank: 6
+},], },
+{id: '2798220008', record_count: 16, title: 'Humility',
+preview_url: 'https://images.steamusercontent.com/ugc/1835789206012468620/B747804EDF53516C1D4567BEFFC85512D787FA45/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561197985488000', pname: 'writhe', time: '29.309', rank: 1
+},{
+pid: '76561198031006273', pname: 'tofu', time: '29.496', rank: 2
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '29.521', rank: 3
+},{
+pid: '76561198018666316', pname: 'Komier', time: '29.562', rank: 4
+},{
+pid: '76561198120524395', pname: 'wm_Cosmo', time: '29.724', rank: 5
+},{
+pid: '76561198022059713', pname: 'sjn|merry', time: '30.160', rank: 6
+},], },
+{id: '2795332000', record_count: 26, title: 'A rather unprofessional NUURP',
+preview_url: 'https://images.steamusercontent.com/ugc/1856054860263025193/D96EED464254745FE86E962C612EA27C2157E7FE/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198290382656', pname: 'allan', time: '12.856', rank: 1
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '12.953', rank: 2
+},{
+pid: '76561198120524395', pname: 'wm_Cosmo', time: '13.023', rank: 3
+},{
+pid: '76561198103198986', pname: 'Hit Gone Fishin', time: '13.153', rank: 4
+},{
+pid: '76561198031006273', pname: 'tofu', time: '13.227', rank: 5
+},{
+pid: '76561198159413772', pname: 'iuMui', time: '13.270', rank: 6
+},], },
+{id: '2776594074', record_count: 8, title: 'gpl-arcaon-rox',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1843666793275198293/46517D1A4D1DA31ABF60F8F6D38175B3D4DB64C8/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198082734424', pname: 'sharqosity', time: '24.127', rank: 1
+},{
+pid: '76561198013857375', pname: 'Paul Ankh', time: '28.360', rank: 2
+},{
+pid: '76561198022059713', pname: 'sjn|merry', time: '28.687', rank: 3
+},{
+pid: '76561197966844603', pname: 'Inane', time: '29.862', rank: 4
+},{
+pid: '76561197996771694', pname: 'Kaknes', time: '30.443', rank: 5
+},{
+pid: '76561198038891770', pname: 'ParkourGrip', time: '32.190', rank: 6
+},], },
+{id: '2773260096', record_count: 8, title: 'Pauly-Smally7',
+preview_url: 'https://images.steamusercontent.com/ugc/1843666066319550160/2058EDFF776BCE57DA9929B3A489A503A47FCFF3/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198031006273', pname: 'tofu', time: '02.418', rank: 1
+},{
+pid: '76561198013857375', pname: 'Paul Ankh', time: '02.427', rank: 2
+},{
+pid: '76561198082734424', pname: 'sharqosity', time: '02.487', rank: 3
+},{
+pid: '76561197965426852', pname: 'Kaiman', time: '02.800', rank: 4
+},{
+pid: '76561198022059713', pname: 'sjn|merry', time: '03.305', rank: 5
+},{
+pid: '76561198024660114', pname: 'doombro', time: '03.783', rank: 6
+},], },
+{id: '2744682407', record_count: 22, title: 'sharq3',
+preview_url: 'https://images.steamusercontent.com/ugc/1811012788049147390/27F3B5BEAC123DC0BF8C0890CA135A5266C27218/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198031006273', pname: 'tofu', time: '30.245', rank: 1
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '30.411', rank: 2
+},{
+pid: '76561198009937727', pname: 'salakalastaja', time: '31.965', rank: 3
+},{
+pid: '76561198120524395', pname: 'wm_Cosmo', time: '32.540', rank: 4
+},{
+pid: '76561198082734424', pname: 'sharqosity', time: '32.948', rank: 5
+},{
+pid: '76561198018666316', pname: 'Komier', time: '34.328', rank: 6
+},], },
+{id: '2698573387', record_count: 8, title: 'Horadrim',
+preview_url: 'https://images.steamusercontent.com/ugc/1856045227610689366/2B4A938684465924676C8721E57B2932F2D13BB2/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198031006273', pname: 'tofu', time: '48.574', rank: 1
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '50.537', rank: 2
+},{
+pid: '76561198120524395', pname: 'wm_Cosmo', time: '53.819', rank: 3
+},{
+pid: '76561198022059713', pname: 'sjn|merry', time: '57.950', rank: 4
+},{
+pid: '76561198049452471', pname: 'lolograde', time: '1:04.922', rank: 5
+},{
+pid: '76561198082734424', pname: 'sharqosity', time: '1:08.910', rank: 6
+},], },
+{id: '2694619052', record_count: 7, title: 'Precision 2',
+preview_url: 'https://images.steamusercontent.com/ugc/1830148925308694406/88F39025E1A343908F632A5BF8292346C6385751/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561197985488000', pname: 'writhe', time: '41.605', rank: 1
+},{
+pid: '76561198120524395', pname: 'wm_Cosmo', time: '49.337', rank: 2
+},{
+pid: '76561198082734424', pname: 'sharqosity', time: '51.672', rank: 3
+},{
+pid: '76561198022059713', pname: 'sjn|merry', time: '57.724', rank: 4
+},{
+pid: '76561198013857375', pname: 'Paul Ankh', time: '1:00.755', rank: 5
+},{
+pid: '76561198017114958', pname: '4thwrldmrshl', time: '1:15.532', rank: 6
+},], },
+{id: '2694275229', record_count: 19, title: 'DRGN Runner',
+preview_url: 'https://images.steamusercontent.com/ugc/1856044623166156348/E6DE93CF62302B909EC327558B025AAFA860801B/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198290382656', pname: 'allan', time: '37.963', rank: 1
+},{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '42.772', rank: 2
+},{
+pid: '76561198120524395', pname: 'wm_Cosmo', time: '42.774', rank: 3
+},{
+pid: '76561198022059713', pname: 'sjn|merry', time: '46.013', rank: 4
+},{
+pid: '76561197991052463', pname: 'Hene', time: '49.136', rank: 5
+},{
+pid: '76561198103198986', pname: 'Hit Gone Fishin', time: '51.689', rank: 6
+},], },
+{id: '2693990887', record_count: 3, title: 'Merry Techmas!',
+preview_url: 'https://images.steamusercontent.com/ugc/1856044623176274842/B0DBEA0704DF99B1FBD5444D960D62F7BA7C2483/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198031006273', pname: 'tofu', time: '1:58.909', rank: 1
+},{
+pid: '76561197986675995', pname: 'WD!!! night', time: '2:17.512', rank: 2
+},{
+pid: '76561198075648076', pname: 'Donald', time: '2:49.018', rank: 3
+},], },
+{id: '2676838146', record_count: 4, title: 'Crown Fort HardCore 2',
+preview_url: 'https://images.steamusercontent.com/ugc/1840280815763596618/8B4B6E6FAEC04F829A0C49806915F1874FD21CC3/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198082734424', pname: 'sharqosity', time: '1:24.296', rank: 1
+},{
+pid: '76561198045753485', pname: 'Desrela', time: '2:09.866', rank: 2
+},{
+pid: '76561198105508164', pname: 'vaffel', time: '2:53.382', rank: 3
+},{
+pid: '76561198141871806', pname: 'I\u0027m really bad', time: '3:53.266', rank: 4
+},], },
+{id: '2592507158', record_count: 3, title: 'Test',
+preview_url: 'https://steamuserimages-a.akamaihd.net/ugc/1681520108919076398/0074B558CF45AA988A7561C79F9AD882849FE3D3/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198013857375', pname: 'Paul Ankh', time: '07.303', rank: 1
+},{
+pid: '76561198022059713', pname: 'sjn|merry', time: '07.513', rank: 2
+},{
+pid: '76561198017114958', pname: '4thwrldmrshl', time: '07.608', rank: 3
+},], },
+{id: '2590284777', record_count: 4, title: 'O',
+preview_url: 'https://images.steamusercontent.com/ugc/1680394068064500399/4E20B20EAF706D152E400CB41367A78735845428/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198013857375', pname: 'Paul Ankh', time: '11.944', rank: 1
+},{
+pid: '76561198082734424', pname: 'sharqosity', time: '14.683', rank: 2
+},{
+pid: '76561198017114958', pname: '4thwrldmrshl', time: '14.829', rank: 3
+},{
+pid: '76561197979635028', pname: 'KraXXXel', time: '18.286', rank: 4
+},], },
+{id: '2590210353', record_count: 7, title: 'H',
+preview_url: 'https://images.steamusercontent.com/ugc/1680394068064091880/003395C15E6D3D9A6666032940841CC040EA7D04/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198082734424', pname: 'sharqosity', time: '06.227', rank: 1
+},{
+pid: '76561198018666316', pname: 'Komier', time: '06.251', rank: 2
+},{
+pid: '76561198022059713', pname: 'sjn|merry', time: '06.380', rank: 3
+},{
+pid: '76561198013857375', pname: 'Paul Ankh', time: '06.580', rank: 4
+},{
+pid: '76561198017114958', pname: '4thwrldmrshl', time: '08.140', rank: 5
+},{
+pid: '76561198254556347', pname: 'LoubiTek54', time: '09.214', rank: 6
+},], },
+{id: '2589391311', record_count: 8, title: 'BinAesthetic',
+preview_url: 'https://images.steamusercontent.com/ugc/1680393865566535373/417F4B8D135E15DE9E080D4A20E4540CA9F40D59/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198018566623', pname: 'wm_htprankster', time: '04.715', rank: 1
+},{
+pid: '76561198082734424', pname: 'sharqosity', time: '04.834', rank: 2
+},{
+pid: '76561198022059713', pname: 'sjn|merry', time: '04.920', rank: 3
+},{
+pid: '76561198060655554', pname: 'gimmick', time: '05.192', rank: 4
+},{
+pid: '76561197975275853', pname: 'Panix', time: '07.895', rank: 5
+},{
+pid: '76561197979635028', pname: 'KraXXXel', time: '08.426', rank: 6
+},], },
+{id: '2589349983', record_count: 4, title: 'BinAesthetic',
+preview_url: 'https://images.steamusercontent.com/ugc/1680393865566340589/43A43BFBCA0FBFF631FC45707D976260AEE772C9/', youtube_url: '',
+lazy_load_img: false,
+records: [{
+pid: '76561198060655554', pname: 'gimmick', time: '02.300', rank: 1
+},{
+pid: '76561198022059713', pname: 'sjn|merry', time: '02.880', rank: 2
+},{
+pid: '76561197979635028', pname: 'KraXXXel', time: '02.937', rank: 3
+},{
+pid: '76561198017114958', pname: '4thwrldmrshl', time: '03.606', rank: 4
+},], },
+{id: '2586457259', record_count: 0, title: 'L',
+preview_url: 'https://images.steamusercontent.com/ugc/1680393681522655774/29667D5A041B0143CA107FDC5AFB62B0BD447FA4/', youtube_url: '',
+lazy_load_img: false,
+records: [], },];
+
+
+function render_map_box(map) {
+var html = `
+<div class="column is-narrow">
+    <div class="map-box">
+        <a href="./maps/${map.id}.html">
+            <figure class="image">`;
+            if (map.lazy_load_img) {
+                html += `<img src="./img/blank_grey.png" data-src="${map.preview_url}"/>`;
+            } else {
+                html += `<img src="${map.preview_url}"/>`;
+            }
+            html += `<div class="is-overlay">
+                <div class="map-box-title-rect">
+                    <div class="map-title">${map.title}</div>
+                </div>
+                <div class="map-box-total-records tag is-black">
+                    ${map.record_count} Record(s)
+                </div>
+                <div class="yt-cover-link"></div>`;
+                
+            if (map.youtube_url !== '') { 
+                html += `<div class="map-box-yt">
+                            <a href="${map.youtube_url}">
+                                <span class="icon is-large">
+                                    <span class="fa-stack">
+                                        <i class="fa fa-square fa-stack-1x" aria-hidden="true"></i>
+                                        <i class="fa fa-youtube-play fa-stack-2x" aria-hidden="true"></i>
+                                    </span>
+                                </span>
+                            </a>
+                        </div>`; 
+            }
+
+            html += `
+                </div>
+            </figure>
+        </a>
+    </div>
+    <div class="map-box-top-players">`;
+
+        for(var ri = 0; ri < map.records.length; ++ri) {
+                html += `
+<nav class="level is-mobile player-entry ${( ri==0 ? 'first-place':'')}">
+    <div class="level-left">
+        <div class="level-item">
+            <span class="player-name"><a href="./players/${map.records[ri].pid}.html">${map.records[ri].pname}</a></span>
+        </div>
+    </div>
+    <div class="level-right">
+        <div class="level-item">
+            <span class="player-score">${map.records[ri].time}</span>
+        </div>
+    </div>
+</nav>`;
+        }
+
+
+    html += `</div>
+</div>`;
+
+return html;
+}
+
+
+
+        var divMapsList = document.querySelector('#maps_list');
+
+        var html = ``;
+        for (var i = 0; i < maps.length; ++i) {
+            html += render_map_box(maps[i]);
+        }
+
+        divMapsList.innerHTML = html;
+
+
+</script>
+</body>
+</html>

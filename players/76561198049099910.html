@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE =edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="../reflex_favicon.ico" type="image/x-icon"/>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css"/>
+<link rel="stylesheet" href="../css/styles.css" >
+<script src="https://use.fontawesome.com/d8bf0cbc69.js"></script>
+    <title>rajas - Reflex Race Leaderboards</title>
+</head>
+<body>
+    
+<div class="container is-fluid">    
+    <nav class="level page-title-bar">
+        <div class="level-left">
+            <div class="level-item">
+                <a href="../" class="link-no-style">
+                    <figure class="image is-40x40">
+                        <img src="../img/reflex-logo.png" class="img-responsive logo-img" />
+                    </figure>
+                </a>
+            </div>
+            <div class="level-item is-hidden-mobile page-title-divider">&nbsp;</div>
+            <div class="level-item">
+                <div>
+                    <a href="../" class="link-no-style">
+                        <span class="page-title is-uppercase">Reflex Race Leaderboards</span>
+                    </a>
+                    <nav class="level">
+                        <div class="level-left">
+                            <div class="level-item">
+                                <a href="../" class="page-nav-item">Home</a>
+                            </div>
+                            <div class="level-item">
+                                <a href="../players" class="page-nav-item">Players</a>
+                            </div>
+                            <div class="level-item">
+                                <a href="../maps" class="page-nav-item">Maps</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="level-right">
+            <div class="level-item">
+                <span class="nav-text">Last update: may 18, '25, 00:39</span>
+            </div>
+            <div class="level-item">
+                <span class="nav-text">[20841 Total Records]</span>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container is-fluid page-nav-horizontal-divider is-marginless">&nbsp;</div>
+
+
+
+<div class="container">
+        <div class="columns is-centered">
+
+            <div class="column is-narrow">
+                <div class="playerinformation">
+                    <div class="playername">      
+                        <span class="icons">
+                            <span class="icon is-medium">
+                                <a href="http://steamcommunity.com/profiles/76561198049099910" style="text-decoration : none;" target="_blank">
+                                    <span class="steam fa-stack">
+                                        <i class="fa fa-square fa-stack-2x"></i>
+                                        <i class="fa fa-steam-square fa-stack-2x"></i>
+                                    </span>
+                                </a>
+                            </span>
+                        </span>                      
+                        <span>rajas</span>                    
+                    </div>
+                    
+                    <div class="tags has-addons">
+                        <span class="tag is-black">Records</span>
+                        <span class="tag is-dark">27</span>
+                    </div>
+                    <div class="tags has-addons">
+                        <span class="tag is-black">Average Rank</span>
+                        <span class="tag is-dark">64,19</span>
+                    </div>
+
+                </div>                
+            </div>
+
+            <div class="column is-narrow" id="records-list">
+
+                <ul class="pagination" style="display:none;"></ul>
+
+                <table class="table is-fullwidth reflex show-sort-icons">
+                    <thead>
+                        <tr>
+                            <th style="width:100px"><button class="sort" data-sort="record-rank">Rank</button></th>
+                            <th>
+                                <button class="sort" data-sort="player-name">Map</button>
+                                <div class="field">
+                                    <p class="control has-icons-left">
+                                        <input class="input is-small grey-placeholder search" type="text" placeholder="Search...">
+                                        <span class="icon is-small is-left">
+                                            <i class="fa fa-search"></i>
+                                        </span>
+                                    </p>
+                                </div>
+                            </th>
+                            <th style="width:120px"><button class="sort" data-sort="record-time">Time</button></th>
+                        </tr>
+                    </thead>
+                    <tbody class="listjs-container" id="player_records_list">
+                    </tbody>
+                </table>
+
+                <div class="columns is-mobile">
+                    <div class="column">
+                        <p class="field has-addons is-pulled-right page-ticker">
+                            <a class="button is-small is-black" id="table-left-btn">
+                                <span class="icon is-small">
+                                    <i class="fa fa-chevron-left"></i>
+                                </span>
+                            </a>
+                            <a class="button is-small is-static is-black " id="table-page-text"></a>
+                            <a class="button is-small is-black" id="table-right-btn">
+                                <span class="icon is-small">
+                                    <i class="fa fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="content">            
+            Developed and designed by <a href="http://steamcommunity.com/profiles/76561198058399060">brandon</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    var records = [{
+map_id: '922545794', map_name: 'Fractured', map_record_count: 77,
+score: 40156, time: '40.156', rank: 58
+},{
+map_id: '920825843', map_name: 'Virus', map_record_count: 56,
+score: 30479, time: '30.479', rank: 27
+},{
+map_id: '901344435', map_name: 'Eclipse', map_record_count: 25,
+score: 38280, time: '38.280', rank: 25
+},{
+map_id: '2110098766', map_name: 'br-infinity', map_record_count: 44,
+score: 23365, time: '23.365', rank: 28
+},{
+map_id: '2011751692', map_name: 'Synthcity by lolograde \u0026 ish', map_record_count: 46,
+score: 39697, time: '39.697', rank: 13
+},{
+map_id: '1882759746', map_name: 'sharq-Quickie1', map_record_count: 22,
+score: 21182, time: '21.182', rank: 17
+},{
+map_id: '1682446134', map_name: 'daan-lowenergy', map_record_count: 40,
+score: 22473, time: '22.473', rank: 32
+},{
+map_id: '1561824177', map_name: 'Breach_Vandelay', map_record_count: 28,
+score: 67141, time: '1:07.141', rank: 9
+},{
+map_id: '1553710809', map_name: 'HIGHex', map_record_count: 59,
+score: 61601, time: '1:01.601', rank: 42
+},{
+map_id: '1535073534', map_name: 'Aubergine', map_record_count: 53,
+score: 29371, time: '29.371', rank: 31
+},{
+map_id: '1336799887', map_name: 'bull-runner', map_record_count: 23,
+score: 45170, time: '45.170', rank: 9
+},{
+map_id: '1204344284', map_name: 'Daedalus', map_record_count: 72,
+score: 25836, time: '25.836', rank: 38
+},{
+map_id: '1172000287', map_name: 'Override', map_record_count: 83,
+score: 45736, time: '45.736', rank: 76
+},{
+map_id: '877564481', map_name: 'Nihilism', map_record_count: 61,
+score: 33992, time: '33.992', rank: 52
+},{
+map_id: '941927549', map_name: 'Slique_Valley', map_record_count: 123,
+score: 25428, time: '25.428', rank: 53
+},{
+map_id: '908083124', map_name: 'wurst-glass', map_record_count: 50,
+score: 15000, time: '15.000', rank: 50
+},{
+map_id: '866468466', map_name: 'LA Dreams (sleep edit)', map_record_count: 86,
+score: 36598, time: '36.598', rank: 60
+},{
+map_id: '856070785', map_name: 'LA Lagoonia', map_record_count: 39,
+score: 28402, time: '28.402', rank: 31
+},{
+map_id: '825402658', map_name: 'pornstar-kaine', map_record_count: 385,
+score: 21678, time: '21.678', rank: 192
+},{
+map_id: '812451528', map_name: 'bo-Clueless', map_record_count: 28,
+score: 194447, time: '3:14.447', rank: 28
+},{
+map_id: '811803357', map_name: 'The Mustard Tiger', map_record_count: 1174,
+score: 28720, time: '28.720', rank: 109
+},{
+map_id: '785511879', map_name: 'br-drive', map_record_count: 87,
+score: 60821, time: '1:00.821', rank: 11
+},{
+map_id: '713127198', map_name: 'br-vacation', map_record_count: 125,
+score: 159919, time: '2:39.919', rank: 42
+},{
+map_id: '733185294', map_name: 'LA Frozen', map_record_count: 79,
+score: 20743, time: '20.743', rank: 25
+},{
+map_id: '657193004', map_name: 'LA Lacuna', map_record_count: 51,
+score: 37606, time: '37.606', rank: 28
+},{
+map_id: '652256992', map_name: 'rek-Real', map_record_count: 571,
+score: 29461, time: '29.461', rank: 278
+},{
+map_id: '625879981', map_name: 'Reflextrain', map_record_count: 656,
+score: 13268, time: '13.268', rank: 369
+},];
+
+    var divRecordsList = document.querySelector('#player_records_list');
+
+        var html = ``;
+        for (var i = 0; i < records.length; ++i) {
+            html += `
+<tr>
+    <td class="record-rank has-text-right">${records[i].rank}/${records[i].map_record_count}</td>
+    <td><a href="../maps/${records[i].map_id}.html" class="map-name">${records[i].map_name}</a></td>
+    <td class="has-text-right">
+        <span class="record-time" style="display:none">${records[i].score}</span>
+        ${records[i].time}
+    </td>
+</tr>`;
+        }
+
+        divRecordsList.innerHTML = html;
+
+
+
+        
+function br_get_total_pages(list) {
+    return Math.ceil(list.matchingItems.length / list.page);
+}
+
+function br_get_current_page(list) {
+    return Math.ceil(list.i / list.page);
+}
+
+function br_update_table_page_text(list, el) {
+    el.textContent = br_get_current_page(list) + "/" + br_get_total_pages(list);
+}
+
+function br_show_next_page(list){
+    if (list.i + list.page <= list.matchingItems.length) {
+        list.show(list.i + list.page, list.page);        
+    }
+}
+
+function br_show_previous_page(list){
+    if (list.i > 1) {
+        var i = list.i - list.page;
+        if (i < 1) {
+            i = 1;
+        }
+        list.show(i, list.page);        
+    }
+}
+
+
+        var records_list = new List('records-list', {
+            listClass: 'listjs-container',
+            valueNames: ['record-rank', 'map-name', 'record-time'],
+            page: 20,
+            pagination: true
+        });
+
+        
+        var table_page_text_el = document.getElementById('table-page-text');
+        
+        br_update_table_page_text(records_list, table_page_text_el);
+
+        records_list.on('searchComplete', function () {
+            br_update_table_page_text(records_list, table_page_text_el);
+        });
+
+        document.getElementById('table-right-btn').onclick = function () {
+            br_show_next_page(records_list);
+            br_update_table_page_text(records_list, table_page_text_el);
+        }
+
+        document.getElementById('table-left-btn').onclick = function () {
+            br_show_previous_page(records_list);
+            br_update_table_page_text(records_list, table_page_text_el);
+        }
+
+    </script>
+</body>
+</html>
+
