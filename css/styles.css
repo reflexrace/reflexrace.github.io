@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Condensed:400,700');
+
+/*part of normalize*/
+/*(show hand icon, same as for a link) for other types of inputs*/
+button, html input[type=button], input[type=reset], input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    cursor:hand; /*cross browser-support*/
+}
+
+html, body {
+    background-color: #202020;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.page-title-bar{
+    font-family:'Roboto Condensed', sans-serif;
+}
+
+.page-title{    
+    font-size: 1.6em;
+    color:white;
+    font-weight:bold;
+}
+
+.page-title-divider{
+    background-color: rgb(176,0,0);
+    height: 75px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.page-nav-horizontal-divider{
+    height:2px;
+    background-color: rgb(176,0,0);
+    margin-top:10px !important;
+    margin-bottom:20px !important;
+}
+
+.is-40x40{
+    width:40px;
+    height:40px;
+}
+
+a.link-no-style,
+a.link-no-style:hover,
+a.link-no-style:visited,
+a.link-no-style:link,
+a.link-no-style:active{
+    text-decoration:none;
+    outline:none;
+    color:inherit;
+}
+
+.page-nav-item,
+a.page-nav-item:link,
+a.page-nav-item:visited{        
+    font-size: 1.2em;        
+    text-decoration:none;
+    color:#aaaaaa;    
+}
+
+a.page-nav-item:hover{
+    text-decoration:none;
+    color:rgb(176,0,0);    
+}
+
+.nav-text{
+    color:white;
+    font-size:1.2em;
+}
+
+.table.leaders .player-cell{
+    width:300px;
+}
+
+.table.leaders .progress{
+    border-radius:0;
+    height:5px;
+}
+
+.table.leaders .progress::-webkit-progress-value {
+  background-color: rgb(176,0,0);
+}
+
+.table.leaders .progress::-moz-progress-bar {
+  background-color: rgb(176,0,0);  
+}
+.map-box {
+    width:320px;
+    height:180px;
+    overflow:hidden;
+    outline:1px solid black;
+    border-top: 2px solid rgb(176, 0, 0);
+}
+
+.map-box-title-rect{    
+    color:white;
+    position:absolute;
+    display:inline-block;
+    border-top: 30px solid black;
+    border-right: 15px solid transparent;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.map-box .map-title{
+    position: relative;
+    top: -27px;
+    color: #aaaaaa;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 270px;    
+}
+
+.map-box figure.image{
+    height:100%;
+}
+
+.map-box-yt{
+    position:absolute;
+    bottom:0px;
+    right:0px;
+    color:red;
+}
+
+.map-box-yt .fa-square{
+    color:white;
+}
+
+.map-box-yt .fa-youtube-play{
+    color:#ac303C;
+}
+
+.map-box-yt .fa-youtube-play:hover {
+    color: #c73846;
+}
+
+.map-box-total-records {
+    position: absolute;
+    bottom: -1px;
+    left:-1px;    
+}
+
+.map-box .yt-cover-link{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.map-box-top-players{
+    border-bottom: 2px solid rgb(176,0,0);
+    outline: 1px solid black;
+}
+
+.map-box-top-players .player-name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 190px;
+}
+
+.map-box-top-players .player-name a,
+.map-box-top-players .player-name a:visited,
+.map-box-top-players .player-name a:link,
+.map-box-top-players .player-name a:active{
+    color:inherit;
+    outline:none;
+}
+
+.map-box-top-players .player-name a:hover{
+    text-decoration:underline;
+}
+
+.map-box-top-players .player-entry.first-place{
+    background-color:black;
+    color:white;
+    padding-top:8px;
+    padding-bottom:8px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.map-box-top-players .player-entry.first-place + .player-entry{
+    padding-top:5px;
+}
+
+.map-box-top-players .player-entry{
+    background-color:#101010;
+    color:#aaaaaa;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom:3px;
+    margin-bottom:0px;
+    font-size:14px;
+}
+
+.hero.slim{
+    margin-bottom:20px;
+    margin-top:20px;
+}
+
+.hero.slim .hero-body{
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+.table.reflex {
+    border-top: 2px solid rgb(176,0,0);
+    outline: 1px solid black;
+    font-size:14px;
+}
+
+.table.reflex thead th {
+    background-color: black;
+    color: #aaaaaa;
+    border-left: 1px solid #202020;
+    border-bottom:none;
+}
+
+.table.reflex thead th button {
+    background-color: black;
+    color: #aaaaaa;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.table.reflex thead th:first-child {
+    border-left: none;
+}
+
+.table.reflex tbody td {        
+    border-bottom: none;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right:20px;
+    border-left: 1px solid black;
+    border-top:none;
+}
+
+.table.reflex tbody tr {
+    background-color: #101010;
+    color:#b5b5b5;
+}
+
+.table.reflex tbody tr:hover {
+    background-color: black;
+    color:#b5b5b5;
+}
+
+.table.reflex tbody td:first-child{
+    border-left:none;
+}
+
+.table.reflex tbody td a.player-name,
+.table.reflex tbody td a.player-name:visited,
+.table.reflex tbody td a.player-name:link,
+.table.reflex tbody td a.player-name:active{
+    color:rgb(176,0,0);
+    text-decoration:none;
+}
+
+.table.reflex tbody td a.player-name:hover{
+    text-decoration:underline;
+}
+
+.table.reflex tbody td a.map-name,
+.table.reflex tbody td a.map-name:visited,
+.table.reflex tbody td a.map-name:link,
+.table.reflex tbody td a.map-name:active{
+    color:rgb(176,0,0);
+    text-decoration:none;
+}
+
+.table.reflex tbody td a.map-name:hover{
+    text-decoration:underline;
+}
+
+.reflex th .field{
+    display:inline-block;
+    margin-left:20px;
+}
+
+.reflex th .field input{
+    outline:none;
+    border:none;
+    border-bottom:1px solid #aaaaaa;
+    background-color:transparent;
+    color:#aaaaaa;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+/*change placeholder text*/
+.grey-placeholder::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #aaaaaa;
+}
+.grey-placeholder:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #aaaaaa;
+   opacity:  1;
+}
+.grey-placeholder::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #aaaaaa;
+   opacity:  1;
+}
+.grey-placeholder:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #aaaaaa;
+}
+.grey-placeholder::-ms-input-placeholder { /* Microsoft Edge */
+   color: #aaaaaa;
+}
+
+/* show up/down arrow icons next to th */
+.table.show-sort-icons button:not(.asc):not(.desc):not(.sorttable_nosort):after { 
+    vertical-align: middle;
+    content: " \25B4\25BE";
+    left:-5px;
+}
+
+/* used with list.js to show current arrow sort direction*/
+.sort.asc:after {    
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid;
+  content:"";
+  position: relative;
+  top:4px;
+  right:-5px;
+}
+.sort.desc:after {    
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 5px solid;
+  content:"";
+  position: relative;
+  top:-4px;
+  right:-5px;
+}
+
+.sort,
+.sort:hover,
+.sort:focus {
+  border:none;
+  text-decoration: none;
+  background:none;
+  outline:none;
+}
+
+.sort:after {    
+  display:inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  content:"";
+  position: relative;
+  top:-10px;
+  right:-5px;
+}
+
+
+/*
+    MAP SUMMARY
+*/
+
+.mapinformation{
+    height:280px;
+    outline:4px solid black;
+}
+
+.mapinformation .mapbg{
+    overflow:hidden;
+    height:100%;
+}
+
+.mapinformation .mapbg img {
+    position:absolute;
+    top:0;
+    bottom:0;
+    margin:auto;
+    width:100%;
+    filter:blur(5px);
+    -webkit-filter:blur(5px);
+}
+
+.mapinformation .general{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    margin: 0 auto;
+    text-align:center;
+}
+
+.mapinformation .general .general-wrapper{
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.mapinformation .general .mapname{
+    font-size: 26px;
+    font-weight:bold;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.mapinformation .icons{
+    margin-top:5px;
+}
+
+.mapinformation .icons .icon{
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+}
+
+.youtube .fa-square {
+    color: #ac303C;   
+    font-size: 25px; 
+}
+
+.youtube:hover .fa-square{
+    color: #c73846;
+}
+
+.youtube .fa-play {
+    color: #eee;
+    font-size: 15px;
+    top: -3px;
+    left: 1px;
+}
+
+.steam .fa-square {
+    color: #eee;
+    font-size: 25px;
+}
+
+.steam .fa-steam-square {
+    color: #333;
+    font-size: 27px;
+    top: -1px;
+}
+.steam:hover .fa-steam-square {
+    color: #444;
+}
+
+.playerinformation{
+    background-color: #000000;
+    padding: 10px;
+    border-top: 2px solid rgb(176,0,0);
+    outline: 1px solid black;
+    min-width:200px;
+    color:#aaaaaa;
+}
+
+.playerinformation .playeravatar{
+    overflow:hidden;
+    width:120px;
+    height:93px;
+    margin:0 auto;
+}
+
+.playerinformation .playeravatar img {
+    max-width:none;
+    width:auto;
+    position:absolute;
+    top:-27px;
+}
+
+.playerinformation .tags{
+    margin-top:10px;
+    margin-bottom:-10px;
+}
+
+.playerinformation .tag{
+    outline: 1px solid #606060;
+    border-radius: 0;
+}
+
+.playerinformation .tag.is-black{
+    color:#aaaaaa;
+}
+
+
+
+.playerinformation .general{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    margin: 0 auto;
+    text-align:center;
+}
+
+.playerinformation .general .general-wrapper{
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.is-static.is-black{
+    background-color:black;
+    color:white;
+    border:none;
+}
+
+.page-ticker .button{
+    border-radius:0;
+    outline:1px solid #606060;
+}
+
+.footer{
+    margin-top:50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 12px;
+    background-color:inherit;
+    border-top:2px solid rgb(176,0,0);
+}
+
+.footer a{
+    color:rgb(176,0,0);
+}
+.footer a:hover{
+    text-decoration:underline;
+    color:rgb(176,0,0);
+}
+
+.submitvideo .label {
+    color: #aaaaaa;
+}

@@ -1,0 +1,7 @@
+app.yaml
+fchar.js
+*.exe
+*.pdb
+*.bat
+*.exe.config
+*.ps1
